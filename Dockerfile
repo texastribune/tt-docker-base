@@ -1,10 +1,8 @@
-FROM ubuntu:14.04
+FROM python:2.7
 MAINTAINER tech@texastribune.org
 
-# Change locale to UTF-8 from standard locale ("C")
 RUN apt-get update -qq && \
   DEBIAN_FRONTEND=noninteractive apt-get -yq install \
-  language-pack-en \
   software-properties-common \
   apt-transport-https \
   apt-utils \
@@ -48,8 +46,3 @@ RUN curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-
   && tar -xJf "node-v$NODE_VERSION-linux-x64.tar.xz" -C /usr/local --strip-components=1 \
   && rm "node-v$NODE_VERSION-linux-x64.tar.xz" SHASUMS256.txt.asc SHASUMS256.txt \
   && ln -s /usr/local/bin/node /usr/local/bin/nodejs
-
-# install/upgrade python
-RUN add-apt-repository -y ppa:fkrull/deadsnakes-python2.7 && \
-  apt-get update && \
-  apt-get install -yq python2.7 python2.7-dev
