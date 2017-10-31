@@ -37,7 +37,7 @@ RUN set -ex \
   done
 
 ENV NPM_CONFIG_LOGLEVEL warn
-ENV NODE_VERSION 6.5.0
+ENV NODE_VERSION 6.11.5
 ENV YARN_VERSION 0.27.5
 
 RUN curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.xz" \
