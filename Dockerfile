@@ -38,7 +38,7 @@ RUN set -ex \
 
 ENV NPM_CONFIG_LOGLEVEL warn
 ENV NODE_VERSION 6.11.5
-ENV YARN_VERSION 0.27.5
+ENV YARN_VERSION 1.3.2
 
 RUN curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.xz" \
   && curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/SHASUMS256.txt.asc" \
