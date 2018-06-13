@@ -22,8 +22,6 @@ ENV LANG en_US.UTF-8
 ENV LC_ALL en_US.UTF-8
 
 # stolen from https://github.com/nodejs/docker-node/blob/master/8/jessie/Dockerfile
-RUN groupadd --gid 1000 node \
-  && useradd --uid 1000 --gid node --shell /bin/bash --create-home node
 
 # gpg keys listed at https://github.com/nodejs/node#release-team
 RUN set -ex \
