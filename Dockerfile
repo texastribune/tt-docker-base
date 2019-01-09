@@ -1,5 +1,4 @@
 FROM python:2.7
-MAINTAINER tech@texastribune.org
 
 RUN apt-get update -qq && \
   DEBIAN_FRONTEND=noninteractive apt-get -yq install \
@@ -21,13 +20,23 @@ ENV LANGUAGE en_US.UTF-8
 ENV LANG en_US.UTF-8
 ENV LC_ALL en_US.UTF-8
 
-# stolen from https://github.com/nodejs/docker-node/blob/master/6/stretch/Dockerfile
+# stolen from https://github.com/nodejs/docker-node/blob/master/8/stretch/Dockerfile
 
 ENV NPM_CONFIG_LOGLEVEL warn
-ENV NODE_VERSION 6.16.0
-ENV ARCH x64
+ENV NODE_VERSION 8.15.0
 
-RUN set -ex \
+RUN ARCH= && dpkgArch="$(dpkg --print-architecture)" \
+  && case "${dpkgArch##*-}" in \
+  amd64) ARCH='x64';; \
+  ppc64el) ARCH='ppc64le';; \
+  s390x) ARCH='s390x';; \
+  arm64) ARCH='arm64';; \
+  armhf) ARCH='armv7l';; \
+  i386) ARCH='x86';; \
+  *) echo "unsupported architecture"; exit 1 ;; \
+  esac \
+  # gpg keys listed at https://github.com/nodejs/node#release-keys
+  && set -ex \
   && for key in \
   94AE36675C464D64BAFA68DD7434390BDBE9B9C5 \
   FD3A5288F042B6850C66B31F09FE44734EB7990E \
