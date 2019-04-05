@@ -75,7 +75,6 @@ Component = "^0.0.1"
 that = "^1.0"
 requires = "^0.0.3"
 up = "^0.2.1"
-auth = "^0.5.3"
 
 [tool.poetry.dev-dependencies]
 
