@@ -91,7 +91,8 @@ RUN pip install --upgrade pip==19.0.3
 RUN pip install poetry
 COPY pyproject.toml poetry.lock /app/
 WORKDIR /app
-RUN poetry install
+RUN poetry config settings.virtualenvs.create false && \
+  poetry install --no-dev
 #
 # Front-end
 #
