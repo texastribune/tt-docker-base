@@ -1,4 +1,4 @@
-FROM python:2.7
+FROM python:3.6
 
 RUN apt-get update -qq && \
   DEBIAN_FRONTEND=noninteractive apt-get -yq install \
@@ -23,7 +23,7 @@ ENV LC_ALL en_US.UTF-8
 # stolen from https://github.com/nodejs/docker-node/blob/master/8/stretch/Dockerfile
 
 ENV NPM_CONFIG_LOGLEVEL warn
-ENV NODE_VERSION 8.15.0
+ENV NODE_VERSION 8.11.3
 
 RUN ARCH= && dpkgArch="$(dpkg --print-architecture)" \
   && case "${dpkgArch##*-}" in \
@@ -62,7 +62,7 @@ RUN ARCH= && dpkgArch="$(dpkg --print-architecture)" \
   && rm "node-v$NODE_VERSION-linux-$ARCH.tar.xz" SHASUMS256.txt.asc SHASUMS256.txt \
   && ln -s /usr/local/bin/node /usr/local/bin/nodejs
 
-ENV YARN_VERSION 1.12.3
+ENV YARN_VERSION 1.13.0
 
 RUN set -ex \
   && for key in \
@@ -80,3 +80,21 @@ RUN set -ex \
   && ln -s /opt/yarn-v$YARN_VERSION/bin/yarn /usr/local/bin/yarn \
   && ln -s /opt/yarn-v$YARN_VERSION/bin/yarnpkg /usr/local/bin/yarnpkg \
   && rm yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz
+
+ENV LC_ALL=C.UTF-8
+ENV LANG=C.UTF-8
+
+RUN pip install --upgrade pip==19.0.3
+
+#COPY requirements.txt /app/requirements.txt
+#RUN pip install -r /app/requirements.txt
+RUN pip install poetry
+COPY pyproject.toml poetry.lock /app/
+WORKDIR /app
+RUN poetry install
+#
+# Front-end
+#
+#WORKDIR /app
+#COPY package.json yarn.lock /app/
+#RUN yarn
