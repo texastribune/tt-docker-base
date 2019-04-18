@@ -1,10 +1,4 @@
 {
-  "name": "texastribune",
-  "private": true,
-  "license": "Apache Public License 2",
-  "bugs": {
-    "url": "https://github.com/texastribune/texastribune/issues"
-  },
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
@@ -80,51 +74,5 @@
     "text-balancer": "^1.0.5",
     "ttfiles": "git://github.com/texastribune/files.git#v1.3.3",
     "underscore": "^1.8.3"
-  },
-  "browserslist": [
-    "> 0.5%",
-    "last 2 versions",
-    "Firefox ESR",
-    "iOS >= 11",
-    "Safari >= 11",
-    "not dead"
-  ],
-  "eslintConfig": {
-    "parser": "babel-eslint",
-    "parserOptions": {
-      "allowImportExportEverywhere": true
-    },
-    "env": {
-      "browser": true,
-      "jest": true
-    },
-    "extends": [
-      "airbnb",
-      "prettier",
-      "prettier/react"
-    ],
-    "rules": {
-      "no-console": "error",
-      "import/no-extraneous-dependencies": [
-        "error",
-        {
-          "devDependencies": true
-        }
-      ],
-      "no-underscore-dangle": [
-        "error",
-        {
-          "allowAfterThis": true
-        }
-      ]
-    }
-  },
-  "prettier": {
-    "bracketSpacing": true,
-    "printWidth": 80,
-    "semi": true,
-    "singleQuote": true,
-    "tabWidth": 2,
-    "trailingComma": "es5"
   }
 }
