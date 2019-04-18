@@ -1,7 +1,9 @@
-FROM texastribune/tt-docker-base:base
+FROM texastribune/base:base
 
 ENV NPM_CONFIG_LOGLEVEL warn
 ENV NODE_VERSION 8.11.3
+ENV NPM_CONFIG_PREFIX=/node_modules
+ENV PATH=$PATH:/node_modules/.bin
 
 RUN \
   echo "deb https://deb.nodesource.com/node_8.x stretch main" > /etc/apt/sources.list.d/nodesource.list && \
@@ -13,9 +15,9 @@ RUN \
   npm i -g npm@^6 && \
   rm -rf /var/lib/apt/lists/*
 
-WORKDIR /app
+WORKDIR /
 
 RUN poetry install
 
-COPY package.json yarn.lock /app/
-RUN yarn
+COPY package.json yarn.lock /
+RUN yarn && rm package.json yarn.lock

@@ -6,8 +6,8 @@ tag:
 
 .PHONY: base
 base:
-	docker build --tag=texastribune/base -f base/Dockerfile .
+	docker build --tag=texastribune/base:base -f base/Dockerfile .
 
 .PHONY: dev
 dev: base
-	docker build --tag=texastribune/dev -f dev/Dockerfile .
+	docker build --tag=texastribune/base:dev -f dev/Dockerfile .

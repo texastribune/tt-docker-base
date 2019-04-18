@@ -1,6 +1,6 @@
 FROM python:3.6-stretch
 
-WORKDIR /app
+WORKDIR /
 
 RUN apt-get update -qq && \
   DEBIAN_FRONTEND=noninteractive apt-get -yq install \
@@ -16,7 +16,7 @@ RUN apt-get update -qq && \
   libffi-dev \
   libmemcached-dev
 
-COPY pyproject.toml poetry.lock /app/
+COPY pyproject.toml poetry.lock /
 RUN pip install poetry==0.12.12 \
   && poetry config settings.virtualenvs.create false \
   && poetry install --no-dev

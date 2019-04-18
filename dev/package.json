@@ -1,26 +1,6 @@
 {
   "name": "texastribune",
-  "version": "0.0.0",
-  "description": "The Texas Tribune website and CMS",
   "private": true,
-  "scripts": {
-    "js:dev": "NODE_ENV=development webpack --config ./webpack/js-bundle/config.dev.js",
-    "js:prod": "NODE_ENV=production webpack --config ./webpack/js-bundle/config.prod.js",
-    "js:utils:prod": "NODE_ENV=production webpack --config ./webpack/utils-bundle/config.js",
-    "build": "NODE_ENV=production node ./config/tasks/build.js && yarn run js:prod && yarn run js:utils:prod && yarn run copyfiles",
-    "runserver": "make runserver",
-    "dev": "NODE_ENV=development node ./config/tasks/dev.js",
-    "start": "npm-run-all --parallel js:dev dev runserver",
-    "amp": "node ./config/tasks/amp.js",
-    "test": "NODE_ENV=test jest -i --verbose --bail --ci --config=jest.config.json",
-    "test:react": "NODE_ENV=test-react jest -i --verbose --bail --ci --config=jest.react.config.json",
-    "lint": "eslint --ext .jsx,.js common/js/modules",
-    "copyfiles": "rm -f -R common/ttfiles && cp -r node_modules/ttfiles common/ttfiles"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/texastribune/texastribune.git"
-  },
   "license": "Apache Public License 2",
   "bugs": {
     "url": "https://github.com/texastribune/texastribune/issues"
