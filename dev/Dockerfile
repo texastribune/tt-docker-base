@@ -21,3 +21,17 @@ RUN poetry install
 
 COPY package.json yarn.lock /
 RUN yarn && rm package.json yarn.lock
+
+ONBUILD COPY scripts /app/scripts
+ONBUILD RUN ./scripts/install-tools.sh
+
+ONBUILD COPY .babelrc.js /app/
+ONBUILD COPY webpack /app/webpack
+ONBUILD COPY config /app/config
+ONBUILD COPY scripts /app/scripts
+ONBUILD COPY www /app/www
+#
+# Build static files
+#
+ONBUILD COPY package.json /app/
+ONBUILD RUN yarn run build
