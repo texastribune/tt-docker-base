@@ -1,8 +1,11 @@
 all: base dev
 
 tag:
+	git add VERSION
+	git commit -m"bump version"
 	git tag `cat VERSION`
 	git push origin --tags
+
 
 .PHONY: base
 base:
