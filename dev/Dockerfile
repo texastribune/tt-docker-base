@@ -30,8 +30,4 @@ ONBUILD COPY webpack /app/webpack
 ONBUILD COPY config /app/config
 ONBUILD COPY scripts /app/scripts
 ONBUILD COPY www /app/www
-#
-# Build static files
-#
 ONBUILD COPY package.json /app/
-ONBUILD RUN yarn run build
