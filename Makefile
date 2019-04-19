@@ -2,6 +2,7 @@ all: base dev
 
 tag:
 	git add VERSION
+	git add dev/Dockerfile
 	git commit -m"bump version"
 	git tag `cat VERSION`
 	git push origin --tags
