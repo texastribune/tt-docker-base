@@ -4,20 +4,22 @@ ENV NPM_CONFIG_LOGLEVEL warn
 ENV NODE_VERSION 8.11.3
 ENV NPM_CONFIG_PREFIX=/node_modules
 ENV PATH=$PATH:/node_modules/.bin
+ENV APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE False
 
 RUN \
+  echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections && \
   echo "deb https://deb.nodesource.com/node_8.x stretch main" > /etc/apt/sources.list.d/nodesource.list && \
   wget -qO- https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add - && \
   echo "deb https://dl.yarnpkg.com/debian/ stable main" > /etc/apt/sources.list.d/yarn.list && \
   wget -qO- https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
   apt-get -qq update && \
-  apt-get -q install -y nodejs yarn && \
+  apt-get -qq install nodejs yarn > /dev/null && \
   npm i -g npm@^6 && \
   rm -rf /var/lib/apt/lists/*
 
 WORKDIR /
 
-RUN poetry install
+RUN poetry --quiet install
 
 COPY package.json yarn.lock /
 RUN yarn && rm package.json yarn.lock

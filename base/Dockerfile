@@ -2,8 +2,9 @@ FROM python:3.6-stretch
 
 WORKDIR /
 
+RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
 RUN apt-get update -qq && \
-  DEBIAN_FRONTEND=noninteractive apt-get -yq install \
+  apt-get -qq install \
   software-properties-common \
   apt-transport-https \
   apt-utils \
@@ -14,9 +15,9 @@ RUN apt-get update -qq && \
   libpq-dev \
   gdal-bin \
   libffi-dev \
-  libmemcached-dev
+  libmemcached-dev > /dev/null
 
 COPY pyproject.toml poetry.lock /
-RUN pip install poetry==0.12.12 \
+RUN pip --quiet install poetry==0.12.12 \
   && poetry config settings.virtualenvs.create false \
-  && poetry install --no-dev
+  && poetry --quiet install --no-dev
