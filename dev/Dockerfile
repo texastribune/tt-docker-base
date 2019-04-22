@@ -10,8 +10,8 @@ RUN \
   wget -qO- https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add - && \
   echo "deb https://dl.yarnpkg.com/debian/ stable main" > /etc/apt/sources.list.d/yarn.list && \
   wget -qO- https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
-  apt-get update && \
-  apt-get install -yqq nodejs yarn && \
+  apt-get -qq update && \
+  apt-get -q install -y nodejs yarn && \
   npm i -g npm@^6 && \
   rm -rf /var/lib/apt/lists/*
 
@@ -27,8 +27,7 @@ ONBUILD COPY scripts /app/scripts
 ONBUILD RUN ./scripts/install-tools.sh
 
 ONBUILD COPY .babelrc.js /app/
-ONBUILD COPY webpack /app/webpack
 ONBUILD COPY config /app/config
-ONBUILD COPY scripts /app/scripts
-ONBUILD COPY www /app/www
 ONBUILD COPY package.json /app/
+ONBUILD COPY webpack /app/webpack
+ONBUILD COPY snollygoster /app/snollygoster
