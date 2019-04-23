@@ -25,7 +25,7 @@ WORKDIR /
 RUN poetry install
 
 COPY package.json yarn.lock /
-RUN yarn && rm package.json yarn.lock
+RUN yarn && rm yarn.lock
 
 ONBUILD WORKDIR /app
 ONBUILD COPY scripts /app/scripts
