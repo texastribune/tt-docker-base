@@ -1,5 +1,5 @@
 {
-  "license": "Apache Public License 2",
+  "license": "Apache-2.0",
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
