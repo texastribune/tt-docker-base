@@ -22,7 +22,7 @@ RUN /install-tools.sh
 
 WORKDIR /
 
-RUN poetry --quiet install
+RUN poetry install
 
 COPY package.json yarn.lock /
 RUN yarn && rm package.json yarn.lock
