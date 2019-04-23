@@ -17,7 +17,8 @@ RUN apt-get update -qq && \
   libffi-dev \
   libmemcached-dev > /dev/null
 
+ENV PATH=/root/.poetry/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 COPY pyproject.toml poetry.lock /
-RUN pip --quiet install poetry==0.12.12 \
+RUN curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python \
   && poetry config settings.virtualenvs.create false \
-  && poetry --quiet install --no-dev
+  && poetry install --no-dev
