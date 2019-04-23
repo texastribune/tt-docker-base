@@ -17,6 +17,9 @@ RUN \
   npm i -g npm@^6 && \
   rm -rf /var/lib/apt/lists/*
 
+COPY install-tools.sh /
+RUN /install-tools.sh
+
 WORKDIR /
 
 RUN poetry --quiet install
