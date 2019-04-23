@@ -29,9 +29,7 @@ RUN yarn && rm yarn.lock
 
 ONBUILD WORKDIR /app
 ONBUILD COPY scripts /app/scripts
-ONBUILD RUN ./scripts/install-tools.sh
-
-ONBUILD COPY .babelrc.js /app/
+ONBUILD COPY babelrc.js /app/.babelrc.js
 ONBUILD COPY config /app/config
 ONBUILD COPY package.json /app/
 ONBUILD COPY webpack /app/webpack
