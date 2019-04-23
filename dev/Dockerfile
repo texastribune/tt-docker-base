@@ -1,4 +1,4 @@
-FROM texastribune/base:0.1.15-base
+FROM texastribune/base:0.1.16-base
 
 ENV NPM_CONFIG_LOGLEVEL warn
 ENV NODE_VERSION 8.11.3
