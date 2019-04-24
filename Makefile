@@ -16,6 +16,12 @@ base:
 dev: base
 	docker build --tag=texastribune/base:dev -f dev/Dockerfile .
 
+base-no-cache:
+	docker build --no-cache --tag=texastribune/base:base -f base/Dockerfile .
+
+dev-no-cache:
+	docker build --tag=texastribune/base:dev -f dev/Dockerfile .
+
 run-base: base
 	docker run -it --rm --volume=$$(pwd)/poetry.lock:/poetry.lock --volume=$$(pwd)/pyproject.toml:/pyproject.toml texastribune/base:base bash
 
