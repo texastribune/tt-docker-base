@@ -9,7 +9,7 @@ How to make updates:
     1.  Run `make run-base`
     1. Run `poetry add --dev <package>` (drop the `--dev` if it's a production
        dependency) 
-    1. For more other operations see the
+    1. For other operations see the
        [poetry docs](https://poetry.eustace.io/docs/)
     1. Maybe edit `pyproject.toml` by hand if necessary
     1. Run `poetry lock`
