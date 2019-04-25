@@ -24,7 +24,7 @@ python-versions = "*"
 version = "1.10.0.dev7"
 
 [package.source]
-reference = 'private'
+reference = "private"
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
 
@@ -446,7 +446,7 @@ version = "1.0.6.dev15"
 Django = "*"
 
 [package.source]
-reference = 'private'
+reference = "private"
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
 
@@ -456,7 +456,10 @@ description = "Country-specific Django helpers"
 name = "django-localflavor"
 optional = false
 python-versions = "*"
-version = "1.0"
+version = "2.1"
+
+[package.dependencies]
+django = ">=1.11"
 
 [[package]]
 category = "main"
@@ -470,7 +473,7 @@ version = "2.2.19.dev12"
 django-staticfiles = "*"
 
 [package.source]
-reference = 'private'
+reference = "private"
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
 
@@ -547,7 +550,7 @@ python-versions = "*"
 version = "0.22.1.dev1"
 
 [package.source]
-reference = 'private'
+reference = "private"
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
 
@@ -1720,7 +1723,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 version = "0.12.0"
 
 [metadata]
-content-hash = "4e86a5dd381c0ba57ccf976179d92dbac8f1f45b96effebe360704e6efc9221c"
+content-hash = "48f6f009174052127857115b5a5d3e4a72c84d4d7e043e06f7ff4bcad1824440"
 python-versions = "^3.6"
 
 [metadata.hashes]
@@ -1767,7 +1770,7 @@ django-flatblocks = ["35f7a1aa4434dbeb3ece4551f74567a520f09e168b0c1ebe2f18cd6f22
 django-formtools = ["7703793f1675aa6e871f9fed147e8563816d7a5b9affdc5e3459899596217f7c", "cb2bd7c29c2104278e5a0e76f7ff256b9570acf11485d547ee0c1b35347359fb"]
 django-inline-actions = ["99061267176c4d6f448df64678ebc8c579d4f31ced67dd70443aaf5f0e0aa185"]
 django-jet = []
-django-localflavor = ["77f5f5642f1f7464b4d097215063bc9daf9b053b1bc1a9c993cadb02fe0fa7b8", "c3443b2d4eb810e7762a8be2b693266827c03a034af874796ae0bd173c0e9180"]
+django-localflavor = ["0cee94c4b8f0214a5ba7be7e935019a8c062f4e7726d1df4b1e453cb812b2039", "12ce98b13adcd68bb4babcd937d0ae5a0fd5801f71acaf9a6bf1784c218ef53c"]
 django-locking = []
 django-object-actions = ["57e67118ea9d7dee7cdfac42fb005fa0e0b087a7bbb9e25f1f2dfd0ddcc24016", "d40d59dc56a63c3118147f95fa1b1ccaff898c50163e81e4991c072beb61d175"]
 django-rest-swagger = ["3471e6c21a3e97751fa6f7b81b66e916e40fa645cac36be1594c0efed810d247", "ff889e2b339a9a57010dba7729d56471e05b77827f6dd36c0bcb983839882598"]
