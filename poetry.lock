@@ -24,7 +24,7 @@ python-versions = "*"
 version = "1.10.0.dev7"
 
 [package.source]
-reference = 'private'
+reference = "private"
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
 
@@ -446,7 +446,7 @@ version = "1.0.6.dev15"
 Django = "*"
 
 [package.source]
-reference = 'private'
+reference = "private"
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
 
@@ -470,7 +470,7 @@ version = "2.2.19.dev12"
 django-staticfiles = "*"
 
 [package.source]
-reference = 'private'
+reference = "private"
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
 
@@ -547,7 +547,7 @@ python-versions = "*"
 version = "0.22.1.dev1"
 
 [package.source]
-reference = 'private'
+reference = "private"
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
 
@@ -651,8 +651,8 @@ category = "main"
 description = "Web APIs for Django, made easy."
 name = "djangorestframework"
 optional = false
-python-versions = "*"
-version = "3.6.4"
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "3.9.2"
 
 [[package]]
 category = "main"
@@ -1720,7 +1720,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 version = "0.12.0"
 
 [metadata]
-content-hash = "4e86a5dd381c0ba57ccf976179d92dbac8f1f45b96effebe360704e6efc9221c"
+content-hash = "4bfe7c412f0f28a30fbc99e708fbafe6a1d8c23c72e8bcd27e9397197ce3ab50"
 python-versions = "^3.6"
 
 [metadata.hashes]
@@ -1785,7 +1785,7 @@ djangocms-column = ["6d6896707e68ecf24759d334fe3efe8fe75ebc2e72c4bf964ea120937ee
 djangocms-history = ["03055ba81c59570ed26a7aa66dda1620222a8180e18f05390e90dabaee56d0a4"]
 djangocms-style = ["071b4a93c1393a4257e2bd63b5ad77c1ba4b5e4ad46cb7560cffbf5858d05671"]
 djangocms-text-ckeditor = ["583fe6bc858075278b927b4cac7e537b72071751b3ca35d2f60f3af18d6b42c7"]
-djangorestframework = ["0f9bfbac702f3376dfb2db4971ad8af4e066bfa35393b1b85e085f7e8b91189a", "de8ac68b3cf6dd41b98e01dcc92dc0022a5958f096eafc181a17fa975d18ca42"]
+djangorestframework = ["8a435df9007c8b7d8e69a21ef06650e3c0cbe0d4b09e55dd1bd74c89a75a9fcd", "f7a266260d656e1cf4ca54d7a7349609dc8af4fe2590edd0ecd7d7643ea94a17"]
 djangorestframework-csv = ["641feb000d622cec2113005988c03c9a9ba7ec31e1f422f16b098e2a42f4cc8d"]
 docker = ["2b1f48041cfdcc9f6b5da0e04e0e326ded225e736762ade2060000e708f4c9b7", "c456ded5420af5860441219ff8e51cdec531d65f4a9e948ccd4133e063b72f50"]
 docker-pycreds = ["6ce3270bcaf404cc4c3e27e4b6c70d3521deae82fb508767870fdbf772d584d4", "7266112468627868005106ec19cd0d722702d2b7d5912a28e19b826c3d37af49"]
