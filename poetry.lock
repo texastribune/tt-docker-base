@@ -24,7 +24,7 @@ python-versions = "*"
 version = "1.10.0.dev7"
 
 [package.source]
-reference = 'private'
+reference = "private"
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
 
@@ -446,7 +446,7 @@ version = "1.0.6.dev15"
 Django = "*"
 
 [package.source]
-reference = 'private'
+reference = "private"
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
 
@@ -470,7 +470,7 @@ version = "2.2.19.dev12"
 django-staticfiles = "*"
 
 [package.source]
-reference = 'private'
+reference = "private"
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
 
@@ -547,7 +547,7 @@ python-versions = "*"
 version = "0.22.1.dev1"
 
 [package.source]
-reference = 'private'
+reference = "private"
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
 
