@@ -2790,9 +2790,9 @@ dot-prop@^4.1.1:
   dependencies:
     is-obj "^1.0.0"
 
-"ds-toolbox-test@https://github.com/texastribune/ds-toolbox.git#d-test":
+"ds-toolbox-test@https://github.com/texastribune/ds-toolbox.git#master":
   version "0.0.4"
-  resolved "https://github.com/texastribune/ds-toolbox.git#ca723600a39a7e2a4ae40f1a9f86842591936bda"
+  resolved "https://github.com/texastribune/ds-toolbox.git#f6e3dab292718ba452b6ba12af0bdff15189fbb3"
   dependencies:
     normalize.css "^8.0.1"
     sass-mq "^5.0.0"
