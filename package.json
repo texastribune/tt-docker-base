@@ -14,7 +14,7 @@
     "babel-plugin-dynamic-import-node": "^2.0.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.18",
     "clean-css": "^4.2.1",
-    "clean-webpack-plugin": "^0.1.16",
+    "clean-webpack-plugin": "^2.0.2",
     "cli-progress": "^2.1.1",
     "css-loader": "^1.0.0",
     "ds-toolbox-test": "https://github.com/texastribune/ds-toolbox.git#master",
