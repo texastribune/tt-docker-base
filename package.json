@@ -58,6 +58,7 @@
     "fontfaceobserver": "^2.0.13",
     "intersection-observer": "^0.5.1",
     "lazysizes": "^4.1.4",
+    "lz-string": "^1.4.4",
     "mapbox-gl": "^0.52.0-beta.1",
     "mitt": "^1.1.3",
     "nodent-runtime": "^3.2.1",
@@ -73,7 +74,7 @@
     "redux-thunk": "^2.3.0",
     "reframe.js": "^2.2.4",
     "text-balancer": "^1.0.5",
-    "ttfiles": "git://github.com/texastribune/files.git#v1.3.3",
+    "ttfiles": "git://github.com/texastribune/files.git#v2.2.6",
     "underscore": "^1.8.3"
-   }
+  }
 }

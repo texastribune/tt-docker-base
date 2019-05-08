@@ -1,4 +1,4 @@
-FROM texastribune/base:0.1.20-base
+FROM texastribune/base:0.1.21-base
 
 ENV NPM_CONFIG_LOGLEVEL warn
 ENV NODE_VERSION 8.11.3
@@ -29,7 +29,7 @@ RUN yarn && rm yarn.lock
 
 ONBUILD WORKDIR /app
 ONBUILD COPY scripts /app/scripts
-ONBUILD COPY .babelrc.js /app/
+ONBUILD COPY babelrc.config.js /app/
 ONBUILD COPY config /app/config
 ONBUILD COPY package.json /app/
 ONBUILD COPY webpack /app/webpack
