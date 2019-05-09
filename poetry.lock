@@ -24,7 +24,7 @@ python-versions = "*"
 version = "1.10.0.dev7"
 
 [package.source]
-reference = 'private'
+reference = "private"
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
 
@@ -446,7 +446,7 @@ version = "1.0.6.dev15"
 Django = "*"
 
 [package.source]
-reference = 'private'
+reference = "private"
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
 
@@ -456,7 +456,11 @@ description = "Country-specific Django helpers"
 name = "django-localflavor"
 optional = false
 python-versions = "*"
-version = "1.0"
+version = "2.2"
+
+[package.dependencies]
+django = ">=1.11"
+python-stdnum = ">=1.0"
 
 [[package]]
 category = "main"
@@ -470,7 +474,7 @@ version = "2.2.19.dev12"
 django-staticfiles = "*"
 
 [package.source]
-reference = 'private'
+reference = "private"
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
 
@@ -547,7 +551,7 @@ python-versions = "*"
 version = "0.22.1.dev1"
 
 [package.source]
-reference = 'private'
+reference = "private"
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
 
@@ -1346,6 +1350,14 @@ version = "0.4.15"
 
 [[package]]
 category = "main"
+description = "Python module to handle standardized numbers and codes"
+name = "python-stdnum"
+optional = false
+python-versions = "*"
+version = "1.11"
+
+[[package]]
+category = "main"
 description = "World timezone definitions, modern and historical"
 name = "pytz"
 optional = false
@@ -1720,7 +1732,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 version = "0.12.0"
 
 [metadata]
-content-hash = "4e86a5dd381c0ba57ccf976179d92dbac8f1f45b96effebe360704e6efc9221c"
+content-hash = "f0179457d5878ba5a423a88b93fe281ff08c4abb445c2c2cbae3a0aea8a08ccc"
 python-versions = "^3.6"
 
 [metadata.hashes]
@@ -1767,7 +1779,7 @@ django-flatblocks = ["35f7a1aa4434dbeb3ece4551f74567a520f09e168b0c1ebe2f18cd6f22
 django-formtools = ["7703793f1675aa6e871f9fed147e8563816d7a5b9affdc5e3459899596217f7c", "cb2bd7c29c2104278e5a0e76f7ff256b9570acf11485d547ee0c1b35347359fb"]
 django-inline-actions = ["99061267176c4d6f448df64678ebc8c579d4f31ced67dd70443aaf5f0e0aa185"]
 django-jet = []
-django-localflavor = ["77f5f5642f1f7464b4d097215063bc9daf9b053b1bc1a9c993cadb02fe0fa7b8", "c3443b2d4eb810e7762a8be2b693266827c03a034af874796ae0bd173c0e9180"]
+django-localflavor = ["628f382ac0b8ce401d4ba684031abd2548c24782df9fb0d5c7ad44c35a2bb095", "7a4fa03651e609c30f720e35fb9442cddefa1975646cf9d6765a2ba1ed139961"]
 django-locking = []
 django-object-actions = ["57e67118ea9d7dee7cdfac42fb005fa0e0b087a7bbb9e25f1f2dfd0ddcc24016", "d40d59dc56a63c3118147f95fa1b1ccaff898c50163e81e4991c072beb61d175"]
 django-rest-swagger = ["3471e6c21a3e97751fa6f7b81b66e916e40fa645cac36be1594c0efed810d247", "ff889e2b339a9a57010dba7729d56471e05b77827f6dd36c0bcb983839882598"]
@@ -1852,6 +1864,7 @@ pypiwin32 = ["67adf399debc1d5d14dffc1ab5acacb800da569754fafdc576b2a039485aa775",
 python-dateutil = ["7e6584c74aeed623791615e26efd690f29817a27c73085b78e4bad02493df2fb", "c89805f6f4d64db21ed966fda138f8a5ed7a4fdbc1a8ee329ce1b74e3c74da9e"]
 python-jose = ["29701d998fe560e52f17246c3213a882a4a39da7e42c7015bcc1f7823ceaff1c", "ed7387f0f9af2ea0ddc441d83a6eb47a5909bd0c8a72ac3250e75afec2cc1371"]
 python-magic = ["f2674dcfad52ae6c49d4803fa027809540b130db1dec928cfbb9240316831375", "f3765c0f582d2dfc72c15f3b5a82aecfae9498bd29ca840d72f37d7bd38bfcd5"]
+python-stdnum = ["d5f0af1bee9ddd9a20b398b46ce062dbd4d41fcc9646940f2667256a44df3854", "f445ec32bf5246c90389204cabba465f494545371c29a83fa2d30e6c872a6763"]
 pytz = ["25a1432f18051c5f8b00419795bbd824ad2c02a948c48adf785b0bb8e74fbbb4", "40c443019f389a93055d2c43a6a425aa10fd0047506e95747197a5a0423e58f8", "44daacdf5bb50c1fa3bc2b6c4c1f5afd78217e1478fe10585fc7ce5e383b6669", "4c6f3e3f2e8bcd49bbb0f6031f77c3a99a54733ad330cb022d64cf406cf1bcb2", "7016b2c4fa075c564b81c37a252a5fccf60d8964aa31b7f5eae59aeb594ae02b", "7d94af5a3ee62616da36f4a5d0138bbfb1cd52d987a8274c45e0c78167837e17", "9a43e20aa537cfad8fe7a1715165c91cb4a6935d40947f2d070e4c80f2dcd22b", "a1ea35e87a63c7825846d5b5c81d23d668e8a102d3b1b465ce95afe1b3a2e065", "a707e2a9c825aa5b4798f2368dc65a85966ccd6a2a42e14fc93364c614bc0e77", "aafbf066975fe217ed49d7d197b26903d3b43e9ca2aa6ba0a211081f13c41917", "c6fc91277aafa1031f9acddb701298549b96fa5ccc621f61425ca98d15f5935c", "c9bd582ebc202972182dc254541c7bd29195648d798feaffb0480fb679c347ec", "dc221460e0264cb274fbb328936f509ba53d912669cb9ef6244e434c910be138"]
 pywin32 = ["22e218832a54ed206452c8f3ca9eff07ef327f8e597569a4c2828be5eaa09a77", "32b37abafbfeddb0fe718008d6aada5a71efa2874f068bee1f9e703983dcc49a", "35451edb44162d2f603b5b18bd427bc88fcbc74849eaa7a7e7cfe0f507e5c0c8", "4eda2e1e50faa706ff8226195b84fbcbd542b08c842a9b15e303589f85bfb41c", "5f265d72588806e134c8e1ede8561739071626ea4cc25c12d526aa7b82416ae5", "6852ceac5fdd7a146b570655c37d9eacd520ed1eaeec051ff41c6fc94243d8bf", "6dbc4219fe45ece6a0cc6baafe0105604fdee551b5e876dc475d3955b77190ec", "9bd07746ce7f2198021a9fa187fa80df7b221ec5e4c234ab6f00ea355a3baf99"]
 pyyaml = ["3d7da3009c0f3e783b2c873687652d83b1bbfd5c88e9813fb7e5b03c0dd3108b", "3ef3092145e9b70e3ddd2c7ad59bdd0252a94dfe3949721633e41344de00a6bf", "40c71b8e076d0550b2e6380bada1f1cd1017b882f7e16f09a65be98e017f211a", "558dd60b890ba8fd982e05941927a3911dc409a63dcb8b634feaa0cda69330d3", "a7c28b45d9f99102fa092bb213aa12e0aaf9a6a1f5e395d36166639c1f96c3a1", "aa7dd4a6a427aed7df6fb7f08a580d68d9b118d90310374716ae90b710280af1", "bc558586e6045763782014934bfaf39d48b8ae85a2713117d16c39864085c613", "d46d7982b62e0729ad0175a9bc7e10a566fc07b224d2c79fafb5e032727eaa04", "d5eef459e30b09f5a098b9cea68bebfeb268697f78d647bd255a085371ac7f3f", "e01d3203230e1786cd91ccfdc8f8454c8069c91bee3962ad93b87a4b2860f537", "e170a9e6fcfd19021dd29845af83bb79236068bf5fd4df3327c1be18182b2531"]
