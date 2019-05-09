@@ -43,7 +43,7 @@
     "svgo": "^1.2.0",
     "svgstore": "^3.0.0-2",
     "terser-webpack-plugin": "^1.1.0",
-    "webpack": "^4.29.6",
+    "webpack": "^4.31.0",
     "webpack-assets-manifest": "^3.0.1",
     "webpack-cli": "^3.2.3",
     "webpack-merge": "^4.2.1",
