@@ -17,7 +17,6 @@ How to make updates:
     1. Run `make run-dev` 
     1. Do whatever node/yarn things you people do ;-)
 1. Bump the version in [VERSION file](VERSION)
-1. Bump version in `dev/Dockerfile`
 1. Commit your changes
 1. Open a pull request; if necessary
 1. Commit and tag it `make tag`

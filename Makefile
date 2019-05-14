@@ -4,6 +4,9 @@ tag:
 	git tag `cat VERSION`
 	git push origin --tags
 
+prepare:
+	cp Dockerfile.base base/Dockerfile
+	cat Dockerfile.base Dockerfile.dev > dev/Dockerfile
 .PHONY: base
 base:
 	docker build --tag=texastribune/base:base -f base/Dockerfile .
