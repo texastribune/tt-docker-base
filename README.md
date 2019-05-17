@@ -16,6 +16,8 @@ How to make updates:
 1. If it's a node dependency:
     1. Run `make run-dev` 
     1. Do whatever node/yarn things you people do ;-)
+1. If you modify Dockerfile.base:
+    1. run `make prepare` after
 1. Bump the version in [VERSION file](VERSION)
 1. Commit your changes
 1. Open a pull request; if necessary
