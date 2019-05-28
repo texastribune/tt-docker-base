@@ -27,4 +27,9 @@ How to make updates:
 1. Merge it to master
 1. Delete the branch
 1. Push
+1. If you're merging Dependabot PRs:
+    1. merge the PR (maybe merge multiple ones to batch them)
+    1. `git checkout master; git merge dependencies`
+    1. Bump the version in [VERSION file](VERSION)
+    1. Commit and tag it `make tag`
 1. Update child projects to use this new version
