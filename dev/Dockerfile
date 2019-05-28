@@ -49,11 +49,3 @@ RUN poetry install
 
 COPY package.json yarn.lock /
 RUN yarn && rm yarn.lock
-
-ONBUILD WORKDIR /app
-ONBUILD COPY scripts /app/scripts
-ONBUILD COPY babel.config.js /app/
-ONBUILD COPY config /app/config
-ONBUILD COPY package.json /app/
-ONBUILD COPY webpack /app/webpack
-ONBUILD COPY snollygoster /app/snollygoster

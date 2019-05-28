@@ -18,7 +18,7 @@ How to make updates:
     1. edit `package.json` 
     1. `yarn install`
     1. Or do whatever node/yarn things you people do ;-)
-1. If you modify Dockerfile.base:
+1. If you modify either Dockerfile.base or Dockerfile.dev:
     1. run `make prepare` after
 1. Bump the version in [VERSION file](VERSION)
 1. Commit your changes
