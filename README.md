@@ -16,7 +16,7 @@ How to make updates:
 1. If it's a node dependency:
     1. Run `make run-dev` 
     1. edit `package.json` 
-    1. `yarn install`
+    1. `yarn add <your dependency>`
     1. Or do whatever node/yarn things you people do ;-)
 1. If you modify either Dockerfile.base or Dockerfile.dev:
     1. run `make prepare` after
