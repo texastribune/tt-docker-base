@@ -4,6 +4,8 @@ Base images
 
 How to make updates:
 
+1. Do not create a new branch or PR.
+1. To minimize conflicts it works best if you can complete all the steps below together without gaps.
 1. If you're adding a python dependency:
     1.  Run `make run-base`
     1. Run `poetry add --dev <package>` (drop the `--dev` if it's a production
@@ -19,8 +21,8 @@ How to make updates:
 1. If you modify either `Dockerfile.base` or `Dockerfile.dev`:
     1. run `make prepare` after
 1. Bump the version in [VERSION file](VERSION)
-1. Commit your changes
-1. Tag and push with `make tag`
+1. Commit your changes to master.
+1. Tag and push with `make tag`.
 1. If you're merging Dependabot PRs:
     1. merge the PR (maybe merge multiple ones to batch them)
     1. `git checkout master; git merge dependencies`
