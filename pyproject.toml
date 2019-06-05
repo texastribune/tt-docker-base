@@ -61,7 +61,7 @@ django-db-readonly = "=0.4.1"
 django-environ = "=0.4.0"
 tweepy = "=3.5.0"
 watson-developer-cloud = "=2.4.0"
-django-taggit = "=0.22.1.dev1"
+django-taggit = "=1.1.0.dev1"
 python-jose = "=3.0.1"
 
 [tool.poetry.dev-dependencies]
