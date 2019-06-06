@@ -387,7 +387,7 @@ description = "Modern template for Django admin interface with improved function
 name = "django-jet"
 optional = false
 python-versions = "*"
-version = "1.0.6.dev15"
+version = "1.0.8.dev1"
 
 [package.dependencies]
 Django = "*"
@@ -788,7 +788,7 @@ description = "A comprehensive HTTP client library."
 name = "httplib2"
 optional = false
 python-versions = "*"
-version = "0.12.3"
+version = "0.13.0"
 
 [[package]]
 category = "main"
@@ -1535,7 +1535,7 @@ python-versions = "*"
 version = "3.3.1"
 
 [metadata]
-content-hash = "c52b044d8f8a8bc26d0ece705d65f434204b8e01cec4fb21961fbb5f2f18413e"
+content-hash = "41c3f13a34072270d4acec50021ba41e2e5528820f5928ca77181c09ad8b8ef8"
 python-versions = "^3.6"
 
 [metadata.hashes]
@@ -1612,7 +1612,7 @@ google-api-python-client = ["441d638e5fff7d9f97587aa99387efd0ee13f577c9d4d50820d
 google-auth = ["0f7c6a64927d34c1a474da92cfc59e552a5d3b940d3266606c6a28b72888b9e4", "20705f6803fd2c4d1cc2dcb0df09d4dfcb9a7d51fd59e94a3a28231fd93119ed"]
 google-auth-httplib2 = ["312464fb81d2a941aa6541410ef61de9fa788753414ee5f2f1d74153d9c1540d", "faacd855092a4c792e8cf3d3b4ed939518c495373a9f9cd31985c3166558452b"]
 html5lib = ["20b159aa3badc9d5ee8f5c647e5efd02ed2a66ab8d354930bd9ff139fc1dc0a3", "66cb0dcfdbbc4f9c3ba1a63fdb511ffdbd4f513b2b6d81b80cd26ce6b3fb3736"]
-httplib2 = ["23914b5487dfe8ef09db6656d6d63afb0cf3054ad9ebc50868ddc8e166b5f8e8", "a18121c7c72a56689efbf1aef990139ad940fee1e64c6f2458831736cd593600"]
+httplib2 = ["158fbd0ffbba536829d664bf3f32c4f45df41f8f791663665162dfaf21ffd075", "d1146939d270f1f1eb8cbf8f5aa72ff37d897faccca448582bb1e180aeb4c6b2"]
 idna = ["c357b3f628cf53ae2c4c05627ecc484553142ca23264e593d327bcde5e9c3407", "ea8b7f6188e6fa117537c3df7da9fc686d485087abf6ac197f9c46432f7e4a3c"]
 imagesize = ["3f349de3eb99145973fefb7dbe38554414e5c30abd0c8e4b970a7c9d09f3a1d8", "f3832918bc3c66617f92e35f5d70729187676313caa60c187eb0f28b8fe5e3b5"]
 invoke = ["1c2cf54c9b9af973ad9704d8ba81b225117cab612568cacbfb3fc42958cc20a9", "334495ea16e73948894e9535019f87a88a44b73e7977492b12c2d1b5085f8197", "54bdd3fd0245abd1185e05359fd2e4f26be0657cfe7d7bb1bed735e054fa53ab"]
