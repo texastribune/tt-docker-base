@@ -31,7 +31,7 @@ How to make updates:
    master. Delete the branch.
 1. Immediately bump the version in the [VERSION file](VERSION), commit and tag: `make tag`. There
    should be as little gap as possible between this step and the previous one so as to
-   avoid conflicts with other commiters. 
+   avoid conflicts with other committers. 
 1. Change your related `texastribune` PR to use the tag instead of the branch name. See
    the `texastribune` README for the locations to change the version.
 1. **Make sure Docker Hub has built the image with the tag before deploying the
