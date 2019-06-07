@@ -4,7 +4,8 @@ Base images
 
 How to make updates:
 
-1. `git pull origin master`. Do not create a new branch or PR. To minimize conflicts it works best if you can complete all the steps below together without gaps.
+1. `git pull origin master`. 
+1. Create a new branch.
 1. If you're adding a python dependency:
     1.  Run `make run-base`
     1. Run `poetry add --dev <package>` (drop the `--dev` if it's a production
@@ -19,12 +20,28 @@ How to make updates:
     1. Or do whatever node/yarn things you people do ;-)
 1. If you modify either `Dockerfile.base` or `Dockerfile.dev`:
     1. run `make prepare` after
-1. Bump the version in [VERSION file](VERSION)
-1. Commit and push your changes to master.
-1. Tag and push a new tag with `make tag`.
+1. Run `make base` or `make dev` depending on what changed. This will create and tag an
+   image locally based on the name of the git branch. So if your branch is `upgrade-drf`
+   the Docker image name will be `texastribune/base:upgrade-drf`. You don't need to wait
+   for Docker Hub to build the image to test with it locally. 
+1. Commit your changes to that branch.
+1. Push your branch. Docker Hub will build the image with the same name as the previous
+   step. You can use this image name in the PR you create in the `texasribune` repo. 
+1. After the related `texastribune` PR is complete and approved merge this branch to
+   master. Delete the branch.
+1. Immediately bump the version in the [VERSION file](VERSION), commit and tag: `make tag`. There
+   should be as little gap as possible between this step and the previous one so as to
+   avoid conflicts with other commiters. 
+1. Change your related `texastribune` PR to use the tag instead of the branch name. See
+   the `texastribune` README for the locations to change the version.
+1. **Make sure Docker Hub has built the image with the tag before deploying the
+   `texastribune` PR**. In an emergency you can leave in the branch name -- the image should
+   already be built by Docker Hub and it won't go away even when the branch is deleted.
+1. Merge and deploy the related `texastribune` PR.
+1. Your work is done.
 1. If you're merging Dependabot PRs:
-    1. merge the PR (maybe merge multiple ones to batch them)
-    1. `git checkout master; git merge dependencies`
-    1. Bump the version in [VERSION file](VERSION)
-    1. Commit and tag it `make tag`
-1. Update child projects to use this new version
+    1. merge the PR (maybe merge multiple ones to batch them) - these will be merged to
+       the `dependencies` branch; not master
+    1. Create your own branch off `master` and merge `dependencies` into it: `git
+       checkout -b my-fancy-branch; git merge dependencies`
+    1. Resume with the step "Run `make base`..." above. 
