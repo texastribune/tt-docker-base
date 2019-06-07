@@ -387,7 +387,7 @@ description = "Modern template for Django admin interface with improved function
 name = "django-jet"
 optional = false
 python-versions = "*"
-version = "1.0.8.dev1"
+version = "1.0.8.dev2"
 
 [package.dependencies]
 Django = "*"
@@ -1535,7 +1535,7 @@ python-versions = "*"
 version = "3.3.1"
 
 [metadata]
-content-hash = "41c3f13a34072270d4acec50021ba41e2e5528820f5928ca77181c09ad8b8ef8"
+content-hash = "ae1a7f35a1e472f00d2d37436eeae858a163c062416a3c025aa0440f286ce095"
 python-versions = "^3.6"
 
 [metadata.hashes]
