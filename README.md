@@ -20,7 +20,8 @@ How to make updates:
     1. Or do whatever node/yarn things you people do ;-)
 1. If you modify either `Dockerfile.base` or `Dockerfile.dev`:
     1. run `make prepare` after
-1. Run `make base` or `make dev` depending on what changed. This will create and tag an
+1. Run `make base` if you modified a production python dependency or `make dev` if you
+   changed node dependencies or a python dev-only dependency. This will create and tag an
    image locally based on the name of the git branch. So if your branch is `upgrade-drf`
    the Docker image name will be `texastribune/base:upgrade-drf`. You don't need to wait
    for Docker Hub to build the image to test with it locally. 
