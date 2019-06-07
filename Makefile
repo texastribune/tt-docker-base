@@ -1,7 +1,7 @@
-all: base dev
-
 VERSION=`cat VERSION`
 GIT_BRANCH=`git rev-parse --abbrev-ref HEAD`
+
+images: base dev
 
 tag:
 	git tag `cat VERSION`
@@ -10,14 +10,15 @@ tag:
 prepare:
 	cp Dockerfile.base base/Dockerfile
 	cat Dockerfile.base Dockerfile.dev > dev/Dockerfile
+
 .PHONY: base
-base:
+base: prepare
 	docker build --tag=texastribune/base:base \
 		--tag=texastribune/base:$(VERSION)-base \
 		--tag=texastribune/base:$(GIT_BRANCH)-base \
 		-f base/Dockerfile .
 
-base-no-cache:
+base-no-cache: prepare
 	docker build --no-cache --tag=texastribune/base:base \
 		--tag=texastribune/base:$(VERSION)-base \
 		--tag=texastribune/base:$(GIT_BRANCH)-base \
@@ -30,7 +31,7 @@ dev: base
 		--tag=texastribune/base:$(GIT_BRANCH)-dev \
 	-f dev/Dockerfile .
 
-dev-no-cache:
+dev-no-cache: prepare
 	docker build --tag=texastribune/base:dev
 		--tag=texastribune/base:$(VERSION)-dev \
 		--tag=texastribune/base:$(GIT_BRANCH)-dev \
