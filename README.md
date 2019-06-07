@@ -7,7 +7,7 @@ How to make updates:
 1. `git pull origin master`. 
 1. Create a new branch.
 1. If you're adding a python dependency:
-    1. Run `make run-base`
+    1. Run `make base-shell`
     1. Run `poetry add --dev <package>` (drop the `--dev` if it's a production
        dependency) 
     1. For other operations see the
@@ -15,7 +15,7 @@ How to make updates:
     1. Maybe edit `pyproject.toml` by hand if necessary
     1. Run `poetry lock`
 1. If it's a node dependency:
-    1. Run `make run-dev` 
+    1. Run `make dev-shell` 
     1. `yarn add <dependency name>`
     1. Or do whatever node/yarn things you people do ;-)
 1. Run `make images`. This will create and tag 
