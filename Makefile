@@ -1,5 +1,8 @@
 all: base dev
 
+VERSION=`cat VERSION`
+GIT_BRANCH=`git rev-parse --abbrev-ref HEAD`
+
 tag:
 	git tag `cat VERSION`
 	git push origin --tags
@@ -9,17 +12,29 @@ prepare:
 	cat Dockerfile.base Dockerfile.dev > dev/Dockerfile
 .PHONY: base
 base:
-	docker build --tag=texastribune/base:base -f base/Dockerfile .
+	docker build --tag=texastribune/base:base \
+		--tag=texastribune/base:$(VERSION)-base \
+		--tag=texastribune/base:$(GIT_BRANCH)-base \
+		-f base/Dockerfile .
+
+base-no-cache:
+	docker build --no-cache --tag=texastribune/base:base \
+		--tag=texastribune/base:$(VERSION)-base \
+		--tag=texastribune/base:$(GIT_BRANCH)-base \
+		-f base/Dockerfile .
 
 .PHONY: dev
 dev: base
-	docker build --tag=texastribune/base:dev -f dev/Dockerfile .
-
-base-no-cache:
-	docker build --no-cache --tag=texastribune/base:base -f base/Dockerfile .
+	docker build --tag=texastribune/base:dev \
+		--tag=texastribune/base:$(VERSION)-dev \
+		--tag=texastribune/base:$(GIT_BRANCH)-dev \
+	-f dev/Dockerfile .
 
 dev-no-cache:
-	docker build --tag=texastribune/base:dev -f dev/Dockerfile .
+	docker build --tag=texastribune/base:dev
+		--tag=texastribune/base:$(VERSION)-dev \
+		--tag=texastribune/base:$(GIT_BRANCH)-dev \
+	-f dev/Dockerfile .
 
 run-base: base
 	docker run -it --rm --volume=$$(pwd)/poetry.lock:/poetry.lock --volume=$$(pwd)/pyproject.toml:/pyproject.toml texastribune/base:base bash
