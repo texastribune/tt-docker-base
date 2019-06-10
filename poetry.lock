@@ -351,8 +351,11 @@ category = "main"
 description = "Django-filter is a reusable Django application for allowing users to filter querysets dynamically."
 name = "django-filter"
 optional = false
-python-versions = "*"
-version = "1.0.2"
+python-versions = ">=3.4"
+version = "2.1.0"
+
+[package.dependencies]
+Django = ">=1.11"
 
 [[package]]
 category = "main"
@@ -1535,7 +1538,7 @@ python-versions = "*"
 version = "3.3.1"
 
 [metadata]
-content-hash = "ae1a7f35a1e472f00d2d37436eeae858a163c062416a3c025aa0440f286ce095"
+content-hash = "11393b858cf54edce1e5f21cd0477c2e118963d3a5e912c6723944a85392cd2a"
 python-versions = "^3.6"
 
 [metadata.hashes]
@@ -1572,7 +1575,7 @@ django-db-readonly = ["163bb9f592f0a1b9762b8a3762fee7b3792f287974974b8603e892205
 django-debug-toolbar = ["89d75b60c65db363fb24688d977e5fbf0e73386c67acf562d278402a10fc3736", "c2b0134119a624f4ac9398b44f8e28a01c7686ac350a12a74793f3dd57a9eea0"]
 django-environ = ["70cf521f87e64f4dd2aeb87ced006dc98f621e2cdb38134fbcbcf6309fde6244"]
 django-extensions = ["6766c573ffe63693cd485512a02f3b59622c884cbfeca241d1278ffdf0ac39ae", "c43e46cc95985c278afda645480b79f9a85cfe5a82c957accd08b8045793b707"]
-django-filter = ["11cc64a75c708ca72d03b8bafa2ee2908debc41ae942a55b01fdaed375b5ee14", "a6a1b59fc7c9c5da17af1c5c98490f89d2df26b9501934a54d814414af9ee1ac"]
+django-filter = ["3dafb7d2810790498895c22a1f31b2375795910680ac9c1432821cbedb1e176d", "a3014de317bef0cd43075a0f08dfa1d319a7ccc5733c3901fb860da70b0dda68"]
 django-flatblocks = ["35f7a1aa4434dbeb3ece4551f74567a520f09e168b0c1ebe2f18cd6f22889ada"]
 django-formtools = ["7703793f1675aa6e871f9fed147e8563816d7a5b9affdc5e3459899596217f7c", "cb2bd7c29c2104278e5a0e76f7ff256b9570acf11485d547ee0c1b35347359fb"]
 django-inline-actions = ["99061267176c4d6f448df64678ebc8c579d4f31ced67dd70443aaf5f0e0aa185"]
