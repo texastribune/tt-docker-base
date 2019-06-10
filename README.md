@@ -25,6 +25,8 @@ How to make updates:
    `BASE_PRODUCTION_VERSION` and `BASE_DEVELOPMENT_VERSION` on your `texastribune`
    PR to `upgrade-drf-base` and `upgrade-drf-dev` respectively.
 1. Commit your changes to that branch.
+1. If this is a small change that's very unlikely to affect anyone else then merge this
+   branch into `master` and skip the next step and any remaining step involving a PR.
 1. Push your branch. Docker Hub will build the image with the same names as the previous
    step. Now anyone else can review that PR.
 1. After the related `texastribune` PR is complete and approved merge this branch to
