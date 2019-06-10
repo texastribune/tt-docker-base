@@ -5,7 +5,7 @@ images: base-image dev-image
 
 tag:
 	git tag `cat VERSION`
-	git push origin --tags
+	git push origin --tags master
 
 prepare:
 	cp Dockerfile.base base/Dockerfile
