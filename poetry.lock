@@ -24,7 +24,7 @@ python-versions = "*"
 version = "1.10.0.dev7"
 
 [package.source]
-reference = 'private'
+reference = "private"
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
 
@@ -443,13 +443,13 @@ description = "Modern template for Django admin interface with improved function
 name = "django-jet"
 optional = false
 python-versions = "*"
-version = "1.0.6.dev15"
+version = "1.0.8.dev2"
 
 [package.dependencies]
 Django = "*"
 
 [package.source]
-reference = 'private'
+reference = "private"
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
 
@@ -473,7 +473,7 @@ version = "2.2.19.dev12"
 django-staticfiles = "*"
 
 [package.source]
-reference = 'private'
+reference = "private"
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
 
@@ -550,7 +550,7 @@ python-versions = "*"
 version = "0.22.1.dev1"
 
 [package.source]
-reference = 'private'
+reference = "private"
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
 
@@ -1699,7 +1699,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 version = "0.12.0"
 
 [metadata]
-content-hash = "3e39d589374a32637d037ee548974dc734ef88e6b518f9644bb94e60b7068e27"
+content-hash = "481444d6bbdbf2074018002e677db3788ddd150ee775d559b67029a783c60572"
 python-versions = "^3.6"
 
 [metadata.hashes]
