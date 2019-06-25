@@ -28,7 +28,7 @@ How to make updates:
 1. If this is a small change that's very unlikely to affect anyone else then merge this
    branch into `master` and skip the next step and any remaining step involving a PR.
 1. Push your branch. Docker Hub will build the image with the same names as the previous
-   step. Now anyone else can review that PR.
+   step. Now anyone else can review that PR once the image tagged with the branch name has been built. You can check the status of the builds on [Docker Hub](https://cloud.docker.com/u/texastribune/repository/docker/texastribune/base/general).
 1. After the related `texastribune` PR is complete and approved merge this branch to
    master. Delete the branch.
 1. Immediately bump the version in the [VERSION file](VERSION), commit and tag: `make tag`. There
@@ -36,7 +36,7 @@ How to make updates:
    avoid conflicts with other committers. You don't need to push anything. The `make tag` command will 
    push it for you.
 1. Change your related `texastribune` PR to use the tag instead of the branch name. See
-   the `texastribune` README for the locations to change the version.
+   the `texastribune` README for the locations to change the version. You may want to wait until the Docker Hub build is complete before pushing your `texastribune` PR image version because the CI tests will fail if the image isn't available yet.
 1. **Make sure Docker Hub has built the image with the tag before deploying the
    `texastribune` PR**. In an emergency you can leave in the branch name -- the image should
    already be built by Docker Hub and it won't go away even when the branch is deleted.
