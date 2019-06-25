@@ -24,7 +24,7 @@ python-versions = "*"
 version = "1.10.0.dev7"
 
 [package.source]
-reference = 'private'
+reference = "private"
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
 
@@ -399,7 +399,7 @@ version = "1.0.8.dev2"
 Django = "*"
 
 [package.source]
-reference = 'private'
+reference = "private"
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
 
@@ -423,7 +423,7 @@ version = "2.2.19.dev12"
 django-staticfiles = "*"
 
 [package.source]
-reference = 'private'
+reference = "private"
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
 
@@ -503,7 +503,7 @@ version = "1.1.0.dev1"
 Django = ">=1.11"
 
 [package.source]
-reference = 'private'
+reference = "private"
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
 
@@ -1020,7 +1020,7 @@ description = "A Python Parser"
 name = "parso"
 optional = false
 python-versions = "*"
-version = "0.4.0"
+version = "0.5.0"
 
 [[package]]
 category = "dev"
@@ -1630,7 +1630,7 @@ oauth2client = ["b8a81cc5d60e2d364f0b1b98f958dbd472887acaf1a5b05e21c28c31a2d6d3a
 oauthlib = ["0ce32c5d989a1827e3f1148f98b9085ed2370fc939bf524c9c851d8714797298", "3e1e14f6cde7e5475128d30e97edc3bfb4dc857cb884d8714ec161fdbb3b358e"]
 openapi-codec = ["1bce63289edf53c601ea3683120641407ff6b708803b8954c8a876fe778d2145"]
 packaging = ["0c98a5d0be38ed775798ece1b9727178c4469d9c3b4ada66e8e6b7849f8732af", "9e1cbf8c12b1f1ce0bb5344b8d7ecf66a6f8a6e91bcb0c84593ed6d3ab5c4ab3"]
-parso = ["17cc2d7a945eb42c3569d4564cdf49bde221bc2b552af3eca9c1aad517dcdd33", "2e9574cb12e7112a87253e14e2c380ce312060269d04bd018478a3c92ea9a376"]
+parso = ["5052bb33be034cba784193e74b1cde6ebf29ae8b8c1e4ad94df0c4209bfc4826", "db5881df1643bf3e66c097bfd8935cf03eae73f4cb61ae4433c9ea4fb6613446"]
 pbr = ["089ccb087e9bd8f278caedfa6c2c5d461381437eda3db750b6834e78b319f404", "9fb1c3371344cd617eb073c6c00872e9b0e5a7fefed6cd29f327a1b26ab5c498"]
 pep8 = ["b22cfae5db09833bb9bd7c8463b53e1a9c9b39f12e304a8d0bba729c501827ee", "fe249b52e20498e59e0b5c5256aa52ee99fc295b26ec9eaa85776ffdb9fe6374"]
 pexpect = ["2094eefdfcf37a1fdbfb9aa090862c1a4878e5c7e0e7e7088bdb511c558e5cd1", "9e2c1fd0e6ee3a49b28f95d4b33bc389c89b20af6a1255906e90ff1262ce62eb"]
