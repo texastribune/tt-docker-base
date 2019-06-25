@@ -48,4 +48,4 @@ WORKDIR /
 RUN poetry install
 
 COPY package.json yarn.lock /
-RUN yarn && rm yarn.lock
+RUN yarn
