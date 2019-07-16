@@ -227,7 +227,10 @@ description = "Generic drag-and-drop sorting for the List, the Stacked- and the 
 name = "django-admin-sortable2"
 optional = false
 python-versions = "*"
-version = "0.6.17"
+version = "0.7.2"
+
+[package.dependencies]
+Django = ">=1.8,<3"
 
 [[package]]
 category = "main"
@@ -1539,7 +1542,7 @@ python-versions = "*"
 version = "3.3.1"
 
 [metadata]
-content-hash = "97eccc4c957270e2c6683d405f76e3872be9fdf86496020f48b982819a675ba5"
+content-hash = "7e9e5a297d3168fe3dabd178b60fc7ffee3774263ff777b2b8bc043d7f071e24"
 python-versions = "^3.6"
 
 [metadata.hashes]
@@ -1564,7 +1567,7 @@ coverage = ["0c5fe441b9cfdab64719f24e9684502a59432df7570521563d7b1aff27ac755f", 
 decorator = ["86156361c50488b84a3f148056ea716ca587df2f0de1d34750d35c21312725de", "f069f3a01830ca754ba5258fde2278454a0b5b79e0d7f5c13b3b97e57d4acff6"]
 dj-pagination = ["1de28af33acafe1898e2d9c80a0669b492f582ec711c13864eff00e9b16479b8", "fd89e97fa49a4ec7712926477d255e646213cdb0349a29b73b67510ceae4d44d"]
 django = ["830d5d40a1705089502bba70605ab3246831440ffc16d1501dfeeef5f4b9c845", "94395804ad80f68d66090a74d68ff2583b43333e1785a026c2aa10cf161642a6"]
-django-admin-sortable2 = ["11e44585de2eb375eb9dab06d399d6da058362949b09c80c5a4a0bf9aafe68c2"]
+django-admin-sortable2 = ["bb34aa23ef8174d46f572c95ab34b8a3865403702822b8f54a757a0f59d87705"]
 django-appconf = ["35f13ca4d567f132b960e2cd4c832c2d03cb6543452d34e29b7ba10371ba80e3", "c98a7af40062e996b921f5962a1c4f3f0c979fa7885f7be4710cceb90ebe13a6"]
 django-axes = ["79e15f6b25430c4fd52a5459379640dfcfde5d3eab9e11f62ccdc71406cdb530"]
 django-classy-tags = ["38b4546a8053499e2fef7af679a58d7c868298717d645b8b8227acba5fd4bf2b"]
