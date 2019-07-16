@@ -246,8 +246,13 @@ category = "main"
 description = "Keep track of failed login attempts in Django-powered sites."
 name = "django-axes"
 optional = false
-python-versions = "*"
-version = "1.3.6"
+python-versions = "~=3.6"
+version = "5.0.9"
+
+[package.dependencies]
+django = ">=1.11"
+django-appconf = ">=1.0.3"
+django-ipware = ">=2.0.2"
 
 [[package]]
 category = "main"
@@ -394,6 +399,14 @@ name = "django-inline-actions"
 optional = false
 python-versions = "*"
 version = "1.0.0"
+
+[[package]]
+category = "main"
+description = "A Django utility application that returns client's real IP address"
+name = "django-ipware"
+optional = false
+python-versions = "*"
+version = "2.1.0"
 
 [[package]]
 category = "main"
@@ -1539,7 +1552,7 @@ python-versions = "*"
 version = "3.3.1"
 
 [metadata]
-content-hash = "97eccc4c957270e2c6683d405f76e3872be9fdf86496020f48b982819a675ba5"
+content-hash = "f625feb829cce3214ed9b62c69911a869b63400d845cf0655a3707b96299ddd7"
 python-versions = "^3.6"
 
 [metadata.hashes]
@@ -1566,7 +1579,7 @@ dj-pagination = ["1de28af33acafe1898e2d9c80a0669b492f582ec711c13864eff00e9b16479
 django = ["830d5d40a1705089502bba70605ab3246831440ffc16d1501dfeeef5f4b9c845", "94395804ad80f68d66090a74d68ff2583b43333e1785a026c2aa10cf161642a6"]
 django-admin-sortable2 = ["11e44585de2eb375eb9dab06d399d6da058362949b09c80c5a4a0bf9aafe68c2"]
 django-appconf = ["35f13ca4d567f132b960e2cd4c832c2d03cb6543452d34e29b7ba10371ba80e3", "c98a7af40062e996b921f5962a1c4f3f0c979fa7885f7be4710cceb90ebe13a6"]
-django-axes = ["79e15f6b25430c4fd52a5459379640dfcfde5d3eab9e11f62ccdc71406cdb530"]
+django-axes = ["c3107033cde27d56cc3b6bf6e892a9ea7ecb45b01284bd34d3446c6a9c01e63d", "e2bb3f9b2e1fe1e910d853669a26b3d3f6482012f36ae8119cc69fe2579b22e5"]
 django-classy-tags = ["38b4546a8053499e2fef7af679a58d7c868298717d645b8b8227acba5fd4bf2b"]
 django-cms = ["72ca485c2bf8bf06ac6fb98be05312a48eb5a57dd0cbc0c078334ddbfecd43b8", "975d749c1cf963300f8947429b3f8688898d47885306f08120303fc458104bd4"]
 django-codemirror-widget = ["4d24ef00c61677171117e7c8d49d8281cc08bd3fd6be6a4ea584def08edcb9b8"]
@@ -1581,6 +1594,7 @@ django-filter = ["3dafb7d2810790498895c22a1f31b2375795910680ac9c1432821cbedb1e17
 django-flatblocks = ["35f7a1aa4434dbeb3ece4551f74567a520f09e168b0c1ebe2f18cd6f22889ada"]
 django-formtools = ["7703793f1675aa6e871f9fed147e8563816d7a5b9affdc5e3459899596217f7c", "cb2bd7c29c2104278e5a0e76f7ff256b9570acf11485d547ee0c1b35347359fb"]
 django-inline-actions = ["99061267176c4d6f448df64678ebc8c579d4f31ced67dd70443aaf5f0e0aa185"]
+django-ipware = ["a7c7a8fd019dbdc9c357e6e582f65034e897572fc79a7e467674efa8aef9d00b"]
 django-jet = []
 django-localflavor = ["77f5f5642f1f7464b4d097215063bc9daf9b053b1bc1a9c993cadb02fe0fa7b8", "c3443b2d4eb810e7762a8be2b693266827c03a034af874796ae0bd173c0e9180"]
 django-locking = []
