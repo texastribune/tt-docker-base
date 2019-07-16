@@ -266,15 +266,15 @@ description = "An Advanced Django CMS"
 name = "django-cms"
 optional = false
 python-versions = "*"
-version = "3.5.3"
+version = "3.6.0"
 
 [package.dependencies]
-Django = ">=1.8,<2.0"
+Django = ">=1.11,<2.2"
 django-classy-tags = ">=0.7.2"
-django-formtools = ">=1.0"
+django-formtools = ">=2.1"
 django-sekizai = ">=0.7"
-django-treebeard = ">=4.0.1"
-djangocms-admin-style = ">=1.0"
+django-treebeard = ">=4.3"
+djangocms-admin-style = ">=1.2"
 
 [[package]]
 category = "main"
@@ -1539,7 +1539,7 @@ python-versions = "*"
 version = "3.3.1"
 
 [metadata]
-content-hash = "68eb4f56112db4bba3144a03b15f559225dd1ed82409b7f3810009ff9e2ce627"
+content-hash = "bb9d378fb1d092b399ad6dc8b6e100be68e04b3cfd95bafc5535e6c919060441"
 python-versions = "^3.6"
 
 [metadata.hashes]
@@ -1568,7 +1568,7 @@ django-admin-sortable2 = ["11e44585de2eb375eb9dab06d399d6da058362949b09c80c5a4a0
 django-appconf = ["35f13ca4d567f132b960e2cd4c832c2d03cb6543452d34e29b7ba10371ba80e3", "c98a7af40062e996b921f5962a1c4f3f0c979fa7885f7be4710cceb90ebe13a6"]
 django-axes = ["79e15f6b25430c4fd52a5459379640dfcfde5d3eab9e11f62ccdc71406cdb530"]
 django-classy-tags = ["38b4546a8053499e2fef7af679a58d7c868298717d645b8b8227acba5fd4bf2b"]
-django-cms = ["72ca485c2bf8bf06ac6fb98be05312a48eb5a57dd0cbc0c078334ddbfecd43b8", "975d749c1cf963300f8947429b3f8688898d47885306f08120303fc458104bd4"]
+django-cms = ["873a87cf5aa8b01050b31cda59998f88033f37ecaf1c3778feb1f916670f3aa0", "9c8fa13d9948b73f1d046a00454922af8d8c52c8d17b88de5466d14fcd9e304a"]
 django-codemirror-widget = ["4d24ef00c61677171117e7c8d49d8281cc08bd3fd6be6a4ea584def08edcb9b8"]
 django-cors-headers = ["5b80bf0f8d7fc6e2bcb4f40781d5ff3661961bbf1982e52daec77241dea3b890", "ebf3e2cf25aa6993b959a8e6a87828ebb3c8fe5bc3ec4a2d6e65f3b8d9b4212c"]
 django-coverage = ["eee56c1465b2ece0a066ea2514c50039462f8fe1ea58e59adc0dfda14b30628b"]
