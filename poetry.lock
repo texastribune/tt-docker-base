@@ -24,7 +24,7 @@ python-versions = "*"
 version = "1.10.0.dev7"
 
 [package.source]
-reference = "private"
+reference = 'private'
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
 
@@ -243,6 +243,24 @@ six = "*"
 
 [[package]]
 category = "main"
+description = ""
+name = "django-auth0-client"
+optional = false
+python-versions = "*"
+version = "0.1.1"
+
+[package.dependencies]
+Django = "*"
+python-jose = "*"
+requests = "*"
+
+[package.source]
+reference = 'private'
+type = "legacy"
+url = "https://pypi.texastribune.org/simple"
+
+[[package]]
+category = "main"
 description = "Keep track of failed login attempts in Django-powered sites."
 name = "django-axes"
 optional = false
@@ -407,7 +425,7 @@ version = "1.0.8.dev2"
 Django = "*"
 
 [package.source]
-reference = "private"
+reference = 'private'
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
 
@@ -431,7 +449,7 @@ version = "2.2.19.dev12"
 django-staticfiles = "*"
 
 [package.source]
-reference = "private"
+reference = 'private'
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
 
@@ -511,7 +529,7 @@ version = "1.1.0.dev1"
 Django = ">=1.11"
 
 [package.source]
-reference = "private"
+reference = 'private'
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
 
@@ -1539,7 +1557,7 @@ python-versions = "*"
 version = "3.3.1"
 
 [metadata]
-content-hash = "97eccc4c957270e2c6683d405f76e3872be9fdf86496020f48b982819a675ba5"
+content-hash = "01916a16b8d4a54f07c099268f052370cdcf5e88f05d0cdc20d761ec97714a88"
 python-versions = "^3.6"
 
 [metadata.hashes]
@@ -1566,6 +1584,7 @@ dj-pagination = ["1de28af33acafe1898e2d9c80a0669b492f582ec711c13864eff00e9b16479
 django = ["830d5d40a1705089502bba70605ab3246831440ffc16d1501dfeeef5f4b9c845", "94395804ad80f68d66090a74d68ff2583b43333e1785a026c2aa10cf161642a6"]
 django-admin-sortable2 = ["11e44585de2eb375eb9dab06d399d6da058362949b09c80c5a4a0bf9aafe68c2"]
 django-appconf = ["35f13ca4d567f132b960e2cd4c832c2d03cb6543452d34e29b7ba10371ba80e3", "c98a7af40062e996b921f5962a1c4f3f0c979fa7885f7be4710cceb90ebe13a6"]
+django-auth0-client = []
 django-axes = ["79e15f6b25430c4fd52a5459379640dfcfde5d3eab9e11f62ccdc71406cdb530"]
 django-classy-tags = ["38b4546a8053499e2fef7af679a58d7c868298717d645b8b8227acba5fd4bf2b"]
 django-cms = ["72ca485c2bf8bf06ac6fb98be05312a48eb5a57dd0cbc0c078334ddbfecd43b8", "975d749c1cf963300f8947429b3f8688898d47885306f08120303fc458104bd4"]
