@@ -66,7 +66,7 @@
     "redux-thunk": "^2.3.0",
     "reframe.js": "^2.2.4",
     "text-balancer": "^1.0.5",
-    "ttfiles": "git://github.com/texastribune/files.git#v2.3.1",
+    "ttfiles": "git://github.com/texastribune/files.git#v2.3.2",
     "underscore": "^1.8.3"
   }
 }
