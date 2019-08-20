@@ -24,6 +24,7 @@
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.11.0",
+    "eslint-plugin-react-hooks": "^1.7.0",
     "fast-async": "7",
     "fast-glob": "^2.2.6",
     "file-loader": "^4.0.0",
