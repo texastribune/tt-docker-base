@@ -7320,6 +7320,11 @@ react-dom@^16.8.6:
     prop-types "^15.6.2"
     scheduler "^0.13.6"
 
+react-hook-form@^3.22.0:
+  version "3.22.0"
+  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-3.22.0.tgz#cc6995ca575f9d529251a2e6b9013b1b51ed5224"
+  integrity sha512-fP2KK+WZEKnUb2J6b5R2bUciZUhT9avu/tdE2BtO7CcocIRyx36+BzNM+tlfdoEZP+AepGNu9hot2jkDYMP+0Q==
+
 react-input-autosize@^2.1.2:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/react-input-autosize/-/react-input-autosize-2.2.1.tgz#ec428fa15b1592994fb5f9aa15bb1eb6baf420f8"
