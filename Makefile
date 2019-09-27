@@ -13,25 +13,21 @@ prepare:
 
 base-image: prepare
 	docker build --tag=texastribune/base:base \
-		--tag=texastribune/base:$(VERSION)-base \
 		--tag=texastribune/base:$(GIT_BRANCH)-base \
 		-f base/Dockerfile .
 
 base-image-no-cache: prepare
 	docker build --no-cache --tag=texastribune/base:base \
-		--tag=texastribune/base:$(VERSION)-base \
 		--tag=texastribune/base:$(GIT_BRANCH)-base \
 		-f base/Dockerfile .
 
 dev-image: base-image
 	docker build --tag=texastribune/base:dev \
-		--tag=texastribune/base:$(VERSION)-dev \
 		--tag=texastribune/base:$(GIT_BRANCH)-dev \
 	-f dev/Dockerfile .
 
 dev-image-no-cache: prepare
 	docker build --tag=texastribune/base:dev
-		--tag=texastribune/base:$(VERSION)-dev \
 		--tag=texastribune/base:$(GIT_BRANCH)-dev \
 	-f dev/Dockerfile .
 
