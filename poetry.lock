@@ -24,7 +24,7 @@ python-versions = "*"
 version = "1.10.0.dev8"
 
 [package.source]
-reference = 'private'
+reference = "private"
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
 
@@ -263,7 +263,7 @@ python-jose = "*"
 requests = "*"
 
 [package.source]
-reference = 'private'
+reference = "private"
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
 
@@ -415,11 +415,11 @@ Django = ">=1.8"
 
 [[package]]
 category = "main"
-description = "django-inline-actions adds actions to the InlineModelAdmin and ModelAdmin changelist."
+description = "django-inline-actions adds actions to each row of the ModelAdmin or InlineModelAdmin."
 name = "django-inline-actions"
 optional = false
-python-versions = "*"
-version = "1.0.0"
+python-versions = ">=3.5,<4.0"
+version = "2.2.0"
 
 [[package]]
 category = "main"
@@ -433,7 +433,7 @@ version = "1.0.8.dev2"
 Django = "*"
 
 [package.source]
-reference = 'private'
+reference = "private"
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
 
@@ -449,7 +449,7 @@ version = "2.2.19.dev13"
 django-staticfiles = "*"
 
 [package.source]
-reference = 'private'
+reference = "private"
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
 
@@ -529,7 +529,7 @@ version = "1.1.0.dev1"
 Django = ">=1.11"
 
 [package.source]
-reference = 'private'
+reference = "private"
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
 
@@ -1558,7 +1558,7 @@ python-versions = "*"
 version = "3.3.1"
 
 [metadata]
-content-hash = "08e3ddb1ee57364b1a071f37a32dbd752342d6e0ef85a04af53a4275b1c74ab6"
+content-hash = "3ce4ecd2fcf9749902dde2139a4fac090a9a377180069eb9501c4d368c1e1a39"
 python-versions = "^3.6"
 
 [metadata.hashes]
@@ -1601,7 +1601,7 @@ django-extensions = ["4aafdb865104eaa5d681b9976b36c52c9d441be89b7d782e40808f1c5c
 django-filter = ["3dafb7d2810790498895c22a1f31b2375795910680ac9c1432821cbedb1e176d", "a3014de317bef0cd43075a0f08dfa1d319a7ccc5733c3901fb860da70b0dda68"]
 django-flatblocks = ["35f7a1aa4434dbeb3ece4551f74567a520f09e168b0c1ebe2f18cd6f22889ada"]
 django-formtools = ["7703793f1675aa6e871f9fed147e8563816d7a5b9affdc5e3459899596217f7c", "cb2bd7c29c2104278e5a0e76f7ff256b9570acf11485d547ee0c1b35347359fb"]
-django-inline-actions = ["99061267176c4d6f448df64678ebc8c579d4f31ced67dd70443aaf5f0e0aa185"]
+django-inline-actions = ["b4ae5a119de23a1d6820293fdda7a74b9cf22a3f34138cb9805c9f0ba08cbfb1", "ddd81026560b0f42cfa16ff54b59390308795dae0ccf4916abec0a575ac4d290"]
 django-jet = []
 django-locking = []
 django-object-actions = ["57e67118ea9d7dee7cdfac42fb005fa0e0b087a7bbb9e25f1f2dfd0ddcc24016", "d40d59dc56a63c3118147f95fa1b1ccaff898c50163e81e4991c072beb61d175"]
