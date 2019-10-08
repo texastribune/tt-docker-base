@@ -435,7 +435,7 @@ description = "Prevents users from doing concurrent editing in Django. Works out
 name = "django-locking"
 optional = false
 python-versions = "*"
-version = "2.2.19.dev13"
+version = "2.2.19.dev14"
 
 [package.dependencies]
 django-staticfiles = "*"
@@ -655,7 +655,7 @@ description = "ECDSA cryptographic signature library (pure python)"
 name = "ecdsa"
 optional = false
 python-versions = "*"
-version = "0.13.2"
+version = "0.13.3"
 
 [[package]]
 category = "dev"
@@ -903,11 +903,11 @@ parso = ">=0.5.0"
 
 [[package]]
 category = "main"
-description = "A small but fast and easy to use stand-alone template engine written in pure python."
+description = "A very fast and expressive template engine."
 name = "jinja2"
 optional = false
 python-versions = "*"
-version = "2.10.1"
+version = "2.10.3"
 
 [package.dependencies]
 MarkupSafe = ">=0.23"
@@ -1549,7 +1549,7 @@ python-versions = "*"
 version = "3.3.1"
 
 [metadata]
-content-hash = "b18bcfee80236406e67f6fae0c05da2b1eca1703409ce1bddbd1bc35803fa2d4"
+content-hash = "2c33cbdd0699d08c7ad46a729f7874f09b1b88b636df79be25ba815c67a23290"
 python-versions = "^3.6"
 
 [metadata.hashes]
@@ -1613,7 +1613,7 @@ djangocms-text-ckeditor = ["583fe6bc858075278b927b4cac7e537b72071751b3ca35d2f60f
 djangorestframework = ["376f4b50340a46c15ae15ddd0c853085f4e66058f97e4dbe7d43ed62f5e60651", "c12869cfd83c33d579b17b3cb28a2ae7322a53c3ce85580c2a2ebe4e3f56c4fb"]
 djangorestframework-csv = ["2f008b20a44f2d3c37835ea5b5ddfe19f54394f07b9cb267c616a917a7f7e27c"]
 docutils = ["6c4f696463b79f1fb8ba0c594b63840ebd41f059e92b31957c46b74a4599b6d0", "9e4d7ecfc600058e07ba661411a2b7de2fd0fafa17d1a7f7361cd47b1175c827", "a2aeea129088da402665e92e0b25b04b073c04b2dce4ab65caaa38b7ce2e1a99"]
-ecdsa = ["20c17e527e75acad8f402290e158a6ac178b91b881f941fc6ea305bfdfb9657c", "5c034ffa23413ac923541ceb3ac14ec15a0d2530690413bff58c12b80e56d884"]
+ecdsa = ["163c80b064a763ea733870feb96f9dd9b92216cfcacd374837af18e4e8ec3d4d", "9814e700890991abeceeb2242586024d4758c8fc18445b194a49bd62d85861db"]
 entrypoints = ["589f874b313739ad35be6e0cd7efde2a4e9b6fea91edcc34e58ecbb8dbe56d19", "c70dd71abe5a8c85e55e12c19bd91ccfeec11a6e99044204511f9ed547d48451"]
 factory-boy = ["728df59b372c9588b83153facf26d3d28947fc750e8e3c95cefa9bed0e6394ee", "faf48d608a1735f0d0a3c9cbf536d64f9132b547dae7ba452c4d99a79e84a370"]
 fake-factory = ["8c1413671f86c1ffc5b2deabf09b320b532e41e105edfce7b503e7ab52464ba1", "ae5caf54c5f1a77c2130b2bb05cdb0d11add8249474b4f757c7065c2ef421868"]
@@ -1636,7 +1636,7 @@ ipython = ["c4ab005921641e40a68e405e286e7a1fcc464497e14d81b6914b4fd95e5dee9b", "
 ipython-genutils = ["72dd37233799e619666c9f639a9da83c34013a73e8bbc79a7a6348d93c61fab8", "eb2e116e75ecef9d4d228fdc66af54269afa26ab4463042e33785b887c628ba8"]
 itypes = ["c6e77bb9fd68a4bfeb9d958fea421802282451a25bac4913ec94db82a899c073"]
 jedi = ["786b6c3d80e2f06fd77162a07fed81b8baa22dde5d62896a790a331d6ac21a27", "ba859c74fa3c966a22f2aeebe1b74ee27e2a462f56d3f5f7ca4a59af61bfe42e"]
-jinja2 = ["065c4f02ebe7f7cf559e49ee5a95fb800a9e4528727aec6f24402a5374c65013", "14dd6caf1527abb21f08f86c784eac40853ba93edb79552aa1e4b8aef1b61c7b"]
+jinja2 = ["74320bb91f31270f9551d46522e33af46a80c3d619f4a4bf42b3164d30b5911f", "9fe95f19286cfefaa917656583d020be14e7859c6b0252588391e47db34527de"]
 jmespath = ["3720a4b1bd659dd2eecad0666459b9788813e032b83e7ba58578e48254e0a0e6", "bde2aef6f44302dfb30320115b17d030798de8c4110e28d5cf6cf91a7a31074c"]
 libthumbor = ["2ba48729e9e52fed235c6948f40ffd5c59c9bc74593ccf4d988972e4f4d750ee"]
 mailchimp3 = ["d7f610724a641c8bffe52a4bc42531b9a52e2e1feca0a516c25a91a38cfe686b", "ed1ae55ca1f1e9c129b3b3a5b7c7bbd7d587e69347560ad2f1d94a22e5d656e8"]
