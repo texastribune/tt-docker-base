@@ -3,6 +3,7 @@ ENV NODE_VERSION 8.11.3
 ENV NPM_CONFIG_PREFIX=/node_modules
 ENV PATH=$PATH:/node_modules/.bin
 ENV APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE False
+ENV PIP_NO_BINARY=psycopg2
 
 RUN \
   echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections && \
