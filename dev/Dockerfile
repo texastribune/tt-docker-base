@@ -20,11 +20,12 @@ RUN apt-get update -qq && \
 ENV PATH=/root/.poetry/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 COPY pyproject.toml poetry.lock /
 ENV POETRY_VERSION=0.12.14
+ENV PIP_NO_BINARY=psycopg2
 RUN curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python \
   && poetry config settings.virtualenvs.create false \
   && poetry install --no-dev
 ENV NPM_CONFIG_LOGLEVEL warn
-ENV NODE_VERSION 8.11.3
+ENV NODE_VERSION 12.13.0
 ENV NPM_CONFIG_PREFIX=/node_modules
 ENV PATH=$PATH:/node_modules/.bin
 ENV APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE False
@@ -32,7 +33,7 @@ ENV PIP_NO_BINARY=psycopg2
 
 RUN \
   echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections && \
-  echo "deb https://deb.nodesource.com/node_8.x stretch main" > /etc/apt/sources.list.d/nodesource.list && \
+  echo "deb https://deb.nodesource.com/node_12.x stretch main" > /etc/apt/sources.list.d/nodesource.list && \
   wget -qO- https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add - && \
   echo "deb https://dl.yarnpkg.com/debian/ stable main" > /etc/apt/sources.list.d/yarn.list && \
   wget -qO- https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
