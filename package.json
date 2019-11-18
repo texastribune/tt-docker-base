@@ -50,6 +50,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.0.0",
+    "@newswire/frames": "^0.3.1",
     "aplayer": "^1.10.1",
     "auth0-js": "^9.10.0",
     "axios": "^0.19.0",

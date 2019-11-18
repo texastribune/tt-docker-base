@@ -933,6 +933,11 @@
     call-me-maybe "^1.0.1"
     glob-to-regexp "^0.3.0"
 
+"@newswire/frames@^0.3.1":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@newswire/frames/-/frames-0.3.1.tgz#f2b3ad10e31a28e3126795f130f9d48144373a58"
+  integrity sha512-o+RiGzc/ibNPE1a51KYxqBPR/xwF6HrO/NlO3fLWZHEqMRPdjaA63fUwlO6EBnYSvE8W/DZQI/HbdqL+i7xN9A==
+
 "@nodelib/fs.scandir@2.1.2":
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.scandir/-/fs.scandir-2.1.2.tgz#1f981cd5b83e85cfdeb386fc693d4baab392fa54"
