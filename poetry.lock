@@ -24,7 +24,7 @@ python-versions = "*"
 version = "1.10.0.dev8"
 
 [package.source]
-reference = 'private'
+reference = "private"
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
 
@@ -255,7 +255,7 @@ python-jose = "*"
 requests = "*"
 
 [package.source]
-reference = 'private'
+reference = "private"
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
 
@@ -264,8 +264,13 @@ category = "main"
 description = "Keep track of failed login attempts in Django-powered sites."
 name = "django-axes"
 optional = false
-python-versions = "*"
-version = "1.3.6"
+python-versions = "~=3.6"
+version = "5.0.20"
+
+[package.dependencies]
+django = ">=1.11"
+django-appconf = ">=1.0.3"
+django-ipware = ">=2.0.2"
 
 [[package]]
 category = "main"
@@ -415,6 +420,14 @@ version = "2.2.0"
 
 [[package]]
 category = "main"
+description = "A Django utility application that returns client's real IP address"
+name = "django-ipware"
+optional = false
+python-versions = "*"
+version = "2.1.0"
+
+[[package]]
+category = "main"
 description = "Modern template for Django admin interface with improved functionality"
 name = "django-jet"
 optional = false
@@ -425,7 +438,7 @@ version = "1.0.8.dev2"
 Django = "*"
 
 [package.source]
-reference = 'private'
+reference = "private"
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
 
@@ -441,7 +454,7 @@ version = "2.2.19.dev14"
 django-staticfiles = "*"
 
 [package.source]
-reference = 'private'
+reference = "private"
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
 
@@ -521,7 +534,7 @@ version = "1.1.0.dev1"
 Django = ">=1.11"
 
 [package.source]
-reference = 'private'
+reference = "private"
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
 
@@ -1549,7 +1562,7 @@ python-versions = "*"
 version = "3.3.1"
 
 [metadata]
-content-hash = "fdbe5d0e347a90046270fd7121cc1879ec3d0a16931bf63b6ccbd0f82d73c540"
+content-hash = "619d1ad7b30e5cc50497d9a0492f396fb68f3e4f498232c2a2a40defc3c8b7f9"
 python-versions = "^3.7"
 
 [metadata.hashes]
@@ -1577,7 +1590,7 @@ django = ["665457d4146bbd34ae9d2970fa3b37082d7b225b0671bfd24c337458f229db78", "b
 django-admin-sortable2 = ["11e44585de2eb375eb9dab06d399d6da058362949b09c80c5a4a0bf9aafe68c2"]
 django-appconf = ["35f13ca4d567f132b960e2cd4c832c2d03cb6543452d34e29b7ba10371ba80e3", "c98a7af40062e996b921f5962a1c4f3f0c979fa7885f7be4710cceb90ebe13a6"]
 django-auth0-client = []
-django-axes = ["79e15f6b25430c4fd52a5459379640dfcfde5d3eab9e11f62ccdc71406cdb530"]
+django-axes = ["26ed34aca7bbe270e806fe4fcc09109318cb687e3abdc340689afe5661ab50c4", "506f5d25e08daf755f215b89067b6a278499b71279671d49274e17fe4f3c3757"]
 django-classy-tags = ["38b4546a8053499e2fef7af679a58d7c868298717d645b8b8227acba5fd4bf2b"]
 django-cms = ["0f4dca88de96c5d780b0297c8f27f5759af1b6c89ca19bae499818606d1f84e3", "a3df90ff352b77876edc6f16b670d408268ba9096cb8195ce96ba6e1b44f4061"]
 django-codemirror-widget = ["4d24ef00c61677171117e7c8d49d8281cc08bd3fd6be6a4ea584def08edcb9b8"]
@@ -1592,6 +1605,7 @@ django-filter = ["3dafb7d2810790498895c22a1f31b2375795910680ac9c1432821cbedb1e17
 django-flatblocks = ["35f7a1aa4434dbeb3ece4551f74567a520f09e168b0c1ebe2f18cd6f22889ada"]
 django-formtools = ["7703793f1675aa6e871f9fed147e8563816d7a5b9affdc5e3459899596217f7c", "cb2bd7c29c2104278e5a0e76f7ff256b9570acf11485d547ee0c1b35347359fb"]
 django-inline-actions = ["b4ae5a119de23a1d6820293fdda7a74b9cf22a3f34138cb9805c9f0ba08cbfb1", "ddd81026560b0f42cfa16ff54b59390308795dae0ccf4916abec0a575ac4d290"]
+django-ipware = ["a7c7a8fd019dbdc9c357e6e582f65034e897572fc79a7e467674efa8aef9d00b"]
 django-jet = []
 django-locking = []
 django-object-actions = ["5b0398bbc8071e923d96348d440b7a56083583c8b4d9022e72be03af87a93a3b", "75baab881ce0bc0873126bf42a7d683b17ab5e26971cecc003a295eddc5c8f26"]
