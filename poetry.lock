@@ -407,6 +407,17 @@ Django = ">=1.8"
 
 [[package]]
 category = "main"
+description = "Run checks on services like databases, queue servers, celery processes, etc."
+name = "django-health-check"
+optional = false
+python-versions = "*"
+version = "3.11.1"
+
+[package.dependencies]
+django = ">=1.11"
+
+[[package]]
+category = "main"
 description = "django-inline-actions adds actions to each row of the ModelAdmin or InlineModelAdmin."
 name = "django-inline-actions"
 optional = false
@@ -1549,7 +1560,7 @@ python-versions = "*"
 version = "3.3.1"
 
 [metadata]
-content-hash = "fdbe5d0e347a90046270fd7121cc1879ec3d0a16931bf63b6ccbd0f82d73c540"
+content-hash = "8c30c01e1b3598f0aed9bbb8e5be3562656766c8d5a8a27790d775572310d55a"
 python-versions = "^3.7"
 
 [metadata.hashes]
@@ -1591,6 +1602,7 @@ django-extensions = ["a9db7c56a556d244184f589f2437b4228de86ee45e5ebb837fb20c6d54
 django-filter = ["3dafb7d2810790498895c22a1f31b2375795910680ac9c1432821cbedb1e176d", "a3014de317bef0cd43075a0f08dfa1d319a7ccc5733c3901fb860da70b0dda68"]
 django-flatblocks = ["35f7a1aa4434dbeb3ece4551f74567a520f09e168b0c1ebe2f18cd6f22889ada"]
 django-formtools = ["7703793f1675aa6e871f9fed147e8563816d7a5b9affdc5e3459899596217f7c", "cb2bd7c29c2104278e5a0e76f7ff256b9570acf11485d547ee0c1b35347359fb"]
+django-health-check = ["06efac9dcd30eb83c3d0184b834d7d86467bdb710da361f20c2c28853d7e6a5e", "c9bcc1b3ef77db3a9ba2d33585916707963cbb958220689f77741235f5fa553a"]
 django-inline-actions = ["b4ae5a119de23a1d6820293fdda7a74b9cf22a3f34138cb9805c9f0ba08cbfb1", "ddd81026560b0f42cfa16ff54b59390308795dae0ccf4916abec0a575ac4d290"]
 django-jet = []
 django-locking = []
