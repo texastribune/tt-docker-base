@@ -11,6 +11,8 @@
     "@testing-library/jest-dom": "^4.1.0",
     "@testing-library/react": "^9.1.3",
     "@texastribune/queso-tools": "^2.1.0",
+    "@typescript-eslint/eslint-plugin": "^2.11.0",
+    "@typescript-eslint/parser": "^2.11.0",
     "autoprefixer": "^8.3.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
