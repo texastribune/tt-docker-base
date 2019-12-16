@@ -50,6 +50,7 @@
   "dependencies": {
     "@babel/runtime": "^7.7.6",
     "@newswire/frames": "^0.3.1",
+    "@texastribune/text-balancer": "^1.0.1",
     "aplayer": "^1.10.1",
     "auth0-js": "^9.10.0",
     "axios": "^0.19.0",
@@ -71,7 +72,6 @@
     "redux": "^4.0.0",
     "redux-thunk": "^2.3.0",
     "reframe.js": "^2.2.4",
-    "text-balancer": "^1.0.5",
     "ttfiles": "git://github.com/texastribune/files.git#v2.5.0",
     "underscore": "^1.8.3",
     "validator": "^11.1.0"

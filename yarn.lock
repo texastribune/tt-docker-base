@@ -1207,6 +1207,11 @@
     svgo "^1.2.2"
     svgstore "^3.0.0-2"
 
+"@texastribune/text-balancer@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@texastribune/text-balancer/-/text-balancer-1.0.1.tgz#be2a97bb9a47ea2be63defcf0c531cfcd6c054d4"
+  integrity sha512-k0sduKv3pyxHLStoSnFmrQGlEn5vPDGRujYUv9DUpQEv67Cvz9365jBJTBLXlbZ6wP1fOBNW2Vs6HmMgP6+jqQ==
+
 "@types/babel__core@^7.1.0":
   version "7.1.2"
   resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.1.2.tgz#608c74f55928033fce18b99b213c16be4b3d114f"
@@ -8918,11 +8923,6 @@ test-exclude@^5.2.3:
     minimatch "^3.0.4"
     read-pkg-up "^4.0.0"
     require-main-filename "^2.0.0"
-
-text-balancer@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/text-balancer/-/text-balancer-1.0.5.tgz#606b5a8cb941565df0cd841353cba520b856e884"
-  integrity sha1-YGtajLlBVl3wzYQTU8ulILhW6IQ=
 
 text-table@^0.2.0:
   version "0.2.0"
