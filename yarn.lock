@@ -9070,9 +9070,9 @@ tsutils@^3.17.1:
   dependencies:
     tslib "^1.8.1"
 
-"ttfiles@git://github.com/texastribune/files.git#v2.4.7":
-  version "2.4.7"
-  resolved "git://github.com/texastribune/files.git#79f3ce6ebd860c514f3c8c9e5ac61ea2959143a1"
+"ttfiles@git://github.com/texastribune/files.git#v2.5.0":
+  version "2.5.0"
+  resolved "git://github.com/texastribune/files.git#66a3c1c1a4f28eec283d3668b947f38f8fcda147"
   dependencies:
     elements "git://github.com/tjb346/elements.git#v1.1.7"
 
