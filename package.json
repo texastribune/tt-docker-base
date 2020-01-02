@@ -10,7 +10,7 @@
     "@testing-library/dom": "^6.10.1",
     "@testing-library/jest-dom": "^4.1.0",
     "@testing-library/react": "^9.1.3",
-    "@texastribune/queso-tools": "^2.1.0",
+    "@texastribune/queso-tools": "^2.1.1",
     "@typescript-eslint/eslint-plugin": "^2.11.0",
     "@typescript-eslint/parser": "^2.11.0",
     "babel-core": "^7.0.0-bridge.0",
@@ -42,7 +42,7 @@
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "redux-mock-store": "^1.3.0",
     "typescript": "^3.7.3",
-    "webpack": "^4.41.2",
+    "webpack": "^4.41.4",
     "webpack-assets-manifest": "^3.0.1",
     "webpack-cli": "^3.3.10",
     "webpack-sources": "^1.1.0"
