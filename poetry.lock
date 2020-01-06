@@ -24,7 +24,7 @@ python-versions = "*"
 version = "1.10.0.dev8"
 
 [package.source]
-reference = 'private'
+reference = "private"
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
 
@@ -258,7 +258,7 @@ python-jose = "*"
 requests = "*"
 
 [package.source]
-reference = 'private'
+reference = "private"
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
 
@@ -439,7 +439,7 @@ version = "1.0.8.dev2"
 Django = "*"
 
 [package.source]
-reference = 'private'
+reference = "private"
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
 
@@ -455,7 +455,7 @@ version = "2.2.19.dev14"
 django-staticfiles = "*"
 
 [package.source]
-reference = 'private'
+reference = "private"
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
 
@@ -535,7 +535,7 @@ version = "1.1.0.dev1"
 Django = ">=1.11"
 
 [package.source]
-reference = 'private'
+reference = "private"
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
 
@@ -799,18 +799,15 @@ six = ">=1.9.0"
 
 [[package]]
 category = "main"
-description = "Google Authentication Library"
+description = "Google Authentication Library: httplib2 transport"
 name = "google-auth-httplib2"
 optional = false
 python-versions = "*"
-version = "0.0.2"
+version = "0.0.3"
 
 [package.dependencies]
 google-auth = "*"
-pyasn1 = ">=0.1.7"
-pyasn1-modules = ">=0.0.5"
-rsa = ">=3.1.4"
-six = ">=1.9.0"
+httplib2 = ">=0.9.1"
 
 [[package]]
 category = "main"
@@ -1566,7 +1563,7 @@ python-versions = "*"
 version = "3.3.1"
 
 [metadata]
-content-hash = "213a01878324034c26f4e9321704863f746a637817d6ba6a10f9ece389a62a3b"
+content-hash = "026213569ed37bfa6e175ce3820cecd0e2741fbd567c7cac2dbaa2457c3ead7c"
 python-versions = "^3.7"
 
 [metadata.hashes]
@@ -1643,7 +1640,7 @@ fudge = ["5a9335d2c0bf29ebd646d4bd102b335107ce3566d278270453001f3e648b63e4", "d9
 future = ["b1bead90b70cf6ec3f0710ae53a525360fa360d306a86583adc6bf83a4db537d"]
 google-api-python-client = ["441d638e5fff7d9f97587aa99387efd0ee13f577c9d4d50820dfda4bb80d0e64", "bb1f27740f6596f8272a2e1033d93d68e27e8ed5d22d6ab957e3f1d3f8ce05f6"]
 google-auth = ["bdf3af2b19368fc50ed0542b891bf64c2e92d8f207d92064a6cf1e1a1014d761", "bf45ce767ac45704372a6d3677b4a036594a935f4e460e58c7accc3c36925f06"]
-google-auth-httplib2 = ["312464fb81d2a941aa6541410ef61de9fa788753414ee5f2f1d74153d9c1540d", "faacd855092a4c792e8cf3d3b4ed939518c495373a9f9cd31985c3166558452b"]
+google-auth-httplib2 = ["098fade613c25b4527b2c08fa42d11f3c2037dda8995d86de0745228e965d445", "f1c437842155680cf9918df9bc51c1182fda41feef88c34004bd1978c8157e08"]
 html5lib = ["20b159aa3badc9d5ee8f5c647e5efd02ed2a66ab8d354930bd9ff139fc1dc0a3", "66cb0dcfdbbc4f9c3ba1a63fdb511ffdbd4f513b2b6d81b80cd26ce6b3fb3736"]
 httplib2 = ["34537dcdd5e0f2386d29e0e2c6d4a1703a3b982d34c198a5102e6e5d6194b107", "409fa5509298f739b34d5a652df762cb0042507dc93f6633e306b11289d6249d"]
 idna = ["c357b3f628cf53ae2c4c05627ecc484553142ca23264e593d327bcde5e9c3407", "ea8b7f6188e6fa117537c3df7da9fc686d485087abf6ac197f9c46432f7e4a3c"]
