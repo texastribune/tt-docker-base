@@ -303,10 +303,7 @@ description = "Django form widget library for using CodeMirror on textarea"
 name = "django-codemirror-widget"
 optional = false
 python-versions = "*"
-version = "0.4.1"
-
-[package.dependencies]
-setuptools = "*"
+version = "0.5.0"
 
 [[package]]
 category = "main"
@@ -1180,6 +1177,14 @@ version = "2.4.6"
 
 [[package]]
 category = "main"
+description = "A Python SOCKS client module. See https://github.com/Anorov/PySocks for more information."
+name = "pysocks"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "1.7.1"
+
+[[package]]
+category = "main"
 description = "Extensions to the standard Python datetime module"
 name = "python-dateutil"
 optional = false
@@ -1442,13 +1447,14 @@ category = "main"
 description = "Twitter library for python"
 name = "tweepy"
 optional = false
-python-versions = "*"
-version = "3.5.0"
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+version = "3.8.0"
 
 [package.dependencies]
-requests = ">=2.4.3"
-requests-oauthlib = ">=0.4.1"
-six = ">=1.7.3"
+PySocks = ">=1.5.7"
+requests = ">=2.11.1"
+requests-oauthlib = ">=0.7.0"
+six = ">=1.10.0"
 
 [[package]]
 category = "main"
@@ -1531,7 +1537,7 @@ python-versions = "*"
 version = "3.3.1"
 
 [metadata]
-content-hash = "662c7567ca1d4f00f185d76f541651ac27ff1c54b1ee13d4ab00f8e4d3b9633b"
+content-hash = "1b0a2d4abcd85e3f3697e9a12b0c2a01319dabfdad83a85b2a6222e7a509ec11"
 python-versions = "^3.7"
 
 [metadata.hashes]
@@ -1562,7 +1568,7 @@ django-auth0-client = []
 django-axes = ["79e15f6b25430c4fd52a5459379640dfcfde5d3eab9e11f62ccdc71406cdb530"]
 django-classy-tags = ["38b4546a8053499e2fef7af679a58d7c868298717d645b8b8227acba5fd4bf2b"]
 django-cms = ["0f4dca88de96c5d780b0297c8f27f5759af1b6c89ca19bae499818606d1f84e3", "a3df90ff352b77876edc6f16b670d408268ba9096cb8195ce96ba6e1b44f4061"]
-django-codemirror-widget = ["4d24ef00c61677171117e7c8d49d8281cc08bd3fd6be6a4ea584def08edcb9b8"]
+django-codemirror-widget = ["a2f7facf299f3f51dff7227cc9850905b899e08485698d3f4fad110a7ad628be"]
 django-cors-headers = ["5b80bf0f8d7fc6e2bcb4f40781d5ff3661961bbf1982e52daec77241dea3b890", "ebf3e2cf25aa6993b959a8e6a87828ebb3c8fe5bc3ec4a2d6e65f3b8d9b4212c"]
 django-coverage = ["eee56c1465b2ece0a066ea2514c50039462f8fe1ea58e59adc0dfda14b30628b"]
 django-crispy-forms = ["5952bab971110d0b86c278132dae0aa095beee8f723e625c3d3fa28888f1675f", "705ededc554ad8736157c666681165fe22ead2dec0d5446d65fc9dd976a5a876"]
@@ -1648,6 +1654,7 @@ pyflakes = ["17dbeb2e3f4d772725c777fabc446d5634d1038f234e77343108ce445ea69ce0", 
 pygments = ["2a3fe295e54a20164a9df49c75fa58526d3be48e14aceba6d6b1e8ac0bfd6f1b", "98c8aa5a9f778fcd1026a17361ddaf7330d1b7c62ae97c3bb0ae73e0b9b6b0fe"]
 pylibmc = ["16255595616a6d78cd786a55cc6431da5b7accf46512df854712a0cdbb3acfaa"]
 pyparsing = ["4c830582a84fb022400b85429791bc551f1f4871c33f23e44f353119e92f969f", "c342dccb5250c08d45fd6f8b4a559613ca603b57498511740e65cd11a2e7dcec"]
+pysocks = ["08e69f092cc6dbe92a0fdd16eeb9b9ffbc13cadfe5ca4c7bd92ffb078b293299", "2725bd0a9925919b9b51739eea5f9e2bae91e83288108a9ad338b2e3a4435ee5", "3f8804571ebe159c380ac6de37643bb4685970655d3bba243530d6558b799aa0"]
 python-dateutil = ["73ebfe9dbf22e832286dafa60473e4cd239f8592f699aa5adaf10050e6e1823c", "75bb3f31ea686f1197762692a9ee6a7550b59fc6ca3a1f4b5d7e32fb98e2da2a"]
 python-jose = ["29701d998fe560e52f17246c3213a882a4a39da7e42c7015bcc1f7823ceaff1c", "ed7387f0f9af2ea0ddc441d83a6eb47a5909bd0c8a72ac3250e75afec2cc1371"]
 python-magic = ["f2674dcfad52ae6c49d4803fa027809540b130db1dec928cfbb9240316831375", "f3765c0f582d2dfc72c15f3b5a82aecfae9498bd29ca840d72f37d7bd38bfcd5"]
@@ -1673,7 +1680,7 @@ sqlparse = ["40afe6b8d4b1117e7dff5504d7a8ce07d9a1b15aeeade8a2d10f130a834f8177", 
 tblib = ["229bee3754cb5d98b4837dd5c4405e80cfab57cb9f93220410ad367f8b352344", "e222f44485d45ed13fada73b57775e2ff9bd8af62160120bbb6679f5ad80315b"]
 text-unidecode = ["1311f10e8b895935241623731c2ba64f4c455287888b18189350b67134a822e8", "bad6603bb14d279193107714b288be206cac565dfa49aa5b105294dd5c4aab93"]
 traitlets = ["70b4c6a1d9019d7b4f6846832288f86998aa3b9207c6821f3578a6a6a467fe44", "d023ee369ddd2763310e4c3eae1ff649689440d4ae59d7485eb4cfbbe3e359f7"]
-tweepy = ["12449b5ca16b0be6a3ea68fb41992627227b48bbad8cd7d5912039340d36badc", "f00ccf5f48c30d559ce0b750dfe3b2df6668dc799d8ce276fd90bfaa68845a58"]
+tweepy = ["8abd828ba51a85a2b5bb7373715d6d3bb32d18ac624e3a4db02e4ef8ab48316b", "ecc7f200c86127903017e48824efd008734814e95f3e8e9b45ce0f4120dd08db"]
 unicodecsv = ["018c08037d48649a0412063ff4eda26eaa81eff1546dbffa51fa5293276ff7fc"]
 uritemplate = ["07620c3f3f8eed1f12600845892b0e036a2420acf513c53f7de0abd911a5894f", "5af8ad10cec94f215e3f48112de2022e1d5a37ed427fbd88652fa908f2ab7cae"]
 urllib3 = ["2393a695cd12afedd0dcb26fe5d50d0cf248e5a66f75dbd89a3d4eb333a61af4", "a637e5fae88995b256e3409dc4d52c2e2e0ba32c42a6365fee8bbd2238de3cfb"]
