@@ -8835,9 +8835,9 @@ tslib@^1.9.0:
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.10.0.tgz#c3c19f95973fb0a62973fb09d90d961ee43e5c8a"
   integrity sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==
 
-"ttfiles@git://github.com/texastribune/files.git#v2.5.2":
-  version "2.5.2"
-  resolved "git://github.com/texastribune/files.git#d7cbfb28eae2f17d6e0692cfa155b4e53813c0b2"
+"ttfiles@git://github.com/texastribune/files.git#v2.5.3":
+  version "2.5.3"
+  resolved "git://github.com/texastribune/files.git#30c294b06dbefd190ea13a7e35984c83bf474030"
   dependencies:
     elements "git://github.com/tjb346/elements.git#v1.1.7"
 
