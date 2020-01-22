@@ -24,7 +24,7 @@ python-versions = "*"
 version = "1.10.0.dev8"
 
 [package.source]
-reference = 'private'
+reference = "private"
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
 
@@ -258,7 +258,7 @@ python-jose = "*"
 requests = "*"
 
 [package.source]
-reference = 'private'
+reference = "private"
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
 
@@ -439,7 +439,7 @@ version = "1.0.8.dev2"
 Django = "*"
 
 [package.source]
-reference = 'private'
+reference = "private"
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
 
@@ -455,7 +455,7 @@ version = "2.2.19.dev14"
 django-staticfiles = "*"
 
 [package.source]
-reference = 'private'
+reference = "private"
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
 
@@ -535,7 +535,7 @@ version = "1.1.0.dev1"
 Django = ">=1.11"
 
 [package.source]
-reference = 'private'
+reference = "private"
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
 
@@ -1317,11 +1317,11 @@ description = "Python client for Sentry (https://getsentry.com)"
 name = "sentry-sdk"
 optional = false
 python-versions = "*"
-version = "0.6.2"
+version = "0.14.1"
 
 [package.dependencies]
 certifi = "*"
-urllib3 = "*"
+urllib3 = ">=1.10.0"
 
 [[package]]
 category = "main"
@@ -1566,7 +1566,7 @@ python-versions = "*"
 version = "3.3.1"
 
 [metadata]
-content-hash = "213a01878324034c26f4e9321704863f746a637817d6ba6a10f9ece389a62a3b"
+content-hash = "c34b30b849c57905c3f7a3e178c348eaf1e5fb78637206f8fd89f4a24eb5d3e5"
 python-versions = "^3.7"
 
 [metadata.hashes]
@@ -1695,7 +1695,7 @@ requests = ["502a824f31acdacb3a35b6690b5fbf0bc41d63a24a45c4004352b0242707598e", 
 requests-oauthlib = ["7f71572defaecd16372f9006f33c2ec8c077c3cfa6f5911a9a90202beb513f3d", "b4261601a71fd721a8bd6d7aa1cc1d6a8a93b4a9f5e96626f8e4d91e8beeaa6a", "fa6c47b933f01060936d87ae9327fead68768b69c6c9ea2109c48be30f2d4dbc"]
 rsa = ["25df4e10c263fb88b5ace923dd84bf9aa7f5019687b5e55382ffcdb8bede9db5", "43f682fea81c452c98d09fc316aae12de6d30c4b5c84226642cf8f8fd1c93abd"]
 s3transfer = ["6efc926738a3cd576c2a79725fed9afde92378aa5c6a957e3af010cb019fac9d", "b780f2411b824cb541dbcd2c713d0cb61c7d1bcadae204cdddda2b35cef493ba"]
-sentry-sdk = ["56118f4c3bd3412e47d1969997580df2f27ae951df949d07f0c2120cefe40b00", "b5a4cd2bb9e86c21e1f4b3fef856785a1075a5430b10a37385c3dce47aaf0649"]
+sentry-sdk = ["b06dd27391fd11fb32f84fe054e6a64736c469514a718a99fb5ce1dff95d6b28", "e023da07cfbead3868e1e2ba994160517885a32dfd994fc455b118e37989479b"]
 simplejson = ["0fe3994207485efb63d8f10a833ff31236ed27e3b23dadd0bf51c9900313f8f2", "17163e643dbf125bb552de17c826b0161c68c970335d270e174363d19e7ea882", "1d1e929cdd15151f3c0b2efe953b3281b2fd5ad5f234f77aca725f28486466f6", "1d346c2c1d7dd79c118f0cc7ec5a1c4127e0c8ffc83e7b13fc5709ff78c9bb84", "1ea59f570b9d4916ae5540a9181f9c978e16863383738b69a70363bc5e63c4cb", "1fbba86098bbfc1f85c5b69dc9a6d009055104354e0d9880bb00b692e30e0078", "229edb079d5dd81bf12da952d4d825bd68d1241381b37d3acf961b384c9934de", "22a7acb81968a7c64eba7526af2cf566e7e2ded1cb5c83f0906b17ff1540f866", "2b4b2b738b3b99819a17feaf118265d0753d5536049ea570b3c43b51c4701e81", "4cf91aab51b02b3327c9d51897960c554f00891f9b31abd8a2f50fd4a0071ce8", "4fd5f79590694ebff8dc980708e1c182d41ce1fda599a12189f0ca96bf41ad70", "5cfd495527f8b85ce21db806567de52d98f5078a8e9427b18e251c68bd573a26", "60aad424e47c5803276e332b2a861ed7a0d46560e8af53790c4c4fb3420c26c2", "7739940d68b200877a15a5ff5149e1599737d6dd55e302625650629350466418", "7cce4bac7e0d66f3a080b80212c2238e063211fe327f98d764c6acbc214497fc", "8027bd5f1e633eb61b8239994e6fc3aba0346e76294beac22a892eb8faa92ba1", "86afc5b5cbd42d706efd33f280fec7bd7e2772ef54e3f34cf6b30777cd19a614", "87d349517b572964350cc1adc5a31b493bbcee284505e81637d0174b2758ba17", "8de378d589eccbc75941e480b4d5b4db66f22e4232f87543b136b1f093fff342", "926bcbef9eb60e798eabda9cd0bbcb0fca70d2779aa0aa56845749d973eb7ad5", "9a126c3a91df5b1403e965ba63b304a50b53d8efc908a8c71545ed72535374a3", "ad8dd3454d0c65c0f92945ac86f7b9efb67fa2040ba1b0189540e984df904378", "d140e9376e7f73c1f9e0a8e3836caf5eec57bbafd99259d56979da05a6356388", "da00675e5e483ead345429d4f1374ab8b949fba4429d60e71ee9d030ced64037", "daaf4d11db982791be74b23ff4729af2c7da79316de0bebf880fa2d60bcc8c5a", "f4b64a1031acf33e281fd9052336d6dad4d35eee3404c95431c8c6bc7a9c0588", "fc046afda0ed8f5295212068266c92991ab1f4a50c6a7144b69364bdee4a0159", "fc9051d249dd5512e541f20330a74592f7a65b2d62e18122ca89bf71f94db748"]
 six = ["0ff78c403d9bccf5a425a6d31a12aa6b47f1c21ca4dc2573a7e2f32a97335eb1", "105f8d68616f8248e24bf0e9372ef04d3cc10104f1980f54d57b2ce73a5ad56a"]
 snowballstemmer = ["209f257d7533fdb3cb73bdbd24f436239ca3b2fa67d56f6ff88e86be08cc5ef0", "df3bac3df4c2c01363f3dd2cfa78cce2840a79b9f1c2d2de9ce8d31683992f52"]
