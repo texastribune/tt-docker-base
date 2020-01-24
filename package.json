@@ -56,11 +56,13 @@
     "axios": "^0.19.0",
     "core-js": "3",
     "date-fns": "^1.29.0",
+    "fast-async": "7",
     "fontfaceobserver": "^2.0.13",
     "intersection-observer": "^0.5.1",
     "lazysizes": "^4.1.4",
     "lz-string": "^1.4.4",
     "mapbox-gl": "^1.5.0",
+    "nodent-runtime": "^3.2.1",
     "prop-types": "^15.6.2",
     "react": "^16.9.0",
     "react-content-loader": "^4.3.2",
@@ -72,7 +74,7 @@
     "redux": "^4.0.0",
     "redux-thunk": "^2.3.0",
     "reframe.js": "^2.2.4",
-    "ttfiles": "git://github.com/texastribune/files.git#v2.5.3",
+    "ttfiles": "git://github.com/texastribune/files.git#v2.5.4",
     "underscore": "^1.8.3",
     "validator": "^11.1.0"
   }
