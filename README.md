@@ -28,7 +28,7 @@ How to make updates:
 1. If this is a small change that's very unlikely to affect anyone else then merge this
    branch into `master` and skip the next step and any remaining step involving a PR.
 1. Push your branch. Docker Hub will build the image with the same names as the previous
-   step. Now anyone else can review that PR once the image tagged with the branch name has been built. You can check the status of the builds on [Docker Hub](https://cloud.docker.com/u/texastribune/repository/docker/texastribune/base/general).
+   step. Now anyone else can review that PR once the image tagged with the branch name has been built. You can check the status of the builds on [Docker Hub](https://hub.docker.com/repository/docker/texastribune/base). _You'll see a more accurate build log when logged-in under an account that is affiliated with the texastribune org in Docker Hub._
 1. After the related `texastribune` PR is complete and approved merge this branch to
    master. Delete the branch.
 1. Immediately bump the version in the [VERSION file](VERSION), commit and tag: `make tag`. There
