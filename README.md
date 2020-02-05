@@ -8,8 +8,13 @@ How to make updates:
 1. Create a new branch.
 1. If you're adding a python dependency:
     1. Run `make base-shell`
-    1. Run `poetry add --dev <package>` (drop the `--dev` if it's a production
-       dependency) 
+    1. For new opackages, run `poetry add --dev <package>` (drop the `--dev` if it's a production
+       dependency).  
+       
+       To specify the version        
+       `poetry add packagename@2.0.5` 
+       or
+       `poetry add "packagename=2.0.5"`
     1. For other operations see the
        [poetry docs](https://poetry.eustace.io/docs/)
     1. Maybe edit `pyproject.toml` by hand if necessary
