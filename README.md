@@ -21,8 +21,7 @@ How to make updates:
     1. Run `poetry lock`
 1. If it's a node dependency:
     1. Run `make dev-shell` 
-    1. `yarn add <dependency name>`
-    1. Or do whatever node/yarn things you people do ;-)
+    1. `npm install <dependency name> --<save/save-dev>`
 1. Run `make images`. This will create and tag 
    images locally based on the name of the git branch. So if your branch is `upgrade-drf`
    the Docker image names will be `texastribune/base:upgrade-drf-dev` and `texastribune/base:upgrade-drf-base`. You don't need to wait
