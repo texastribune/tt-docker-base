@@ -21,6 +21,7 @@ How to make updates:
     1. Run `poetry lock`
 1. If it's a node dependency:
     1. Run `make dev-shell` 
+    1. Run `cd node` 
     1. `npm install <dependency name> --<save/save-dev>`
 1. Run `make images`. This will create and tag 
    images locally based on the name of the git branch. So if your branch is `upgrade-drf`
