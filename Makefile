@@ -35,4 +35,4 @@ base-shell: base-image
 	docker run -it --rm --volume=$$(pwd)/poetry.lock:/poetry.lock --volume=$$(pwd)/pyproject.toml:/pyproject.toml texastribune/base:base bash
 
 dev-shell: dev-image
-	docker run -it --rm --volume=$$(pwd)/package.json:/package.json --volume=$$(pwd)/package-lock.json:/package-lock.json texastribune/base:dev bash
+	docker run -it --rm --volume=$$(pwd)/node:/node texastribune/base:dev bash

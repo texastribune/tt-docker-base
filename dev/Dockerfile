@@ -45,5 +45,8 @@ WORKDIR /
 
 RUN poetry install
 
-COPY package.json package-lock.json /
+COPY node /node
+WORKDIR /node
 RUN npm install
+RUN cp -r node_modules /
+WORKDIR /
