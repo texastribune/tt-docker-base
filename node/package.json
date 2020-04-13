@@ -60,7 +60,7 @@
     "@newswire/frames": "^0.3.1",
     "@texastribune/text-balancer": "^1.0.1",
     "aplayer": "^1.10.1",
-    "auth0-js": "^9.10.0",
+    "auth0-js": "^9.13.2",
     "axios": "^0.19.0",
     "core-js": "3",
     "date-fns": "^1.29.0",
