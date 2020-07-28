@@ -1,55 +1,138 @@
 
-Base images
+tt-docker-base
 ===========
 
-How to make updates:
+> Base image of dependencies
 
-1. `git pull origin master`. 
-1. Create a new branch.
-1. If you're adding a python dependency:
-    1. Run `make base-shell`
-    1. For new opackages, run `poetry add --dev <package>` (drop the `--dev` if it's a production
-       dependency).  
-       
-       To specify the version        
-       `poetry add packagename@2.0.5` 
-       or
-       `poetry add "packagename=2.0.5"`
-    1. For other operations see the
-       [poetry docs](https://poetry.eustace.io/docs/)
-    1. Maybe edit `pyproject.toml` by hand if necessary
-    1. Run `poetry lock`
-1. If it's a node dependency:
-    1. Run `make dev-shell` 
-    1. Run `cd node` 
-    1. `npm install <dependency name> --<save/save-dev>`
-1. Run `make images`. This will create and tag 
-   images locally based on the name of the git branch. So if your branch is `upgrade-drf`
-   the Docker image names will be `texastribune/base:upgrade-drf-dev` and `texastribune/base:upgrade-drf-base`. You don't need to wait
-   for Docker Hub to build the image to test with it locally. You can update
-   `BASE_PRODUCTION_VERSION` and `BASE_DEVELOPMENT_VERSION` on your `texastribune`
-   PR to `upgrade-drf-base` and `upgrade-drf-dev` respectively.
-1. Commit your changes to that branch.
-1. If this is a small change that's very unlikely to affect anyone else then merge this
-   branch into `master` and skip the next step and any remaining step involving a PR.
-1. Push your branch. Docker Hub will build the image with the same names as the previous
-   step. Now anyone else can review that PR once the image tagged with the branch name has been built. You can check the status of the builds on [Docker Hub](https://hub.docker.com/repository/docker/texastribune/base). _You'll see a more accurate build log when logged-in under an account that is affiliated with the texastribune org in Docker Hub._
-1. After the related `texastribune` PR is complete and approved merge this branch to
-   master. Delete the branch.
-1. Immediately bump the version in the [VERSION file](VERSION), commit and tag: `make tag`. There
-   should be as little gap as possible between this step and the previous one so as to
-   avoid conflicts with other committers. You don't need to push anything. The `make tag` command will 
-   push it for you.
-1. Change your related `texastribune` PR to use the tag instead of the branch name. See
-   the `texastribune` README for the locations to change the version. You may want to wait until the Docker Hub build is complete before pushing your `texastribune` PR image version because the CI tests will fail if the image isn't available yet.
-1. **Make sure Docker Hub has built the image with the tag before deploying the
-   `texastribune` PR**. In an emergency you can leave in the branch name -- the image should
+## Updating
+### Setup
+```sh
+# bring down latest
+git pull origin master
+
+# create a feature branch for your changes
+git checkout -b <new-branch-name>
+```
+### Add or Update Dependencies
+#### Python Dependencies
+If you're adding or updating a python dependency:
+   1. Run a shell inside a container
+      ```sh
+         make base-shell
+      ```
+   1. Add or update python dependency
+      ```sh
+      # from inside the container shell from step 1:
+
+      # add a new production python dependency
+      poetry add <package>
+
+      # add a new development dependency
+      poetry add --dev <package>
+
+      # pin the dependency to a specific version like this
+      poetry add <package>@1.0.0
+
+      # example for updating an existing package to 1.0.1
+      poetry update packagename@1.0.1
+      ```
+   1. Return to your local machine's shell
+      ```sh
+      exit
+      ```
+   1. Proceed to [build and test locally](#build-and-test-new-images-locally).
+Though recommended to use the poetry CLI, another way to accomplish the same is to edit `pyproject.toml` manually, then run `poetry lock` in the shell inside the container.
+
+See the [poetry docs](https://poetry.eustace.io/docs/) for more commands and details on usage.
+
+#### Node Dependencies
+If you're adding or updating a node dependency:
+   1. Run a shell inside a container
+      ```sh
+      make dev-shell
+      ```
+   1. Add or update python dependency
+      ```sh
+      # from inside the container shell from step 1:
+
+      # enter the node directory
+      cd node
+
+      # add a new package
+      npm install --save <package-name> # use --save-dev if dev dependency
+
+      # add a specific version of a package
+      npm install --save <package>@1.0.0
+   
+      # get help on npm for further usage
+      npm help
+      ```
+   1. Return to your local machine's shell
+      ```sh
+      exit
+      ```
+   1. Proceed to [build and test locally](#build-and-test-new-images-locally).
+### Build and Test New Images Locally
+1. Build new images locally based on your python or node dependency updates
+   ```sh
+   # from your local machine's shell - not the container!
+
+   make images
+   ```
+   This creates two local images:
+     - `texastribune/base:<git-branch-name>-dev`
+     - `texastribune/base:<git-branch-name>-base`  
+
+   You can check that they were successfully created by runnning:
+      ```sh
+      docker images | $(git branch --show-current)
+
+      # example output:
+      texastribune/base          branchname-dev          2707ec0fcf6b        22 minutes ago      2.24GB
+      texastribune/base          branchname-base         8a387eac996c        59 minutes ago      1.37GB
+
+      ```
+
+1. Test it locally
+   - Switch to your local `texastribune` repo:
+     - Update the `BASE_PRODUCTION_VERSION` and `BASE_DEVELOPMENT_VERSION` variables
+      - [See here for an example](https://github.com/texastribune/texastribune/pull/4082/commits/4e52597600b2b029dee11c7c4d6532be083d8cc0) of where they should be updated.
+   -  Create a PR in [`texastribune/texastribune`](https://github.com/texastribune/texastribune/pulls)
+1. If all looks good, proceed to [deploy](#deploy).
+
+### Deploy
+#### Build the New Base Images
+If this is a small change that's very unlikely to affect anyone else, you'll build your [new images directly through `master`](#directly-to-master-branch), otherwise [build your images through your feature branch](#through-tt-base-feature-branch).
+##### Directly to Master Branch
+1. Commit your changes to your `tt-base` branch.
+1. Merge this branch into `master` and proceed to [steps to deploy texastribune](#deploy-texastribune).
+1. Immediately bump the version in the [VERSION file](VERSION), commit and tag: `make tag`. There should be as little gap as possible between this step and the previous one so as to avoid conflicts with other committers. You don't need to push anything. The `make tag` command will push it for you.
+1. Proceed to [deploy to texastribune steps](#deploy-texastribune).
+
+##### Through tt-base Feature Branch
+1. Commit your changes to your `tt-base` branch.
+1. Push your branch. 
+    - Docker Hub will build the images with the same name as when you [built them locally](#build-and-test-new-images-locally).
+    - Now anyone can pull down and use the images `texastribune/base:<git-branch-name>` 
+    - Update your associated `texastribune` PR to use these ^ images built from the `tt-base` feature branch.  Anyone can pull that PR's branch down to test locally.
+    - You can check the status of the builds on [Docker Hub](https://hub.docker.com/repository/docker/texastribune/base). _You'll see a more accurate build log when logged-in under an account that is affiliated with the texastribune org in Docker Hub._
+1. After the related `texastribune` PR is approved, merge your `tt-base` feature branch into master, and delete the feature branch.
+1. Proceed to [update git version tag](#update-git-version-tag).
+1. Immediately bump the version in the [VERSION file](VERSION), commit and tag: `make tag`. There should be as little gap as possible between this step and the previous one so as to avoid conflicts with other committers. You don't need to push anything. The `make tag` command will push it for you.
+1. Proceed to [deploy to texastribune steps](#deploy-texastribune).
+
+#### Deploy Texastribune
+1. Change your related `texastribune` PR to use the tag instead of the branch name (example: `texastribune/base:1.2.14-base` and `texastribune/base:1.2.14-dev`). See the `texastribune` README for the locations to change the version. You may want to wait until the Docker Hub build is complete before pushing your `texastribune` PR image version because the CI tests will fail if the image isn't available yet.
+1. **Make sure [Docker Hub](https://hub.docker.com/repository/docker/texastribune/base) has built the image with the tag before deploying the `texastribune` PR**. In an emergency you can leave in the branch name -- the image should
    already be built by Docker Hub and it won't go away even when the branch is deleted.
-1. Merge and deploy the related `texastribune` PR.
+1. Merge related `texastribune` PR.
+1. Deploy it
 1. Your work is done.
+
+### Note on Dependabot PRs
 1. If you're merging Dependabot PRs:
     1. merge the PR (maybe merge multiple ones to batch them) - these will be merged to
        the `dependencies` branch; not master
     1. Create your own branch off `master` and merge `dependencies` into it: `git
        checkout -b my-fancy-branch; git merge dependencies`
-    1. Resume with the step "Run `make images`..." above. 
+    1. Proceed to [build and test the new images locally](#build-and-test-new-images-locally)
