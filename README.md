@@ -2,7 +2,7 @@
 tt-docker-base
 ===========
 
-> Base image of dependencies
+> Base image of dependencies, starting point for [multistage docker build](https://docs.docker.com/develop/develop-images/multistage-build/)
 
 ## Updating
 ### Setup
@@ -96,9 +96,9 @@ If you're adding or updating a node dependency:
 1. Test it locally
    - Switch to your local `texastribune` repo:
      - Update the `BASE_PRODUCTION_VERSION` and `BASE_DEVELOPMENT_VERSION` variables
-      - [See here for an example](https://github.com/texastribune/texastribune/pull/4082/commits/4e52597600b2b029dee11c7c4d6532be083d8cc0) of where they should be updated.
-   -  Create a PR in [`texastribune/texastribune`](https://github.com/texastribune/texastribune/pulls)
-1. If all looks good, proceed to [deploy](#deploy).
+      - See `texastribune` docs for they should be updated, or use your text editor search.
+   -  Create a `texastribune` PR.
+1. If all looks good, proceed to [deploy steps](#deploy).
 
 ### Deploy
 #### Build the New Base Images
@@ -121,7 +121,7 @@ If this is a small change that's very unlikely to affect anyone else, you'll bui
 1. Immediately bump the version in the [VERSION file](VERSION), commit and tag: `make tag`. There should be as little gap as possible between this step and the previous one so as to avoid conflicts with other committers. You don't need to push anything. The `make tag` command will push it for you.
 1. Proceed to [deploy to texastribune steps](#deploy-texastribune).
 
-#### Deploy Texastribune
+#### Deploy texastribune
 1. Change your related `texastribune` PR to use the tag instead of the branch name (example: `texastribune/base:1.2.14-base` and `texastribune/base:1.2.14-dev`). See the `texastribune` README for the locations to change the version. You may want to wait until the Docker Hub build is complete before pushing your `texastribune` PR image version because the CI tests will fail if the image isn't available yet.
 1. **Make sure [Docker Hub](https://hub.docker.com/repository/docker/texastribune/base) has built the image with the tag before deploying the `texastribune` PR**. In an emergency you can leave in the branch name -- the image should
    already be built by Docker Hub and it won't go away even when the branch is deleted.
@@ -130,9 +130,9 @@ If this is a small change that's very unlikely to affect anyone else, you'll bui
 1. Your work is done.
 
 ### Note on Dependabot PRs
-1. If you're merging Dependabot PRs:
-    1. merge the PR (maybe merge multiple ones to batch them) - these will be merged to
-       the `dependencies` branch; not master
-    1. Create your own branch off `master` and merge `dependencies` into it: `git
-       checkout -b my-fancy-branch; git merge dependencies`
-    1. Proceed to [build and test the new images locally](#build-and-test-new-images-locally)
+If you're merging Dependabot PRs:
+1. merge the PR (maybe merge multiple ones to batch them) - these will be merged to
+   the `dependencies` branch; not master
+1. Create your own branch off `master` and merge `dependencies` into it: `git
+   checkout -b my-fancy-branch; git merge dependencies`
+1. Proceed to [build and test the new images locally](#build-and-test-new-images-locally)
