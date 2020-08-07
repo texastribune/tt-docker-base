@@ -287,15 +287,16 @@ description = "An Advanced Django CMS"
 name = "django-cms"
 optional = false
 python-versions = "*"
-version = "3.7.0"
+version = "3.7.4"
 
 [package.dependencies]
-Django = ">=1.11,<3.0"
+Django = ">=1.11,<4"
 django-classy-tags = ">=0.7.2"
 django-formtools = ">=2.1"
 django-sekizai = ">=0.7"
 django-treebeard = ">=4.3"
 djangocms-admin-style = ">=1.2"
+six = "*"
 
 [[package]]
 category = "main"
@@ -370,10 +371,7 @@ description = "Extensions for Django"
 name = "django-extensions"
 optional = false
 python-versions = ">=3.5"
-version = "3.0.3"
-
-[package.dependencies]
-six = ">=1.2"
+version = "3.0.4"
 
 [[package]]
 category = "main"
@@ -590,7 +588,7 @@ description = "Text Plugin for django CMS with CKEditor support"
 name = "djangocms-text-ckeditor"
 optional = false
 python-versions = "*"
-version = "3.7.0"
+version = "3.10.0"
 
 [package.dependencies]
 Pillow = "*"
@@ -745,7 +743,7 @@ description = "Google Authentication Library"
 name = "google-auth"
 optional = false
 python-versions = ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*"
-version = "1.19.2"
+version = "1.20.1"
 
 [package.dependencies]
 cachetools = ">=2.0.0,<5.0"
@@ -754,7 +752,7 @@ setuptools = ">=40.3.0"
 six = ">=1.9.0"
 
 [package.dependencies.rsa]
-python = ">=3"
+python = ">=3.5"
 version = ">=3.1.4,<5"
 
 [[package]]
@@ -848,8 +846,8 @@ category = "dev"
 description = "IPython: Productive Interactive Computing"
 name = "ipython"
 optional = false
-python-versions = ">=3.6"
-version = "7.16.1"
+python-versions = ">=3.7"
+version = "7.17.0"
 
 [package.dependencies]
 appnope = "*"
@@ -1151,7 +1149,7 @@ description = "PyDev.Debugger (used in PyDev, PyCharm and VSCode Python)"
 name = "pydevd"
 optional = false
 python-versions = "*"
-version = "1.9.1"
+version = "1.9.2"
 
 [[package]]
 category = "dev"
@@ -1556,7 +1554,7 @@ python-versions = ">=3.6"
 version = "3.1.0"
 
 [metadata]
-content-hash = "a615b259f7b3b0247d6d570c3f73858ee707c07aed4c73c0463dc7e4054fea98"
+content-hash = "a106e1e3388953c59be5bdb6f6547da122d3d75039ae4281fd26e3417b29d9f2"
 python-versions = "^3.7"
 
 [metadata.hashes]
@@ -1586,7 +1584,7 @@ django-appconf = ["1b1d0e1069c843ebe8ae5aa48ec52403b1440402b320c3e3a206a0907e97b
 django-auth0-client = []
 django-axes = ["79e15f6b25430c4fd52a5459379640dfcfde5d3eab9e11f62ccdc71406cdb530"]
 django-classy-tags = ["ad6a25fc2b58a098f00d86bd5e5dad47922f5ca4e744bc3cccb7b4be5bc35eb1"]
-django-cms = ["0f4dca88de96c5d780b0297c8f27f5759af1b6c89ca19bae499818606d1f84e3", "a3df90ff352b77876edc6f16b670d408268ba9096cb8195ce96ba6e1b44f4061"]
+django-cms = ["9302f0e21153fc9afca55d9c3424ca3654b51d274a1af6ec39f4fbb05059fe46", "9374af5a35bac590f1891031fb0878a0e6c2dc5309a6907929c6a036493694f6"]
 django-codemirror-widget = ["a2f7facf299f3f51dff7227cc9850905b899e08485698d3f4fad110a7ad628be"]
 django-cors-headers = ["5b80bf0f8d7fc6e2bcb4f40781d5ff3661961bbf1982e52daec77241dea3b890", "ebf3e2cf25aa6993b959a8e6a87828ebb3c8fe5bc3ec4a2d6e65f3b8d9b4212c"]
 django-coverage = ["eee56c1465b2ece0a066ea2514c50039462f8fe1ea58e59adc0dfda14b30628b"]
@@ -1594,7 +1592,7 @@ django-crispy-forms = ["5952bab971110d0b86c278132dae0aa095beee8f723e625c3d3fa288
 django-db-readonly = ["163bb9f592f0a1b9762b8a3762fee7b3792f287974974b8603e892205fecaa9b", "2b8adf9e075ffb692d73b9fef680b9cc073dcf5a4ce03a85d99e85d85fc7c4fa"]
 django-debug-toolbar = ["eabbefe89881bbe4ca7c980ff102e3c35c8e8ad6eb725041f538988f2f39a943", "ff94725e7aae74b133d0599b9bf89bd4eb8f5d2c964106e61d11750228c8774c"]
 django-environ = ["70cf521f87e64f4dd2aeb87ced006dc98f621e2cdb38134fbcbcf6309fde6244"]
-django-extensions = ["6230898b1e1d5deb3ddab8335b2d270edb7afa4ef916a95e479a19fdfb0464cb", "d5fcf8f3bab019487e07473c24453bccd5acfb4440f3ef36788294c307b09d4c"]
+django-extensions = ["237e8262ce2a4ec8acd2ee6cbc822095e26e78f72ceb77d4d0a0918860f84fbb", "d1e94df479daf681c33f2f5647403ee904e9268b00b5506705f4c1ee0067ed1b"]
 django-filter = ["3dafb7d2810790498895c22a1f31b2375795910680ac9c1432821cbedb1e176d", "a3014de317bef0cd43075a0f08dfa1d319a7ccc5733c3901fb860da70b0dda68"]
 django-flatblocks = ["35f7a1aa4434dbeb3ece4551f74567a520f09e168b0c1ebe2f18cd6f22889ada"]
 django-formtools = ["304fa777b8ef9e0693ce7833f885cb89ba46b0e46fc23b01176900a93f46742f", "c5272c03c1cd51b2375abf7397a199a3148a9fbbf2f100e186467a84025d13b2"]
@@ -1614,7 +1612,7 @@ django-tinymce = ["5a6e21406daafab22124be5c447abdfe78937307420daae0b997d2be0f08c
 django-treebeard = ["83aebc34a9f06de7daaec330d858d1c47887e81be3da77e3541fe7368196dd8a"]
 djangocms-admin-style = ["47d9868aa448e593ce90059d6542a4d907c120d357cd0561c586f5557e3ba316"]
 djangocms-history = ["03055ba81c59570ed26a7aa66dda1620222a8180e18f05390e90dabaee56d0a4"]
-djangocms-text-ckeditor = ["583fe6bc858075278b927b4cac7e537b72071751b3ca35d2f60f3af18d6b42c7"]
+djangocms-text-ckeditor = ["905fa0cfbd244fb3a12657f89b083bfb57554ba35f4358972eebc6d78f8d8c3d"]
 djangorestframework = ["376f4b50340a46c15ae15ddd0c853085f4e66058f97e4dbe7d43ed62f5e60651", "c12869cfd83c33d579b17b3cb28a2ae7322a53c3ce85580c2a2ebe4e3f56c4fb"]
 djangorestframework-csv = ["2f008b20a44f2d3c37835ea5b5ddfe19f54394f07b9cb267c616a917a7f7e27c"]
 docutils = ["0c5b78adfbf7762415433f5515cd5c9e762339e23369dbe8000d84a4bf4ab3af", "c2de3a60e9e7d07be26b7f2b00ca0309c207e06c100f9cc2a94931fc75a478fc"]
@@ -1628,7 +1626,7 @@ freezegun = ["82c757a05b7c7ca3e176bfebd7d6779fd9139c7cb4ef969c38a28d74deef89b2",
 fudge = ["5a9335d2c0bf29ebd646d4bd102b335107ce3566d278270453001f3e648b63e4", "d9929d87bb38711112734d99a2c7ada5dc39ef67b758b1e55f4c779c3634efdc"]
 future = ["b1bead90b70cf6ec3f0710ae53a525360fa360d306a86583adc6bf83a4db537d"]
 google-api-python-client = ["441d638e5fff7d9f97587aa99387efd0ee13f577c9d4d50820dfda4bb80d0e64", "bb1f27740f6596f8272a2e1033d93d68e27e8ed5d22d6ab957e3f1d3f8ce05f6"]
-google-auth = ["15b42d57d6c3d868d318e8273c06b2692fc5aad1bc45989a4f68f1fee05d41b2", "f404448f3d3c91944b1d907427d4a0c48f465898e9dbacf1bdebf95c5fe03273"]
+google-auth = ["2f34dd810090d0d4c9d5787c4ad7b4413d1fbfb941e13682c7a2298d3b6cdcc8", "ce1fb80b5c6d3dd038babcc43e221edeafefc72d983b3dc28b67b996f76f00b9"]
 google-auth-httplib2 = ["312464fb81d2a941aa6541410ef61de9fa788753414ee5f2f1d74153d9c1540d", "faacd855092a4c792e8cf3d3b4ed939518c495373a9f9cd31985c3166558452b"]
 html5lib = ["0d78f8fde1c230e99fe37986a60526d7049ed4bf8a9fadbad5f00e22e58e041d", "b2e5b40261e20f354d198eae92afc10d750afb487ed5e50f9c4eaf07c184146f"]
 httplib2 = ["8af66c1c52c7ffe1aa5dc4bcd7c769885254b0756e6e69f953c7f0ab49a70ba3", "ca2914b015b6247791c4866782fa6042f495b94401a0f0bd3e1d6e0ba2236782"]
@@ -1637,7 +1635,7 @@ imagesize = ["6965f19a6a2039c7d48bca7dba2473069ff854c36ae6f19d2cde309d998228a1",
 importlib-metadata = ["90bb658cdbbf6d1735b6341ce708fc7024a3e14e99ffdc5783edea9f9b077f83", "dc15b2969b4ce36305c51eebe62d418ac7791e9a157911d58bfb1f9ccd8e2070"]
 invoke = ["1c2cf54c9b9af973ad9704d8ba81b225117cab612568cacbfb3fc42958cc20a9", "334495ea16e73948894e9535019f87a88a44b73e7977492b12c2d1b5085f8197", "54bdd3fd0245abd1185e05359fd2e4f26be0657cfe7d7bb1bed735e054fa53ab"]
 ipdb = ["d6f46d261c45a65e65a2f7ec69288a1c511e16206edb2875e7ec6b2f66997e78"]
-ipython = ["2dbcc8c27ca7d3cfe4fcdff7f45b27f9a8d3edfa70ff8024a71c7a8eb5f09d64", "9f4fcb31d3b2c533333893b9172264e4821c1ac91839500f31bd43f2c59b3ccf"]
+ipython = ["5a8f159ca8b22b9a0a1f2a28befe5ad2b703339afb58c2ffe0d7c8d7a3af5999", "b70974aaa2674b05eb86a910c02ed09956a33f2dd6c71afc60f0b128a77e7f28"]
 ipython-genutils = ["72dd37233799e619666c9f639a9da83c34013a73e8bbc79a7a6348d93c61fab8", "eb2e116e75ecef9d4d228fdc66af54269afa26ab4463042e33785b887c628ba8"]
 itypes = ["03da6872ca89d29aef62773672b2d408f490f80db48b23079a4b194c86dd04c6", "af886f129dea4a2a1e3d36595a2d139589e4dd287f5cab0b40e799ee81570ff1"]
 jedi = ["86ed7d9b750603e4ba582ea8edc678657fb4007894a12bcf6f4bb97892f31d20", "98cc583fa0f2f8304968199b01b6b4b94f469a1f4a74c1560506ca2a211378b5"]
@@ -1668,7 +1666,7 @@ pyasn1 = ["014c0e9976956a08139dc0712ae195324a75e142284d5f87f1a87ee1b068a359", "0
 pyasn1-modules = ["0845a5582f6a02bb3e1bde9ecfc4bfcae6ec3210dd270522fee602365430c3f8", "0fe1b68d1e486a1ed5473f1302bd991c1611d319bba158e98b106ff86e1d7199", "15b7c67fabc7fc240d87fb9aabf999cf82311a6d6fb2c70d00d3d0604878c811", "426edb7a5e8879f1ec54a1864f16b882c2837bfd06eee62f2c982315ee2473ed", "65cebbaffc913f4fe9e4808735c95ea22d7a7775646ab690518c056784bc21b4", "905f84c712230b2c592c19470d3ca8d552de726050d1d1716282a1f6146be65e", "a50b808ffeb97cb3601dd25981f6b016cbb3d31fbf57a8b8a87428e6158d0c74", "a99324196732f53093a84c4369c996713eb8c89d360a496b599fb1a9c47fc3eb", "b80486a6c77252ea3a3e9b1e360bc9cf28eaac41263d173c032581ad2f20fe45", "c29a5e5cc7a3f05926aff34e097e84f8589cd790ce0ed41b67aed6857b26aafd", "cbac4bc38d117f2a49aeedec4407d23e8866ea4ac27ff2cf7fb3e5b570df19e0", "f39edd8c4ecaa4556e989147ebf219227e2cd2e8a43c7e7fcb1f1c18c5fd6a3d", "fe0644d9ab041506b62782e92b06b8c68cca799e1a9636ec398675459e031405"]
 pycodestyle = ["2295e7b2f6b5bd100585ebcb1f616591b652db8a741695b3d8f5d28bdc934367", "c58a7d2815e0e8d7972bf1803331fb0152f867bd89adf8a01dfd55085434192e"]
 pycparser = ["2d475327684562c3a96cc71adf7dc8c4f0565175cf86b6d7a404ff4c771f15f0", "7582ad22678f0fcd81102833f60ef8d0e57288b6b5fb00323d101be910e35705"]
-pydevd = ["065da0e26071ad7d562f93c56dbc5819a93c217330571c5744e14e8995de5a1d", "21eefdda84fdfa5e7aa9fbf9ea300b9e1c784b12994601eb9fafd66488871e13", "288d425bae36be816417fe50dd917e9445aec5f73a9452cf7c60dede0be3fd01", "2dbac786586e3ecbaffbdb36da5acd56119e97ff2c1ed85b2bef0c6e0fa98fc8", "3070b0b43d00b82977a4726d4809d791b800aa0082aaada163a0a98f3d6ef19b", "308e40cc622a496e485c8dab665ea58c9c09f16a8198f538d870a3ac325656cd", "9448fe899283cf1cdcbac98436b4c377aff169643cd4a133c4c46b9f95ac8f4a", "a5938a61fd985ab77314ddc47f8543e4dbdf4af7f4c6304e2ce9516935a57e54", "ab3242c9dcdb2b19b95b09ec71a2ffdf018e3e19d0c203750a0dfefeb524722a", "af3f7ffcbbf55d2a251212d58c537ab6b458cbf3be730a346d2fc689bbedd226", "d488811928dbef2a9d21a7d3437345b2a55549113561bff3f3650cdcd7d58305"]
+pydevd = ["2290a4d04be29ea5761b87a7c303340608b0f3112d06878c2a92c931169e12d4", "31c9660c4fa71c09291e6c8b320a1cabe0a3b9f0513fda3ecb46e601d8995820", "5dba368ce4c424c3396e8981a8475adb9658519a808ccf137abd0fd6521a7a5a", "61a3300d011cfb9e88f420d24585c64479ce832c0bf23bb979b3e074445dca11", "72497ea3c05c0d82664f25984dc5bd390e0f4e70828d2333dc0dbe7c9b683724", "8d363f1d349990085e60c1cc631945b685867f6d17a9bd51f51b548a6a1cdadc", "9f1e9217e9f8131d96de9356ab45284b62bbf063adbf3f32d246aecd36fdb581", "ab687226500817ec35938c6eeecdcd4490352e2fa88847f4e48938655a2b2603", "bf63ce514e9da235e1cc41c8f99b077dcb7e642d0dd929c0f595244017f8b866", "bfeddfc7b31b8db1695e916e4de28870a0e7819b8207197b42da06d1768c75a0", "db8a595b5425c3c8d093f271e71f9e4a9251983fdd8bb0aa4ac29d6210a556a9"]
 pyflakes = ["0d94e0e05a19e57a99444b6ddcf9a6eb2e5c68d3ca1e98e90707af8152c90a92", "35b2d75ee967ea93b55750aa9edbbf72813e06a66ba54438df2cfac9e3c27fc8"]
 pygments = ["647344a061c249a3b74e230c739f434d7ea4d8b1d5f3721bc0f3558049b38f44", "ff7a40b4860b727ab48fad6360eb351cc1b33cbf9b15a0f689ca5353e9463324"]
 pylibmc = ["16255595616a6d78cd786a55cc6431da5b7accf46512df854712a0cdbb3acfaa"]
