@@ -444,7 +444,7 @@ description = "Prevents users from doing concurrent editing in Django. Works out
 name = "django-locking"
 optional = false
 python-versions = "*"
-version = "2.2.19.dev15"
+version = "2.2.19.dev16"
 
 [package.dependencies]
 django-staticfiles = "*"
@@ -1551,7 +1551,7 @@ python-versions = ">=3.6"
 version = "3.3.0"
 
 [metadata]
-content-hash = "81f3dd8326d80beee2f993f938511bcb7144d3671cda7a9a8f278b823d6c59ae"
+content-hash = "cda71cc6a43906901d3a50bb7726b4c9de16bc3aadfbabae547487f07de7ecb5"
 python-versions = "^3.7"
 
 [metadata.hashes]
