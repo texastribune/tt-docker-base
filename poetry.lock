@@ -409,7 +409,7 @@ description = "Run checks on services like databases, queue servers, celery proc
 name = "django-health-check"
 optional = false
 python-versions = "*"
-version = "3.14.2"
+version = "3.14.3"
 
 [package.dependencies]
 django = ">=1.11"
@@ -1491,7 +1491,7 @@ description = "The uWSGI server"
 name = "uwsgi"
 optional = false
 python-versions = "*"
-version = "2.0.19.1"
+version = "2.0.16"
 
 [[package]]
 category = "main"
@@ -1548,10 +1548,10 @@ marker = "python_version < \"3.8\""
 name = "zipp"
 optional = false
 python-versions = ">=3.6"
-version = "3.3.0"
+version = "3.3.1"
 
 [metadata]
-content-hash = "1a8192e393e499454cc8b51dbec1e785f76b2820207683a1c7644633933d34db"
+content-hash = "cda71cc6a43906901d3a50bb7726b4c9de16bc3aadfbabae547487f07de7ecb5"
 python-versions = "^3.7"
 
 [metadata.hashes]
@@ -1593,7 +1593,7 @@ django-extensions = ["6809c89ca952f0e08d4e0766bc0101dfaf508d7649aced1180c091d737
 django-filter = ["3dafb7d2810790498895c22a1f31b2375795910680ac9c1432821cbedb1e176d", "a3014de317bef0cd43075a0f08dfa1d319a7ccc5733c3901fb860da70b0dda68"]
 django-flatblocks = ["35f7a1aa4434dbeb3ece4551f74567a520f09e168b0c1ebe2f18cd6f22889ada"]
 django-formtools = ["304fa777b8ef9e0693ce7833f885cb89ba46b0e46fc23b01176900a93f46742f", "c5272c03c1cd51b2375abf7397a199a3148a9fbbf2f100e186467a84025d13b2"]
-django-health-check = ["77ec42dd5ee2cad0ebc4ce14c7974938499de6171e40052d4b6cddffac61955b", "fcfcdaf255308351aaf296398012d7928c9d6033232d9884c3719f3742409d40"]
+django-health-check = ["6e84e7a3e5f1fcb82b7692833fa205bc274415850d333d5a50259de06080dfa8", "d5f5cbf3c34bc5ea297696e183c5084b0c15d3bd13d9eb997c25258241589c75"]
 django-inline-actions = ["4f14960c9f0f8ba968977a1c663c7b5e5285f65bbbda0efb8b4b07d5b75a5475", "cf85d9d27fb02e0985bc847118d46e9a19fed12bb71df02303be157b80efc8a0"]
 django-jet = []
 django-locking = []
@@ -1698,10 +1698,10 @@ tweepy = ["8abd828ba51a85a2b5bb7373715d6d3bb32d18ac624e3a4db02e4ef8ab48316b", "e
 unicodecsv = ["018c08037d48649a0412063ff4eda26eaa81eff1546dbffa51fa5293276ff7fc"]
 uritemplate = ["07620c3f3f8eed1f12600845892b0e036a2420acf513c53f7de0abd911a5894f", "5af8ad10cec94f215e3f48112de2022e1d5a37ed427fbd88652fa908f2ab7cae"]
 urllib3 = ["2393a695cd12afedd0dcb26fe5d50d0cf248e5a66f75dbd89a3d4eb333a61af4", "a637e5fae88995b256e3409dc4d52c2e2e0ba32c42a6365fee8bbd2238de3cfb"]
-uwsgi = ["faa85e053c0b1be4d5585b0858d3a511d2cd10201802e8676060fd0a109e5869"]
+uwsgi = ["a911f48f3cc51ac82fdabc4e001f18a32569128680beb5a833ebc3ff6edcc1f4"]
 watson-developer-cloud = ["db1c73c08c2981e749bfe6b2642028a470b54a99572bec049f258cacfcda8b60"]
 wcwidth = ["beb4802a9cebb9144e99086eff703a642a13d6a0052920003a230f3294bbe784", "c4d647b99872929fdb7bdcaa4fbe7f01413ed3d98077df798530e5b04f116c83"]
 webencodings = ["a0af1213f3c2226497a97e2b3aa01a7e4bee4f403f95be16fc9acd2947514a78", "b36a1c245f2d304965eb4e0a82848379241dc04b865afcc4aab16748587e1923"]
 websocket-client = ["188b68b14fdb2d8eb1a111f21b9ffd2dbf1dbc4e4c1d28cf2c37cdbf1dd1cae6", "a453dc4dfa6e0db3d8fd7738a308a88effe6240c59f3226eb93e8f020c216149"]
 whitenoise = ["15f43b2e701821b95c9016cf469d29e2a546cb1c7dead584ba82c36f843995cf", "9d81515f2b5b27051910996e1e860b1332e354d9e7bcf30c98f21dcb6713e0dd"]
-zipp = ["64ad89efee774d1897a58607895d80789c59778ea02185dd846ac38394a8642b", "eed8ec0b8d1416b2ca33516a37a08892442f3954dee131e92cfd92d8fe3e7066"]
+zipp = ["16522f69653f0d67be90e8baa4a46d66389145b734345d68a257da53df670903", "c1532a8030c32fd52ff6a288d855fe7adef5823ba1d26a29a68fd6314aa72baa"]
