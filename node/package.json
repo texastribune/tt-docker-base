@@ -65,7 +65,7 @@
     "core-js": "3",
     "date-fns": "^1.29.0",
     "fast-async": "7",
-    "intersection-observer": "^0.5.1",
+    "intersection-observer": "^0.12.0",
     "lazysizes": "^4.1.4",
     "lz-string": "^1.4.4",
     "mapbox-gl": "0.54.0",
