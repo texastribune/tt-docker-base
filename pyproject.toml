@@ -85,6 +85,7 @@ pep8 = "^1.7"
 Sphinx = "^2.0"
 sphinxcontrib-confluencebuilder = "^1.1"
 tblib = "^1.3"
+selenium = "^3"
 
 [build-system]
 requires = ["poetry>=0.12"]
