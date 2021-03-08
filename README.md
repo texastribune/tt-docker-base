@@ -1,4 +1,3 @@
-
 tt-docker-base
 ===========
 
@@ -51,7 +50,7 @@ If you're adding or updating a node dependency:
       ```sh
       make dev-shell
       ```
-   1. Add or update python dependency
+   1. Add or update node dependency
       ```sh
       # from inside the container shell from step 1:
 
