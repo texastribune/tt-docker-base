@@ -563,7 +563,7 @@ description = "Efficient tree implementations for Django"
 name = "django-treebeard"
 optional = false
 python-versions = ">=3.6"
-version = "4.5.1"
+version = "4.4"
 
 [package.dependencies]
 Django = ">=2.2"
@@ -1582,7 +1582,7 @@ python-versions = ">=3.6"
 version = "3.4.1"
 
 [metadata]
-content-hash = "f2973195f3a1880fc4073da54986e5ce2527b7bbfae1f94ba6c89a862f90dcd9"
+content-hash = "798531c1c6399947f7b41ed28adc836a07d3a8c76ee6629004482bfe94772a17"
 python-versions = "^3.7"
 
 [metadata.hashes]
@@ -1637,7 +1637,7 @@ django-storages = ["ab6be1538cf29511400bce83d0e5ca74d2e935cad82086063bcf5e7edacc
 django-taggit = []
 django-thumbor = ["7e68c5f5c3da6246c9da37951e65796eb6afdf7d9181eab6dc4cc837e25b53a2"]
 django-tinymce = ["0ad9c91851261dafb6f4abfc80de5560002fbfb1a681a1cec2f0eca349462a4a", "fe82e476059b27187eaec849b6b765ef9918a25e64e419861c4f507d0c8cc143"]
-django-treebeard = ["7c2b1cdb1e9b46d595825186064a1228bc4d00dbbc186db5b0b9412357fba91c", "80150017725239702054e5fa64dc66e383dc13ac262c8d47ee5a82cb005969da"]
+django-treebeard = ["214ae3ab331a7de11fb055a2015c201e34f3fa14255b667e1e07752231a7a398", "f50e4eea146f7af6702decf7ef198ac1eee1fb9bb4af2c5dba276c3c48f76623"]
 djangocms-admin-style = ["4381b259b62340127654a51a1eb83af2c9a42b608a36393c731c04712cd37068", "6661a6c36ce56d18ec8fad05a3e56589417fc0bd0c647eb6d336e7f836999723"]
 djangocms-history = ["03055ba81c59570ed26a7aa66dda1620222a8180e18f05390e90dabaee56d0a4"]
 djangocms-text-ckeditor = ["905fa0cfbd244fb3a12657f89b083bfb57554ba35f4358972eebc6d78f8d8c3d"]
