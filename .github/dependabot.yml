@@ -1,0 +1,84 @@
+version: 2
+updates:
+- package-ecosystem: pip
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "11:00"
+  open-pull-requests-limit: 10
+  target-branch: dependencies
+  ignore:
+  - dependency-name: django-debug-toolbar
+    versions:
+    - 2.2.1
+  - dependency-name: sphinx
+    versions:
+    - 3.4.3
+    - 3.5.0
+    - 3.5.1
+    - 3.5.2
+    - 3.5.3
+  - dependency-name: sentry-sdk
+    versions:
+    - 0.19.5
+    - 0.20.1
+    - 0.20.2
+    - 0.20.3
+  - dependency-name: django-taggit
+    versions:
+    - 1.3.0
+  - dependency-name: google-auth-httplib2
+    versions:
+    - 0.0.4
+- package-ecosystem: npm
+  directory: "/node"
+  schedule:
+    interval: daily
+    time: "11:00"
+  open-pull-requests-limit: 10
+  target-branch: dependencies
+  ignore:
+  - dependency-name: ssri
+    versions:
+    - 6.0.2
+  - dependency-name: mini-css-extract-plugin
+    versions:
+    - 1.3.4
+    - 1.3.5
+    - 1.3.6
+    - 1.3.7
+    - 1.3.8
+    - 1.3.9
+    - 1.4.0
+    - 1.4.1
+  - dependency-name: y18n
+    versions:
+    - 4.0.1
+    - 4.0.3
+  - dependency-name: react-redux
+    versions:
+    - 7.2.2
+    - 7.2.3
+  - dependency-name: elliptic
+    versions:
+    - 6.5.4
+  - dependency-name: react-select
+    versions:
+    - 4.0.2
+    - 4.1.0
+    - 4.2.0
+    - 4.2.1
+  - dependency-name: webpack-cli
+    versions:
+    - 4.4.0
+    - 4.5.0
+  - dependency-name: enzyme-to-json
+    versions:
+    - 3.6.1
+- package-ecosystem: docker
+  directory: "/base"
+  schedule:
+    interval: daily
+    time: "11:00"
+  open-pull-requests-limit: 10
+  target-branch: dependencies
