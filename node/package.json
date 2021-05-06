@@ -82,7 +82,7 @@
     "redux-thunk": "^2.3.0",
     "reframe.js": "^2.2.4",
     "ttfiles": "git://github.com/texastribune/files.git#v2.5.5",
-    "underscore": "^1.8.3",
+    "underscore": "^1.12.1",
     "validator": "^11.1.0"
   }
 }
