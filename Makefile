@@ -32,7 +32,7 @@ dev-image-no-cache: prepare
 	-f dev/Dockerfile .
 
 base-shell: base-image
-	docker run -it --rm --volume=$$(pwd)/poetry.lock:/poetry.lock --volume=$$(pwd)/pyproject.toml:/pyproject.toml texastribune/base:base bash
+	docker run -it --rm --volume="$$(pwd)/poetry.lock:/poetry.lock" --volume="$$(pwd)/pyproject.toml:/pyproject.toml" texastribune/base:base bash
 
 dev-shell: dev-image
 	docker run -it --rm --volume=$$(pwd)/node:/node texastribune/base:dev bash
