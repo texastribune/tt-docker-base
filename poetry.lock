@@ -28,7 +28,7 @@ django-reversion = "*"
 [package.source]
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
-reference = 'private'
+reference = "private"
 
 [[package]]
 name = "awscli"
@@ -256,7 +256,7 @@ requests = "*"
 [package.source]
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
-reference = 'private'
+reference = "private"
 
 [[package]]
 name = "django-axes"
@@ -435,7 +435,7 @@ Django = "*"
 [package.source]
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
-reference = 'private'
+reference = "private"
 
 [[package]]
 name = "django-locking"
@@ -451,7 +451,7 @@ django-staticfiles = "*"
 [package.source]
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
-reference = 'private'
+reference = "private"
 
 [[package]]
 name = "django-object-actions"
@@ -531,7 +531,7 @@ Django = ">=1.11"
 [package.source]
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
-reference = 'private'
+reference = "private"
 
 [[package]]
 name = "django-thumbor"
@@ -574,11 +574,14 @@ python-versions = "*"
 
 [[package]]
 name = "djangocms-history"
-version = "1.0.0"
+version = "2.0.0"
 description = "Adds undo/redo functionality to django CMS"
 category = "main"
 optional = false
 python-versions = "*"
+
+[package.dependencies]
+django-cms = ">=3.7"
 
 [[package]]
 name = "djangocms-text-ckeditor"
@@ -1602,7 +1605,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=1.2.3)", "pytest-flake8", "pyt
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "29376f7925b34914758596fa080d81a09226cb0c5a7ee1349abb6339d3dd6978"
+content-hash = "bbbda7412d7bf115b3d55c153664100fd9c63876183ab744f0d15e68a45f651a"
 
 [metadata.files]
 alabaster = [
@@ -1924,7 +1927,8 @@ djangocms-admin-style = [
     {file = "djangocms_admin_style-2.0.2-py3-none-any.whl", hash = "sha256:6661a6c36ce56d18ec8fad05a3e56589417fc0bd0c647eb6d336e7f836999723"},
 ]
 djangocms-history = [
-    {file = "djangocms-history-1.0.0.tar.gz", hash = "sha256:03055ba81c59570ed26a7aa66dda1620222a8180e18f05390e90dabaee56d0a4"},
+    {file = "djangocms-history-2.0.0.tar.gz", hash = "sha256:4aa4a04225511f8a5b7c1a9dfe30afda65f615687d7be23e83e5109de143f48b"},
+    {file = "djangocms_history-2.0.0-py3-none-any.whl", hash = "sha256:1929d88dd219c2b15562da13631b5462cbde18aa0e4f89b0297a8e78de3769ae"},
 ]
 djangocms-text-ckeditor = [
     {file = "djangocms-text-ckeditor-3.10.0.tar.gz", hash = "sha256:905fa0cfbd244fb3a12657f89b083bfb57554ba35f4358972eebc6d78f8d8c3d"},
