@@ -21,7 +21,7 @@ ENV PATH=/root/.poetry/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sb
 COPY pyproject.toml poetry.lock /
 ENV POETRY_VERSION=0.12.14
 ENV PIP_NO_BINARY=psycopg2
-RUN curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python \
+RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python \
   && poetry config settings.virtualenvs.create false \
   && poetry install --no-dev
 ENV PATH="/root/.poetry/bin:$PATH"
