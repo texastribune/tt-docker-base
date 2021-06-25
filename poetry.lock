@@ -28,7 +28,7 @@ django-reversion = "*"
 [package.source]
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
-reference = 'private'
+reference = "private"
 
 [[package]]
 name = "awscli"
@@ -256,15 +256,19 @@ requests = "*"
 [package.source]
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
-reference = 'private'
+reference = "private"
 
 [[package]]
 name = "django-axes"
-version = "1.3.6"
+version = "5.19.0"
 description = "Keep track of failed login attempts in Django-powered sites."
 category = "main"
 optional = false
-python-versions = "*"
+python-versions = "~=3.6"
+
+[package.dependencies]
+django = ">=2.2"
+django-ipware = ">=3,<4"
 
 [[package]]
 name = "django-classy-tags"
@@ -422,6 +426,14 @@ optional = false
 python-versions = ">=3.5,<4.0"
 
 [[package]]
+name = "django-ipware"
+version = "3.0.2"
+description = "A Django utility application that returns client's real IP address"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "django-jet"
 version = "1.0.8.dev2"
 description = "Modern template for Django admin interface with improved functionality"
@@ -435,7 +447,7 @@ Django = "*"
 [package.source]
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
-reference = 'private'
+reference = "private"
 
 [[package]]
 name = "django-locking"
@@ -451,7 +463,7 @@ django-staticfiles = "*"
 [package.source]
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
-reference = 'private'
+reference = "private"
 
 [[package]]
 name = "django-object-actions"
@@ -531,7 +543,7 @@ Django = ">=1.11"
 [package.source]
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
-reference = 'private'
+reference = "private"
 
 [[package]]
 name = "django-thumbor"
@@ -1602,7 +1614,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=1.2.3)", "pytest-flake8", "pyt
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "29376f7925b34914758596fa080d81a09226cb0c5a7ee1349abb6339d3dd6978"
+content-hash = "02faee78450c32aab6b1f86c80f220163e9a395be9fce94867f239ad9a86cc12"
 
 [metadata.files]
 alabaster = [
@@ -1824,7 +1836,8 @@ django-appconf = [
 ]
 django-auth0-client = []
 django-axes = [
-    {file = "django-axes-1.3.6.tar.gz", hash = "sha256:79e15f6b25430c4fd52a5459379640dfcfde5d3eab9e11f62ccdc71406cdb530"},
+    {file = "django-axes-5.19.0.tar.gz", hash = "sha256:e1f40ca0244ce51f5e83cc4353b1c39e0be301eb94b0fc2355dbd5c2dbdc8fd7"},
+    {file = "django_axes-5.19.0-py3-none-any.whl", hash = "sha256:7e03065a667334ffa58eb996f620741474838e7374fc327fde5816cfc0635c83"},
 ]
 django-classy-tags = [
     {file = "django-classy-tags-2.0.0.tar.gz", hash = "sha256:d59d98bdf96a764dcf7a2929a86439d023b283a9152492811c7e44fc47555bc9"},
@@ -1881,6 +1894,9 @@ django-health-check = [
 django-inline-actions = [
     {file = "django-inline-actions-2.3.0.tar.gz", hash = "sha256:4f14960c9f0f8ba968977a1c663c7b5e5285f65bbbda0efb8b4b07d5b75a5475"},
     {file = "django_inline_actions-2.3.0-py3-none-any.whl", hash = "sha256:cf85d9d27fb02e0985bc847118d46e9a19fed12bb71df02303be157b80efc8a0"},
+]
+django-ipware = [
+    {file = "django-ipware-3.0.2.tar.gz", hash = "sha256:c7df8e1410a8e5d6b1fbae58728402ea59950f043c3582e033e866f0f0cf5e94"},
 ]
 django-jet = []
 django-locking = []
