@@ -130,8 +130,7 @@ If this is a small change that's very unlikely to affect anyone else, you'll bui
 
 ### Note on Dependabot PRs
 If you're merging Dependabot PRs:
-1. merge the PR (maybe merge multiple ones to batch them) - these will be merged to
-   the `dependencies` branch; not master
-1. Create your own branch off `master` and merge `dependencies` into it: `git
-   checkout -b my-fancy-branch; git merge dependencies`
-1. Proceed to [build and test the new images locally](#build-and-test-new-images-locally)
+1. Merge the PR (maybe merge multiple ones to batch them)
+1. Locally, pull down the latest `master`
+1. Immediately bump the version in the [VERSION file](VERSION), commit and tag: `make tag`. There should be as little gap as possible between this step and the previous one so as to avoid conflicts with other committers. You don't need to push anything. The `make tag` command will push it for you.
+1. Proceed to [deploy to texastribune steps](#deploy-texastribune).
