@@ -28,7 +28,7 @@ django-reversion = "*"
 [package.source]
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
-reference = 'private'
+reference = "private"
 
 [[package]]
 name = "awscli"
@@ -196,7 +196,7 @@ python-versions = ">=3.5"
 
 [[package]]
 name = "dj-pagination"
-version = "2.4.0"
+version = "2.5.0"
 description = "Django + Pagination Made Easy"
 category = "main"
 optional = false
@@ -256,7 +256,7 @@ requests = "*"
 [package.source]
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
-reference = 'private'
+reference = "private"
 
 [[package]]
 name = "django-axes"
@@ -435,7 +435,7 @@ Django = "*"
 [package.source]
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
-reference = 'private'
+reference = "private"
 
 [[package]]
 name = "django-locking"
@@ -451,7 +451,7 @@ django-staticfiles = "*"
 [package.source]
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
-reference = 'private'
+reference = "private"
 
 [[package]]
 name = "django-object-actions"
@@ -531,7 +531,7 @@ Django = ">=1.11"
 [package.source]
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
-reference = 'private'
+reference = "private"
 
 [[package]]
 name = "django-thumbor"
@@ -1602,7 +1602,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=1.2.3)", "pytest-flake8", "pyt
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "29376f7925b34914758596fa080d81a09226cb0c5a7ee1349abb6339d3dd6978"
+content-hash = "e7a9039c357beb352e7573348ee7466122a72b6ad37352a1f489f49fe5c94fee"
 
 [metadata.files]
 alabaster = [
@@ -1808,8 +1808,8 @@ decorator = [
     {file = "decorator-5.0.9.tar.gz", hash = "sha256:72ecfba4320a893c53f9706bebb2d55c270c1e51a28789361aa93e4a21319ed5"},
 ]
 dj-pagination = [
-    {file = "dj-pagination-2.4.0.tar.gz", hash = "sha256:fd89e97fa49a4ec7712926477d255e646213cdb0349a29b73b67510ceae4d44d"},
-    {file = "dj_pagination-2.4.0-py3-none-any.whl", hash = "sha256:1de28af33acafe1898e2d9c80a0669b492f582ec711c13864eff00e9b16479b8"},
+    {file = "dj-pagination-2.5.0.tar.gz", hash = "sha256:860301cdc79edc0712008921037b2341271d3a55586bc34fad072e74c8e800c4"},
+    {file = "dj_pagination-2.5.0-py3-none-any.whl", hash = "sha256:2d65aac791abe7b5a5cd09cd0735c76dcd3a932ac1a56e1dffea441937f886b7"},
 ]
 django = [
     {file = "Django-2.2.24-py3-none-any.whl", hash = "sha256:f2084ceecff86b1e631c2cd4107d435daf4e12f1efcdf11061a73bf0b5e95f92"},
