@@ -28,7 +28,7 @@ django-reversion = "*"
 [package.source]
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
-reference = 'private'
+reference = "private"
 
 [[package]]
 name = "awscli"
@@ -256,7 +256,7 @@ requests = "*"
 [package.source]
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
-reference = 'private'
+reference = "private"
 
 [[package]]
 name = "django-axes"
@@ -423,7 +423,7 @@ python-versions = ">=3.5,<4.0"
 
 [[package]]
 name = "django-jet"
-version = "1.0.8.dev2"
+version = "1.0.8"
 description = "Modern template for Django admin interface with improved functionality"
 category = "main"
 optional = false
@@ -431,11 +431,6 @@ python-versions = "*"
 
 [package.dependencies]
 Django = "*"
-
-[package.source]
-type = "legacy"
-url = "https://pypi.texastribune.org/simple"
-reference = 'private'
 
 [[package]]
 name = "django-locking"
@@ -451,7 +446,7 @@ django-staticfiles = "*"
 [package.source]
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
-reference = 'private'
+reference = "private"
 
 [[package]]
 name = "django-object-actions"
@@ -531,7 +526,7 @@ Django = ">=1.11"
 [package.source]
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
-reference = 'private'
+reference = "private"
 
 [[package]]
 name = "django-thumbor"
@@ -1602,7 +1597,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=1.2.3)", "pytest-flake8", "pyt
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "29376f7925b34914758596fa080d81a09226cb0c5a7ee1349abb6339d3dd6978"
+content-hash = "18d6f8def3cac2f31b34a7ea3d6e0ffa794db93f6658eeb270067ab7a9689d1d"
 
 [metadata.files]
 alabaster = [
@@ -1882,7 +1877,9 @@ django-inline-actions = [
     {file = "django-inline-actions-2.3.0.tar.gz", hash = "sha256:4f14960c9f0f8ba968977a1c663c7b5e5285f65bbbda0efb8b4b07d5b75a5475"},
     {file = "django_inline_actions-2.3.0-py3-none-any.whl", hash = "sha256:cf85d9d27fb02e0985bc847118d46e9a19fed12bb71df02303be157b80efc8a0"},
 ]
-django-jet = []
+django-jet = [
+    {file = "django-jet-1.0.8.tar.gz", hash = "sha256:f521dc0873023afa198d2b57687e0593ee62022bd50fa59506dfce69b101cd9e"},
+]
 django-locking = []
 django-object-actions = [
     {file = "django-object-actions-3.0.1.tar.gz", hash = "sha256:f3bcb1573f7a239f095f9a38edf4e832cac2dc740317b1cf13d9a40cf102257b"},
