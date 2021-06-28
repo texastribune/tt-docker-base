@@ -28,7 +28,7 @@ django-reversion = "*"
 [package.source]
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
-reference = 'private'
+reference = "private"
 
 [[package]]
 name = "awscli"
@@ -256,7 +256,7 @@ requests = "*"
 [package.source]
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
-reference = 'private'
+reference = "private"
 
 [[package]]
 name = "django-axes"
@@ -435,7 +435,7 @@ Django = "*"
 [package.source]
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
-reference = 'private'
+reference = "private"
 
 [[package]]
 name = "django-locking"
@@ -451,7 +451,7 @@ django-staticfiles = "*"
 [package.source]
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
-reference = 'private'
+reference = "private"
 
 [[package]]
 name = "django-object-actions"
@@ -531,7 +531,7 @@ Django = ">=1.11"
 [package.source]
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
-reference = 'private'
+reference = "private"
 
 [[package]]
 name = "django-thumbor"
@@ -555,7 +555,7 @@ python-versions = "*"
 
 [[package]]
 name = "django-treebeard"
-version = "4.4"
+version = "4.5.1"
 description = "Efficient tree implementations for Django"
 category = "main"
 optional = false
@@ -1602,7 +1602,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=1.2.3)", "pytest-flake8", "pyt
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "29376f7925b34914758596fa080d81a09226cb0c5a7ee1349abb6339d3dd6978"
+content-hash = "e5455efdfde618863d3b47b7967f3d77d06e7eb1108dfc0d9cdc24228ca15210"
 
 [metadata.files]
 alabaster = [
@@ -1916,8 +1916,8 @@ django-tinymce = [
     {file = "django_tinymce-3.0.2-py2.py3-none-any.whl", hash = "sha256:0ad9c91851261dafb6f4abfc80de5560002fbfb1a681a1cec2f0eca349462a4a"},
 ]
 django-treebeard = [
-    {file = "django-treebeard-4.4.tar.gz", hash = "sha256:f50e4eea146f7af6702decf7ef198ac1eee1fb9bb4af2c5dba276c3c48f76623"},
-    {file = "django_treebeard-4.4-py3-none-any.whl", hash = "sha256:214ae3ab331a7de11fb055a2015c201e34f3fa14255b667e1e07752231a7a398"},
+    {file = "django-treebeard-4.5.1.tar.gz", hash = "sha256:80150017725239702054e5fa64dc66e383dc13ac262c8d47ee5a82cb005969da"},
+    {file = "django_treebeard-4.5.1-py3-none-any.whl", hash = "sha256:7c2b1cdb1e9b46d595825186064a1228bc4d00dbbc186db5b0b9412357fba91c"},
 ]
 djangocms-admin-style = [
     {file = "djangocms-admin-style-2.0.2.tar.gz", hash = "sha256:4381b259b62340127654a51a1eb83af2c9a42b608a36393c731c04712cd37068"},
