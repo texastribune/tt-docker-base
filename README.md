@@ -62,7 +62,7 @@ If you're adding or updating a node dependency:
 
       # add a specific version of a package
       npm install --save <package>@1.0.0
-   
+
       # get help on npm for further usage
       npm help
       ```
@@ -80,7 +80,7 @@ If you're adding or updating a node dependency:
    ```
    This creates two local images:
      - `texastribune/base:<git-branch-name>-dev`
-     - `texastribune/base:<git-branch-name>-base`  
+     - `texastribune/base:<git-branch-name>-base`
 
    You can check that they were successfully created by runnning:
       ```sh
@@ -110,13 +110,13 @@ If this is a small change that's very unlikely to affect anyone else, you'll bui
 
 ##### Through tt-base Feature Branch
 1. Commit your changes to your `tt-base` branch.
-1. Push your branch. 
+1. Push your branch.
     - Docker Hub will build the images with the same name as when you [built them locally](#build-and-test-new-images-locally).
-    - Now anyone can pull down and use the images `texastribune/base:<git-branch-name>` 
+    - Now anyone can pull down and use the images `texastribune/base:<git-branch-name>`
     - Update your associated `texastribune` PR to use these ^ images built from the `tt-base` feature branch.  Anyone can pull that PR's branch down to test locally.
     - You can check the status of the builds on [Docker Hub](https://hub.docker.com/repository/docker/texastribune/base). _You'll see a more accurate build log when logged-in under an account that is affiliated with the texastribune org in Docker Hub._
 1. After the related `texastribune` PR is approved, merge your `tt-base` feature branch into master, and delete the feature branch.
-1. Proceed to [update git version tag](#update-git-version-tag).
+1. `git checkout master` and `git pull` to get your local master branch even with remote.
 1. Immediately bump the version in the [VERSION file](VERSION), commit and tag: `make tag`. There should be as little gap as possible between this step and the previous one so as to avoid conflicts with other committers. You don't need to push anything. The `make tag` command will push it for you.
 1. Proceed to [deploy to texastribune steps](#deploy-texastribune).
 
