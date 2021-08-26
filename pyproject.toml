@@ -65,6 +65,8 @@ django-health-check = "^3.11"
 pillow = "=8.3.1"
 rsa = "*"
 Markdown = "^3.3.4"
+google-auth = "^2.0.1"
+gspread = "^4.0.1"
 
 [tool.poetry.dev-dependencies]
 django-debug-toolbar = "*"
