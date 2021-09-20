@@ -65,7 +65,7 @@
     "intersection-observer": "^0.5.1",
     "lazysizes": "^5.2.2",
     "lz-string": "^1.4.4",
-    "mapbox-gl": "0.54.0",
+    "mapbox-gl": "^2.4.1",
     "nodent-runtime": "^3.2.1",
     "react": "^17.0.1",
     "react-content-loader": "^6.0.1",
