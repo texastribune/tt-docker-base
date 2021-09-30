@@ -27,7 +27,7 @@ dev-image: base-image
 	-f dev/Dockerfile .
 
 dev-image-no-cache: prepare
-	docker build --tag=texastribune/base:dev
+	docker build --no-cache --tag=texastribune/base:dev \
 		--tag=texastribune/base:$(GIT_BRANCH)-dev \
 	-f dev/Dockerfile .
 
