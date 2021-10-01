@@ -29,6 +29,11 @@ ENV PATH=$PATH:/node_modules/.bin
 ENV APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE False
 ENV PIP_NO_BINARY=psycopg2
 
+# Install ligbnetls30, needed workaround for this issue to install nodesource:  https://github.com/nodesource/distributions/issues/1266
+RUN apt update && \
+    apt install libgnutls30
+
+# Install nodejs from nodesource
 RUN \
   echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections && \
   echo "deb https://deb.nodesource.com/node_12.x stretch main" > /etc/apt/sources.list.d/nodesource.list && \
