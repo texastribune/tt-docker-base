@@ -66,6 +66,7 @@ rsa = "*"
 Markdown = "^3.3.4"
 google-auth = "^2.0.1"
 gspread = "^4.0.1"
+slack-sdk = "^3.11.2"
 
 [tool.poetry.dev-dependencies]
 django-debug-toolbar = "*"
