@@ -79,6 +79,6 @@
     "reframe.js": "^2.2.4",
     "ttfiles": "git://github.com/texastribune/files.git#2.6.1",
     "underscore": "^1.13.1",
-    "validator": "^11.1.0"
+    "validator": "^13.6.0"
   }
 }
