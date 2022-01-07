@@ -28,7 +28,7 @@ django-reversion = "*"
 [package.source]
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
-reference = 'private'
+reference = "private"
 
 [[package]]
 name = "awscli"
@@ -272,7 +272,7 @@ requests = "*"
 [package.source]
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
-reference = 'private'
+reference = "private"
 
 [[package]]
 name = "django-axes"
@@ -451,7 +451,7 @@ Django = "*"
 [package.source]
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
-reference = 'private'
+reference = "private"
 
 [[package]]
 name = "django-locking"
@@ -467,7 +467,7 @@ django-staticfiles = "*"
 [package.source]
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
-reference = 'private'
+reference = "private"
 
 [[package]]
 name = "django-object-actions"
@@ -547,7 +547,7 @@ Django = ">=1.11"
 [package.source]
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
-reference = 'private'
+reference = "private"
 
 [[package]]
 name = "django-thumbor"
@@ -563,7 +563,7 @@ libthumbor = ">=1.2.0"
 
 [[package]]
 name = "django-tinymce"
-version = "3.0.2"
+version = "3.4.0"
 description = "A Django application that contains a widget to render a form field as a TinyMCE editor."
 category = "main"
 optional = false
@@ -1698,7 +1698,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "fcadf0c92e9d639da2e62105f3a1929768cfa2904d06818a22a1e1da161e6946"
+content-hash = "1c8f9119264dd4afd02badd5f6056b5832ace75385dab6ca4f470acf1270ceb6"
 
 [metadata.files]
 alabaster = [
@@ -2016,8 +2016,8 @@ django-thumbor = [
     {file = "django-thumbor-0.5.7.tar.gz", hash = "sha256:7e68c5f5c3da6246c9da37951e65796eb6afdf7d9181eab6dc4cc837e25b53a2"},
 ]
 django-tinymce = [
-    {file = "django-tinymce-3.0.2.tar.gz", hash = "sha256:fe82e476059b27187eaec849b6b765ef9918a25e64e419861c4f507d0c8cc143"},
-    {file = "django_tinymce-3.0.2-py2.py3-none-any.whl", hash = "sha256:0ad9c91851261dafb6f4abfc80de5560002fbfb1a681a1cec2f0eca349462a4a"},
+    {file = "django-tinymce-3.4.0.tar.gz", hash = "sha256:275653dbf09fbd3347928757d6baf29040b42fe5c5d95396418c36aa4b1517eb"},
+    {file = "django_tinymce-3.4.0-py3-none-any.whl", hash = "sha256:4241eb201c670892aa8980a130652f4ae818ba24702f078336296d25e9e1658b"},
 ]
 django-treebeard = [
     {file = "django-treebeard-4.4.tar.gz", hash = "sha256:f50e4eea146f7af6702decf7ef198ac1eee1fb9bb4af2c5dba276c3c48f76623"},
