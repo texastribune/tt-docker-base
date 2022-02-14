@@ -1,9 +1,18 @@
 tt-docker-base
 ===========
 
-> Base image of dependencies, starting point for [multistage docker build](https://docs.docker.com/develop/develop-images/multistage-build/)
+This project contains the base Docker image of dependencies for the Texas Tribune website and CMS. It serves as the starting point for a [multistage docker build](https://docs.docker.com/develop/develop-images/multistage-build/).
 
-## Updating
+## Testing Dependabot PRs
+
+Github's dependabot regularly creates PRs that bump package versions in order to fix known security issues. To ensure that these updates don't cause unexpected behavior on the Texas Tribune website, we prefer to test them locally before merging and deploying them.
+
+Consult our [dependabot testing guide](https://texastribune.atlassian.net/wiki/spaces/TECH/pages/1992163329/How+to+deploy+dependabot+fixes) for step-by-step instructions on testing and deploying.
+
+## Updating dependencies
+
+The following instructions provide a general guide to updating, adding or removing Python and Node dependencies in this repo.
+
 ### Setup
 ```sh
 # bring down latest
@@ -127,10 +136,3 @@ If this is a small change that's very unlikely to affect anyone else, you'll bui
 1. Merge related `texastribune` PR.
 1. Deploy it
 1. Your work is done.
-
-### Note on Dependabot PRs
-If you're merging Dependabot PRs:
-1. Merge the PR (maybe merge multiple ones to batch them)
-1. Locally, pull down the latest `master`
-1. Immediately bump the version in the [VERSION file](VERSION), commit and tag: `make tag`. There should be as little gap as possible between this step and the previous one so as to avoid conflicts with other committers. You don't need to push anything. The `make tag` command will push it for you.
-1. Proceed to [deploy to texastribune steps](#deploy-texastribune).
