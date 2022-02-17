@@ -28,7 +28,7 @@ django-reversion = "*"
 [package.source]
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
-reference = 'private'
+reference = "private"
 
 [[package]]
 name = "awscli"
@@ -220,7 +220,7 @@ python-versions = "*"
 
 [[package]]
 name = "django"
-version = "2.2.26"
+version = "2.2.27"
 description = "A high-level Python Web framework that encourages rapid development and clean, pragmatic design."
 category = "main"
 optional = false
@@ -272,7 +272,7 @@ requests = "*"
 [package.source]
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
-reference = 'private'
+reference = "private"
 
 [[package]]
 name = "django-axes"
@@ -451,7 +451,7 @@ Django = "*"
 [package.source]
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
-reference = 'private'
+reference = "private"
 
 [[package]]
 name = "django-locking"
@@ -467,7 +467,7 @@ django-staticfiles = "*"
 [package.source]
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
-reference = 'private'
+reference = "private"
 
 [[package]]
 name = "django-object-actions"
@@ -547,7 +547,7 @@ Django = ">=1.11"
 [package.source]
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
-reference = 'private'
+reference = "private"
 
 [[package]]
 name = "django-thumbor"
@@ -1698,7 +1698,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "3955010cae0ff0569f8801653237217b36ab9638dd6ff6c7a8b7a3bc83f6a145"
+content-hash = "34e6b922da806d3ca4a30a6fb4da0bb16b8cd24c85d2933fb2b47cd3b91181ef"
 
 [metadata.files]
 alabaster = [
@@ -1916,8 +1916,8 @@ dj-pagination = [
     {file = "dj_pagination-2.4.0-py3-none-any.whl", hash = "sha256:1de28af33acafe1898e2d9c80a0669b492f582ec711c13864eff00e9b16479b8"},
 ]
 django = [
-    {file = "Django-2.2.26-py3-none-any.whl", hash = "sha256:85e62019366692f1d5afed946ca32fef34c8693edf342ac9d067d75d64faf0ac"},
-    {file = "Django-2.2.26.tar.gz", hash = "sha256:dfa537267d52c6243a62b32855a744ca83c37c70600aacffbfd98bc5d6d8518f"},
+    {file = "Django-2.2.27-py3-none-any.whl", hash = "sha256:90763c764738586b11d7e1f44828032c153366e43ad7f782908193a1bb2d6d92"},
+    {file = "Django-2.2.27.tar.gz", hash = "sha256:1ee37046b0bf2b61e83b3a01d067323516ec3b6f2b17cd49b1326dd4ba9dc913"},
 ]
 django-admin-sortable2 = [
     {file = "django-admin-sortable2-0.7.5.tar.gz", hash = "sha256:1366cb159439aa28472639dc1f33d6370a56d4c3efbe3def854d953aaa6bbd24"},
