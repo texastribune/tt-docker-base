@@ -28,7 +28,7 @@ django-reversion = "*"
 [package.source]
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
-reference = 'private'
+reference = "private"
 
 [[package]]
 name = "awscli"
@@ -288,7 +288,7 @@ requests = "*"
 [package.source]
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
-reference = 'private'
+reference = "private"
 
 [[package]]
 name = "django-axes"
@@ -311,20 +311,19 @@ django = ">=2.2"
 
 [[package]]
 name = "django-cms"
-version = "3.7.4"
-description = "An Advanced Django CMS"
+version = "3.9.0"
+description = "Lean enterprise content management powered by Django."
 category = "main"
 optional = false
 python-versions = "*"
 
 [package.dependencies]
-Django = ">=1.11,<4"
+Django = ">=2.2"
 django-classy-tags = ">=0.7.2"
 django-formtools = ">=2.1"
 django-sekizai = ">=0.7"
 django-treebeard = ">=4.3"
 djangocms-admin-style = ">=1.2"
-six = "*"
 
 [[package]]
 name = "django-codemirror-widget"
@@ -467,7 +466,7 @@ Django = "*"
 [package.source]
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
-reference = 'private'
+reference = "private"
 
 [[package]]
 name = "django-locking"
@@ -483,7 +482,7 @@ django-staticfiles = "*"
 [package.source]
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
-reference = 'private'
+reference = "private"
 
 [[package]]
 name = "django-object-actions"
@@ -563,7 +562,7 @@ Django = ">=1.11"
 [package.source]
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
-reference = 'private'
+reference = "private"
 
 [[package]]
 name = "django-thumbor"
@@ -1796,7 +1795,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "773f07ad71f890d68e8c557974c9da4229c307a778944bd10a04e5539b02faf7"
+content-hash = "3bd680dbe1eed0ba0131227978d9253733783b15b42e9372584d073d00e4008a"
 
 [metadata.files]
 alabaster = [
@@ -2041,8 +2040,7 @@ django-classy-tags = [
     {file = "django_classy_tags-2.0.0-py3-none-any.whl", hash = "sha256:25eb4f95afee396148683bfb4811b83b3f5729218d73ad0a3399271a6f9fcc49"},
 ]
 django-cms = [
-    {file = "django-cms-3.7.4.tar.gz", hash = "sha256:9374af5a35bac590f1891031fb0878a0e6c2dc5309a6907929c6a036493694f6"},
-    {file = "django_cms-3.7.4-py2.py3-none-any.whl", hash = "sha256:9302f0e21153fc9afca55d9c3424ca3654b51d274a1af6ec39f4fbb05059fe46"},
+    {file = "django_cms-3.9.0-py2.py3-none-any.whl", hash = "sha256:6feaa6f3b7f225e08f221cf33d6135a1e268e9b781dae4bf916239c3f54e7b27"},
 ]
 django-codemirror-widget = [
     {file = "django-codemirror-widget-0.5.0.tar.gz", hash = "sha256:a2f7facf299f3f51dff7227cc9850905b899e08485698d3f4fad110a7ad628be"},
