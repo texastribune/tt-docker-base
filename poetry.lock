@@ -355,11 +355,11 @@ python-versions = "*"
 
 [[package]]
 name = "django-crispy-forms"
-version = "1.7.2"
+version = "1.14.0"
 description = "Best way to have Django DRY forms"
 category = "main"
 optional = false
-python-versions = "*"
+python-versions = ">=3.7"
 
 [[package]]
 name = "django-db-readonly"
@@ -455,7 +455,7 @@ python-versions = ">=3.5,<4.0"
 
 [[package]]
 name = "django-jet"
-version = "1.0.8.dev2"
+version = "1.0.8.dev3"
 description = "Modern template for Django admin interface with improved functionality"
 category = "main"
 optional = false
@@ -1772,11 +1772,14 @@ six = "*"
 
 [[package]]
 name = "whitenoise"
-version = "3.3.1"
+version = "6.0.0"
 description = "Radically simplified static file serving for WSGI applications"
 category = "main"
 optional = false
-python-versions = "*"
+python-versions = ">=3.7"
+
+[package.extras]
+brotli = ["brotli"]
 
 [[package]]
 name = "zipp"
@@ -1793,7 +1796,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "a7bd334be057eb873f04b146b6b7c3835cfc6e1b312de61559cd999b9cdc37ac"
+content-hash = "773f07ad71f890d68e8c557974c9da4229c307a778944bd10a04e5539b02faf7"
 
 [metadata.files]
 alabaster = [
@@ -2052,8 +2055,8 @@ django-coverage = [
     {file = "django-coverage-1.2.4.tar.gz", hash = "sha256:eee56c1465b2ece0a066ea2514c50039462f8fe1ea58e59adc0dfda14b30628b"},
 ]
 django-crispy-forms = [
-    {file = "django-crispy-forms-1.7.2.tar.gz", hash = "sha256:5952bab971110d0b86c278132dae0aa095beee8f723e625c3d3fa28888f1675f"},
-    {file = "django_crispy_forms-1.7.2-py2.py3-none-any.whl", hash = "sha256:705ededc554ad8736157c666681165fe22ead2dec0d5446d65fc9dd976a5a876"},
+    {file = "django-crispy-forms-1.14.0.tar.gz", hash = "sha256:35887b8851a931374dd697207a8f56c57a9c5cb9dbf0b9fa54314da5666cea5b"},
+    {file = "django_crispy_forms-1.14.0-py3-none-any.whl", hash = "sha256:bc4d2037f6de602d39c0bc452ac3029d1f5d65e88458872cc4dbc01c3a400604"},
 ]
 django-db-readonly = [
     {file = "django-db-readonly-0.4.1.tar.gz", hash = "sha256:2b8adf9e075ffb692d73b9fef680b9cc073dcf5a4ce03a85d99e85d85fc7c4fa"},
@@ -2796,8 +2799,8 @@ websocket-client = [
     {file = "websocket_client-0.47.0.tar.gz", hash = "sha256:a453dc4dfa6e0db3d8fd7738a308a88effe6240c59f3226eb93e8f020c216149"},
 ]
 whitenoise = [
-    {file = "whitenoise-3.3.1-py2.py3-none-any.whl", hash = "sha256:15f43b2e701821b95c9016cf469d29e2a546cb1c7dead584ba82c36f843995cf"},
-    {file = "whitenoise-3.3.1.tar.gz", hash = "sha256:9d81515f2b5b27051910996e1e860b1332e354d9e7bcf30c98f21dcb6713e0dd"},
+    {file = "whitenoise-6.0.0-py3-none-any.whl", hash = "sha256:5a4aff543ee860fbe40d743e556adf92ccd41b7df45697cae074afdf657056b9"},
+    {file = "whitenoise-6.0.0.tar.gz", hash = "sha256:08c42bc535f9777eea1a599289d9433f081921f97887eaf6f559446b2a080374"},
 ]
 zipp = [
     {file = "zipp-3.6.0-py3-none-any.whl", hash = "sha256:9fe5ea21568a0a70e50f273397638d39b03353731e6cbbb3fd8502a33fec40bc"},
