@@ -250,31 +250,31 @@ python-versions = "*"
 
 [[package]]
 name = "django"
-version = "3.0.14"
+version = "3.2.12"
 description = "A high-level Python Web framework that encourages rapid development and clean, pragmatic design."
 category = "main"
 optional = false
 python-versions = ">=3.6"
 
 [package.dependencies]
-asgiref = ">=3.2,<4.0"
+asgiref = ">=3.3.2,<4"
 pytz = "*"
 sqlparse = ">=0.2.2"
 
 [package.extras]
-argon2 = ["argon2-cffi (>=16.1.0)"]
+argon2 = ["argon2-cffi (>=19.1.0)"]
 bcrypt = ["bcrypt"]
 
 [[package]]
 name = "django-admin-sortable2"
-version = "0.7.5"
+version = "1.0.4"
 description = "Generic drag-and-drop sorting for the List, the Stacked- and the Tabular-Inlines Views in the Django Admin"
 category = "main"
 optional = false
 python-versions = "*"
 
 [package.dependencies]
-Django = ">=1.8,<3.1"
+Django = ">=2.2,<4.1"
 
 [[package]]
 name = "django-appconf"
@@ -326,20 +326,19 @@ django = ">=2.2"
 
 [[package]]
 name = "django-cms"
-version = "3.7.4"
-description = "An Advanced Django CMS"
+version = "3.9.0"
+description = "Lean enterprise content management powered by Django."
 category = "main"
 optional = false
 python-versions = "*"
 
 [package.dependencies]
-Django = ">=1.11,<4"
+Django = ">=2.2"
 django-classy-tags = ">=0.7.2"
 django-formtools = ">=2.1"
 django-sekizai = ">=0.7"
 django-treebeard = ">=4.3"
 djangocms-admin-style = ">=1.2"
-six = "*"
 
 [[package]]
 name = "django-codemirror-widget"
@@ -486,19 +485,21 @@ reference = 'private'
 
 [[package]]
 name = "django-locking"
-version = "2.2.19.dev17"
-description = "Prevents users from doing concurrent editing in Django. Works out of the box in the admin interface, or you can integrate it with your own apps using a public API."
+version = "2.2.19.dev18"
+description = ""
 category = "main"
 optional = false
 python-versions = "*"
+develop = false
 
 [package.dependencies]
 django-staticfiles = "*"
 
 [package.source]
-type = "legacy"
-url = "https://pypi.texastribune.org/simple"
-reference = 'private'
+type = "git"
+url = "https://github.com/texastribune/django-locking.git"
+reference = "django3-upgrade"
+resolved_reference = "2d78bd538014fae41a8b75bee52770a563b4913c"
 
 [[package]]
 name = "django-object-actions"
@@ -558,11 +559,22 @@ django-appconf = ">=0.4"
 
 [[package]]
 name = "django-storages"
-version = "1.6.5"
+version = "1.12.3"
 description = "Support for many storage backends in Django"
 category = "main"
 optional = false
-python-versions = "*"
+python-versions = ">=3.5"
+
+[package.dependencies]
+Django = ">=2.2"
+
+[package.extras]
+azure = ["azure-storage-blob (>=12.0.0)"]
+boto3 = ["boto3 (>=1.4.4)"]
+dropbox = ["dropbox (>=7.2.1)"]
+google = ["google-cloud-storage (>=1.27.0)"]
+libcloud = ["apache-libcloud"]
+sftp = ["paramiko"]
 
 [[package]]
 name = "django-taggit"
@@ -1811,7 +1823,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "773f07ad71f890d68e8c557974c9da4229c307a778944bd10a04e5539b02faf7"
+content-hash = "661400541e99313da1e03422e123bf2a6e69634ab86a764196df2e4b4e0ce05e"
 
 [metadata.files]
 alabaster = [
@@ -2041,11 +2053,12 @@ dj-pagination = [
     {file = "dj_pagination-2.4.0-py3-none-any.whl", hash = "sha256:1de28af33acafe1898e2d9c80a0669b492f582ec711c13864eff00e9b16479b8"},
 ]
 django = [
-    {file = "Django-3.0.14-py3-none-any.whl", hash = "sha256:9bc7aa619ed878fedba62ce139abe663a147dccfd20e907725ec11e02a1ca225"},
-    {file = "Django-3.0.14.tar.gz", hash = "sha256:d58d8394036db75a81896037d757357e79406e8f68816c3e8a28721c1d9d4c11"},
+    {file = "Django-3.2.12-py3-none-any.whl", hash = "sha256:9b06c289f9ba3a8abea16c9c9505f25107809fb933676f6c891ded270039d965"},
+    {file = "Django-3.2.12.tar.gz", hash = "sha256:9772e6935703e59e993960832d66a614cf0233a1c5123bc6224ecc6ad69e41e2"},
 ]
 django-admin-sortable2 = [
-    {file = "django-admin-sortable2-0.7.5.tar.gz", hash = "sha256:1366cb159439aa28472639dc1f33d6370a56d4c3efbe3def854d953aaa6bbd24"},
+    {file = "django-admin-sortable2-1.0.4.tar.gz", hash = "sha256:f96044003176c6684c5f969792ca833a505d654fa0f7b24232a0a610e4332a53"},
+    {file = "django_admin_sortable2-1.0.4-py3-none-any.whl", hash = "sha256:e22956889533b48a35a7f02859ae3a939753fa9a7d7d532cefc2835b41bdcebb"},
 ]
 django-appconf = [
     {file = "django-appconf-1.0.5.tar.gz", hash = "sha256:be3db0be6c81fa84742000b89a81c016d70ae66a7ccb620cdef592b1f1a6aaa4"},
@@ -2060,8 +2073,7 @@ django-classy-tags = [
     {file = "django_classy_tags-2.0.0-py3-none-any.whl", hash = "sha256:25eb4f95afee396148683bfb4811b83b3f5729218d73ad0a3399271a6f9fcc49"},
 ]
 django-cms = [
-    {file = "django-cms-3.7.4.tar.gz", hash = "sha256:9374af5a35bac590f1891031fb0878a0e6c2dc5309a6907929c6a036493694f6"},
-    {file = "django_cms-3.7.4-py2.py3-none-any.whl", hash = "sha256:9302f0e21153fc9afca55d9c3424ca3654b51d274a1af6ec39f4fbb05059fe46"},
+    {file = "django_cms-3.9.0-py2.py3-none-any.whl", hash = "sha256:6feaa6f3b7f225e08f221cf33d6135a1e268e9b781dae4bf916239c3f54e7b27"},
 ]
 django-codemirror-widget = [
     {file = "django-codemirror-widget-0.5.0.tar.gz", hash = "sha256:a2f7facf299f3f51dff7227cc9850905b899e08485698d3f4fad110a7ad628be"},
@@ -2134,8 +2146,8 @@ django-staticfiles = [
     {file = "django-staticfiles-1.2.1.tar.gz", hash = "sha256:6c4371699bb316dc3e0db1ecf07c80d3d72827a789d73b165b0a592875621fe1"},
 ]
 django-storages = [
-    {file = "django-storages-1.6.5.tar.gz", hash = "sha256:bc8e4c1f483608c5dd1212072fd41042f3ef2d2a2896ec4fb12dbc62c82996a0"},
-    {file = "django_storages-1.6.5-py2.py3-none-any.whl", hash = "sha256:ab6be1538cf29511400bce83d0e5ca74d2e935cad82086063bcf5e7edacc1661"},
+    {file = "django-storages-1.12.3.tar.gz", hash = "sha256:a475edb2f0f04c4f7e548919a751ecd50117270833956ed5bd585c0575d2a5e7"},
+    {file = "django_storages-1.12.3-py3-none-any.whl", hash = "sha256:204a99f218b747c46edbfeeb1310d357f83f90fa6a6024d8d0a3f422570cee84"},
 ]
 django-taggit = []
 django-thumbor = [
