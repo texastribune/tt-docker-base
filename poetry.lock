@@ -469,19 +469,21 @@ python-versions = ">=3.5,<4.0"
 
 [[package]]
 name = "django-jet"
-version = "1.0.8.dev3"
+version = "1.0.8.dev4"
 description = "Modern template for Django admin interface with improved functionality"
 category = "main"
 optional = false
 python-versions = "*"
+develop = false
 
 [package.dependencies]
 Django = "*"
 
 [package.source]
-type = "legacy"
-url = "https://pypi.texastribune.org/simple"
-reference = 'private'
+type = "git"
+url = "https://github.com/texastribune/django-jet.git"
+reference = "fixing-gettext-bug"
+resolved_reference = "3d4ab312ace56a69d8be8812b50e1abb41bcf533"
 
 [[package]]
 name = "django-locking"
@@ -1823,7 +1825,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "661400541e99313da1e03422e123bf2a6e69634ab86a764196df2e4b4e0ce05e"
+content-hash = "02d653a6a96739e26d939b5ec0cc05e00e2dd434c39b4748e310a6267d5b762d"
 
 [metadata.files]
 alabaster = [
