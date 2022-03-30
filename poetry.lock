@@ -16,7 +16,7 @@ python-versions = "*"
 
 [[package]]
 name = "armstrong.core.arm-wells"
-version = "1.10.0.dev10"
+version = "1.10.0.dev11"
 description = "Provides the basic well objects"
 category = "main"
 optional = false
@@ -483,7 +483,7 @@ Django = "*"
 type = "git"
 url = "https://github.com/texastribune/django-jet.git"
 reference = "fixing-gettext-bug"
-resolved_reference = "3d4ab312ace56a69d8be8812b50e1abb41bcf533"
+resolved_reference = "f807e35a2f025ca393df18e10e27b42c299e3beb"
 
 [[package]]
 name = "django-locking"
@@ -1825,7 +1825,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "02d653a6a96739e26d939b5ec0cc05e00e2dd434c39b4748e310a6267d5b762d"
+content-hash = "6925569c94c13eb49a7299ff34d1da036e0c5bcf3ef94ec5a72a14dea1334a0f"
 
 [metadata.files]
 alabaster = [
