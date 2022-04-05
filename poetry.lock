@@ -28,7 +28,7 @@ django-reversion = "*"
 [package.source]
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
-reference = "private"
+reference = 'private'
 
 [[package]]
 name = "asgiref"
@@ -303,7 +303,7 @@ requests = "*"
 [package.source]
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
-reference = "private"
+reference = 'private'
 
 [[package]]
 name = "django-axes"
@@ -483,7 +483,7 @@ Django = "*"
 type = "git"
 url = "https://github.com/texastribune/django-jet.git"
 reference = "fixing-gettext-bug"
-resolved_reference = "f807e35a2f025ca393df18e10e27b42c299e3beb"
+resolved_reference = "a092ea422579ecd8bad6cc2137e756e8b3f1be29"
 
 [[package]]
 name = "django-locking"
@@ -501,7 +501,7 @@ django-staticfiles = "*"
 type = "git"
 url = "https://github.com/texastribune/django-locking.git"
 reference = "django3-upgrade"
-resolved_reference = "2d78bd538014fae41a8b75bee52770a563b4913c"
+resolved_reference = "6d928927ba5726231254049b50f7440512bad833"
 
 [[package]]
 name = "django-object-actions"
@@ -592,7 +592,7 @@ Django = ">=1.11"
 [package.source]
 type = "legacy"
 url = "https://pypi.texastribune.org/simple"
-reference = "private"
+reference = 'private'
 
 [[package]]
 name = "django-thumbor"
@@ -1825,7 +1825,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "9d7ce314c7090581409a134ed4d08c039ea67dcd9006d0c75c2097f370ad42c3"
+content-hash = "3e39c214c3228dc520e593912e262ff4dc2833c00b560201fe62b649b24f92a4"
 
 [metadata.files]
 alabaster = [
