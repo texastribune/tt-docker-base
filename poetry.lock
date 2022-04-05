@@ -474,34 +474,30 @@ description = "Modern template for Django admin interface with improved function
 category = "main"
 optional = false
 python-versions = "*"
-develop = false
 
 [package.dependencies]
 Django = "*"
 
 [package.source]
-type = "git"
-url = "https://github.com/texastribune/django-jet.git"
-reference = "fixing-gettext-bug"
-resolved_reference = "a092ea422579ecd8bad6cc2137e756e8b3f1be29"
+type = "legacy"
+url = "https://pypi.texastribune.org/simple"
+reference = 'private'
 
 [[package]]
 name = "django-locking"
 version = "2.2.19.dev18"
-description = ""
+description = "Prevents users from doing concurrent editing in Django. Works out of the box in the admin interface, or you can integrate it with your own apps using a public API."
 category = "main"
 optional = false
 python-versions = "*"
-develop = false
 
 [package.dependencies]
 django-staticfiles = "*"
 
 [package.source]
-type = "git"
-url = "https://github.com/texastribune/django-locking.git"
-reference = "django3-upgrade"
-resolved_reference = "6d928927ba5726231254049b50f7440512bad833"
+type = "legacy"
+url = "https://pypi.texastribune.org/simple"
+reference = 'private'
 
 [[package]]
 name = "django-object-actions"
@@ -1825,7 +1821,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "3e39c214c3228dc520e593912e262ff4dc2833c00b560201fe62b649b24f92a4"
+content-hash = "f46a4bd631874adef150c4de9b10bb4107438c1301070cd1bcf1e79b2d9380c6"
 
 [metadata.files]
 alabaster = [
