@@ -32,17 +32,14 @@ If you're adding or updating a python dependency:
       ```sh
       # from inside the container shell from step 1:
 
-      # add a new production python dependency
+      # add or upgrade a new production python dependency
       poetry add <package>
 
-      # add a new development dependency
+      # add/upgrade a new development dependency
       poetry add --dev <package>
 
       # pin the dependency to a specific version like this
       poetry add <package>@1.0.0
-
-      # example for updating an existing package to 1.0.1
-      poetry update packagename@1.0.1
       ```
    1. Return to your local machine's shell
       ```sh
