@@ -78,7 +78,7 @@
     "redux": "^4.0.0",
     "redux-thunk": "^2.3.0",
     "reframe.js": "^2.2.4",
-    "ttfiles": "https://github.com/texastribune/files.git#2.6.1",
+    "ttfiles": "https://github.com/texastribune/files.git#v2.7.0",
     "underscore": "^1.13.1",
     "validator": "^13.7.0"
   }
