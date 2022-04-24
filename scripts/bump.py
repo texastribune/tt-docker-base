@@ -1,10 +1,8 @@
-
 #!/usr/bin/env python3
 
 import re
 from enum import Enum
 import sys
-import os
 import subprocess
 
 VERSION_FILE_PATH = './VERSION'
@@ -126,7 +124,7 @@ def main():
         print("Exiting...")
         sys.exit(0)
     write_version_file(new_version)
-    cmd_gitadd = f"git add {VERSION_FILE_PATH}"
+    cmd_gitadd = "git add {}".format(VERSION_FILE_PATH)
     exit_code_gitadd = execute_command(cmd_gitadd)
     if (exit_code_gitadd != 0):
         sys.exit(exit_code_gitadd)
