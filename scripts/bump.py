@@ -24,7 +24,7 @@ def execute_command(command):
         command (str): The command to execute.
 
     Returns:
-        None
+        Exit code of the command.
     """
     process = subprocess.Popen(
         command,
@@ -40,6 +40,8 @@ def execute_command(command):
             break
         if realtime_output:
             print(realtime_output.strip(), flush=True)
+    exit_code = process.wait()
+    return exit_code
 
 
 def yes_or_no(question):
@@ -125,9 +127,14 @@ def main():
         sys.exit(0)
     write_version_file(new_version)
     cmd_gitadd = f"git add {VERSION_FILE_PATH}"
-    execute_command(cmd_gitadd)
+    exit_code_gitadd = execute_command(cmd_gitadd)
+    if (exit_code_gitadd != 0):
+        sys.exit(exit_code_gitadd)
     cmd_commit = "git commit -m 'bump version to {}'".format(new_version)
-    execute_command(cmd_commit)
+    exit_code_commit = execute_command(cmd_commit)
+    if (exit_code_commit != 0):
+        sys.exit(exit_code_commit)
+    sys.exit(0)
 
 
 if __name__ == "__main__":
