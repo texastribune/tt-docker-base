@@ -38,11 +38,5 @@ dev-shell: dev-image
 	docker run -it --rm --volume=$$(pwd)/node:/node texastribune/base:dev bash
 
 # bumps version in VERSION file
-bump-patch:
-	python ./scripts/bump.py patch
-
-bump-minor:
-	python ./scripts/bump.py minor
-
-bump-major:
-	python ./scripts/bump.py major
+bump:
+	python ./scripts/bump.py
