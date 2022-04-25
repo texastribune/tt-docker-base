@@ -175,11 +175,11 @@ def main():
     new_version = generate_new_version(current_version, reply_increment)
 
     # save and commit
-    q_commit = f"Bump version to {new_version} and commit?"
+    q_commit = f"Bump version to {wrap(new_version,bc.UNDERLINE)} and commit?"
     confirm_commit = yes_or_no(q_commit)
     if confirm_commit == False:
         exit_without_error()
-    print(f"{VERSION_FILE_PATH} file changed: {current_version} -> {new_version}")
+    print(f"{VERSION_FILE_PATH} file changed: {current_version} -> {wrap(new_version,bc.UNDERLINE)}")
     write_version_file(new_version)
     cmd_gitadd = f"git add {VERSION_FILE_PATH}"
     exit_code_gitadd = execute_command(cmd_gitadd)
@@ -189,7 +189,7 @@ def main():
     check_exit_code(exit_code_commit)
 
     # tag and push
-    q_tag = f"Tag commit as {new_version} and push local '{active_branch}' to remote '{active_branch}'?"
+    q_tag = f"Tag commit as {wrap(new_version,bc.UNDERLINE)} and push local '{active_branch}' to remote '{active_branch}'?"
     confirm_tag = yes_or_no(q_tag)
     if confirm_tag == False:
         exit_without_error()
