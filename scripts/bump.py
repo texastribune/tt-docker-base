@@ -16,6 +16,22 @@ class Increment(Enum):
     patch = '3'
 
 
+class bc:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKCYAN = '\033[96m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+
+
+def wrap(text, color):
+    return f"{color}{text}{bc.ENDC}"
+
+
 def execute_command(command):
     """
     Execute a shell command and stream the output until the process completes.
@@ -71,7 +87,8 @@ def yes_or_no(question):
     Returns:
         bool: True if user answers yes, False otherwise
     """
-    reply = str(input(f"{question} (y/n): ")).lower().strip()
+    reply = str(
+        input(f"{question} ({wrap('y/n', bc.BOLD)}): ")).lower().strip()
     no_reply_msg = "Please enter"
     if not reply:
         return yes_or_no(no_reply_msg)
@@ -138,7 +155,7 @@ def main():
     active_branch = get_active_branch_name()
     if active_branch != "master":
         print(
-            f"Warning: You are on branch '{active_branch}'.\nIt's generally recommended you run this script on master after first merging your feature branch.")
+            f"{wrap('WARNING',bc.WARNING)}: You are on branch '{active_branch}'.\nIt's generally recommended you run this script on master after first merging your feature branch.")
         reply_switch = yes_or_no("Change to master and pull?")
         if reply_switch is True:
             exit_code_exit_code = execute_command(
@@ -152,7 +169,7 @@ def main():
         f"Current tt-docker-base version on '{active_branch}': {current_version}")
 
     # get desired bump
-    q_increment = "Bump major (1), minor (2), or patch (3)?"
+    q_increment = f"Bump major ({wrap('1', bc.BOLD)}), minor ({wrap('2', bc.BOLD)}), or patch ({wrap('3', bc.BOLD)})?"
     reply_increment = input(f"{q_increment}: ").lower().strip()
     validate_increment(reply_increment)
     new_version = generate_new_version(current_version, reply_increment)
