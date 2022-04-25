@@ -111,7 +111,7 @@ If this is a small change that's very unlikely to affect anyone else, you'll bui
 ##### Directly to Master Branch
 1. Commit your changes to your `tt-base` branch.
 1. Merge this branch into `master` and proceed to [steps to deploy texastribune](#deploy-texastribune).
-1. Run the `make bump` command and follow the prompts in order to bump the version and tag it. The final prompt will push the tag to the remote of the active branch. There should be as little gap as possible between this step and the previous one so as to avoid conflicts with other committers.
+1. Run the `make bump` command and follow the prompts in order to bump the version and tag it. The final prompt will push the tag to remote. There should be as little gap as possible between this step and the previous one so as to avoid conflicts with other committers.
 1. Proceed to [deploy to texastribune steps](#deploy-texastribune).
 
 ##### Through tt-base Feature Branch
@@ -123,7 +123,7 @@ If this is a small change that's very unlikely to affect anyone else, you'll bui
     - You can check the status of the builds on [Docker Hub](https://hub.docker.com/repository/docker/texastribune/base). _You'll see a more accurate build log when logged-in under an account that is affiliated with the texastribune org in Docker Hub._
 1. After the related `texastribune` PR is approved, merge your `tt-base` feature branch into master, and delete the feature branch.
 1. `git checkout master` and `git pull` to get your local master branch even with remote.
-1. Run the `make bump` command and follow the prompts in order to bump the version and tag it. The final prompt will push the tag to the remote of the active branch. There should be as little gap as possible between this step and the previous one so as to avoid conflicts with other committers.
+1. Run the `make bump` command and follow the prompts in order to bump the version and tag it. The final prompt will push the tag to remote. There should be as little gap as possible between this step and the previous one so as to avoid conflicts with other committers.
 1. Proceed to [deploy to texastribune steps](#deploy-texastribune).
 
 #### Deploy texastribune
