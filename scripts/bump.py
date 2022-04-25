@@ -4,9 +4,10 @@ import re
 from enum import Enum
 import sys
 import subprocess
+from pathlib import Path
+
 
 VERSION_FILE_PATH = './VERSION'
-
 
 class Increment(Enum):
     major = '1'
@@ -41,6 +42,19 @@ def execute_command(command):
     exit_code = process.wait()
     return exit_code
 
+def get_active_branch_name():
+
+    head_dir = Path(".") / ".git" / "HEAD"
+    with head_dir.open("r") as f: content = f.read().splitlines()
+
+    for line in content:
+        if line[0:4] == "ref:":
+            return line.partition("refs/heads/")[2]
+
+def check_exit_code(exit_code):
+    if exit_code != 0:
+        print("Error: exit code {}".format(exit_code))
+        sys.exit(exit_code)
 
 def yes_or_no(question):
     """
@@ -111,27 +125,51 @@ def write_version_file(new_version):
 
 
 def main():
+    # check branch
+    branch = get_active_branch_name()
+    if branch != "master":
+        print("Warning: You are on branch '{}'.\nIt's generally recommended you run this script on master after first merging your feature branch.".format(branch))
+        reply_switch = yes_or_no("Change to master and pull?")
+        if reply_switch is True:
+            exit_code_exit_code = execute_command("git checkout master && git pull origin master")
+            check_exit_code(exit_code_exit_code)
+    
+    # get current version
     current_version = get_current_version()
     print("Current version: {}".format(current_version))
-    prompt = "Bump major (1), minor (2), or patch (3)?"
-    increment = input(f"{prompt}: ").lower().strip()
-    validate_increment(increment)
-    new_version = generate_new_version(current_version, increment)
-    confirm_q = "Bump {} to {} and commit?".format(
+    
+    # get desired bump
+    q_increment = "Bump major (1), minor (2), or patch (3)?"
+    reply_increment = input(f"{q_increment}: ").lower().strip()
+    validate_increment(reply_increment)
+    new_version = generate_new_version(current_version, reply_increment)
+    
+    # save and commit
+    q_commit = "Bump {} to {} and commit?".format(
         VERSION_FILE_PATH, new_version)
-    confirm_reply = yes_or_no(confirm_q)
-    if confirm_reply == False:
+    confirm_commit = yes_or_no(q_commit)
+    if confirm_commit == False:
         print("Exiting...")
         sys.exit(0)
     write_version_file(new_version)
     cmd_gitadd = "git add {}".format(VERSION_FILE_PATH)
     exit_code_gitadd = execute_command(cmd_gitadd)
-    if (exit_code_gitadd != 0):
-        sys.exit(exit_code_gitadd)
+    check_exit_code(exit_code_gitadd)
     cmd_commit = "git commit -m 'bump version to {}'".format(new_version)
     exit_code_commit = execute_command(cmd_commit)
-    if (exit_code_commit != 0):
-        sys.exit(exit_code_commit)
+    check_exit_code(exit_code_commit)
+
+    
+    # tag and push
+    q_tag = "Tag {} and push to master {}?".format(new_version)
+    confirm_tag = yes_or_no(q_tag)
+    if confirm_tag == False:
+        print("Exiting...")
+        sys.exit(0)
+    cmd_tag = 'git tag {}'.format(new_version)
+    exit_code_tag = execute_command(cmd_tag)
+    check_exit_code(exit_code_tag)
+    # TODO: add git push cmd
     sys.exit(0)
 
 
