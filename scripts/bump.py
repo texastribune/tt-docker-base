@@ -189,14 +189,14 @@ def main():
     check_exit_code(exit_code_commit)
 
     # tag and push
-    q_tag = f"Tag commit as {wrap(new_version,bc.UNDERLINE)} and push local '{active_branch}' to remote '{active_branch}'?"
+    q_tag = f"Tag commit as {wrap(new_version,bc.UNDERLINE)} and push to remote?"
     confirm_tag = yes_or_no(q_tag)
     if confirm_tag == False:
         exit_without_error()
     cmd_tag = f'git tag {new_version}'
     exit_code_tag = execute_command(cmd_tag)
     check_exit_code(exit_code_tag)
-    cmd_push_active = f'git push origin {active_branch}'
+    cmd_push_active = f'git push origin --tags {active_branch}' # pushes only specific tag
     exit_code_push = execute_command(cmd_push_active)
     check_exit_code(exit_code_push)
 
