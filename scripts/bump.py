@@ -77,6 +77,9 @@ def yes_or_no(question):
     else:
         return yes_or_no(no_reply_msg)
 
+def exit_without_error():
+    print("Exit")
+    sys.exit(0)
 
 def check_valid_version(version):
     pattern = r"^\d+\.\d+\.\d+$"
@@ -126,17 +129,18 @@ def write_version_file(new_version):
 
 def main():
     # check branch
-    branch = get_active_branch_name()
-    if branch != "master":
-        print("Warning: You are on branch '{}'.\nIt's generally recommended you run this script on master after first merging your feature branch.".format(branch))
+    active_branch = get_active_branch_name()
+    if active_branch != "master":
+        print("Warning: You are on branch '{}'.\nIt's generally recommended you run this script on master after first merging your feature branch.".format(active_branch))
         reply_switch = yes_or_no("Change to master and pull?")
         if reply_switch is True:
             exit_code_exit_code = execute_command("git checkout master && git pull origin master")
             check_exit_code(exit_code_exit_code)
+            active_branch = get_active_branch_name()
     
     # get current version
     current_version = get_current_version()
-    print("Current version: {}".format(current_version))
+    print("Current tt-docker-base version on '{}': {}".format(active_branch, current_version))
     
     # get desired bump
     q_increment = "Bump major (1), minor (2), or patch (3)?"
@@ -145,12 +149,12 @@ def main():
     new_version = generate_new_version(current_version, reply_increment)
     
     # save and commit
-    q_commit = "Bump {} to {} and commit?".format(
-        VERSION_FILE_PATH, new_version)
+    q_commit = "Bump version to {} and commit?".format(new_version)
     confirm_commit = yes_or_no(q_commit)
     if confirm_commit == False:
-        print("Exiting...")
-        sys.exit(0)
+        exit_without_error()
+    print("{} file changed: {} -> {}".format(VERSION_FILE_PATH, current_version, new_version))
+
     write_version_file(new_version)
     cmd_gitadd = "git add {}".format(VERSION_FILE_PATH)
     exit_code_gitadd = execute_command(cmd_gitadd)
@@ -161,16 +165,14 @@ def main():
 
     
     # tag and push
-    q_tag = "Tag {} and push to master {}?".format(new_version)
+    q_tag = "Tag {} and push to remote '{}'?".format(new_version, active_branch)
     confirm_tag = yes_or_no(q_tag)
     if confirm_tag == False:
-        print("Exiting...")
-        sys.exit(0)
+        exit_without_error()
     cmd_tag = 'git tag {}'.format(new_version)
     exit_code_tag = execute_command(cmd_tag)
     check_exit_code(exit_code_tag)
-    # TODO: add git push cmd
-    sys.exit(0)
+    
 
 
 if __name__ == "__main__":
