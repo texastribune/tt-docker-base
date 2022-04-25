@@ -162,8 +162,7 @@ def main():
     if confirm_commit == False:
         exit_without_error()
     print("{} file changed: {} -> {}".format(VERSION_FILE_PATH,
-          current_version, new_version))
-
+                                             current_version, new_version))
     write_version_file(new_version)
     cmd_gitadd = "git add {}".format(VERSION_FILE_PATH)
     exit_code_gitadd = execute_command(cmd_gitadd)
