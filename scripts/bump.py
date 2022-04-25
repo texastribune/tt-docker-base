@@ -78,7 +78,7 @@ def yes_or_no(question):
         return yes_or_no(no_reply_msg)
 
 def exit_without_error():
-    print("Exit")
+    print("Exiting")
     sys.exit(0)
 
 def check_valid_version(version):
@@ -165,14 +165,17 @@ def main():
 
     
     # tag and push
-    q_tag = "Tag {} and push to remote '{}'?".format(new_version, active_branch)
+    q_tag = "Tag commit as {} and push local '{}' to remote '{}'?".format(new_version, active_branch, active_branch)
     confirm_tag = yes_or_no(q_tag)
     if confirm_tag == False:
         exit_without_error()
     cmd_tag = 'git tag {}'.format(new_version)
     exit_code_tag = execute_command(cmd_tag)
     check_exit_code(exit_code_tag)
-    
+    cmd_push_active = 'git push origin {}'.format(active_branch)
+    exit_code_push = execute_command(cmd_push_active)
+    check_exit_code(exit_code_push)
+
 
 
 if __name__ == "__main__":
