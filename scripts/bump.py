@@ -9,6 +9,7 @@ from pathlib import Path
 
 VERSION_FILE_PATH = './VERSION'
 
+
 class Increment(Enum):
     major = '1'
     minor = '2'
@@ -42,19 +43,23 @@ def execute_command(command):
     exit_code = process.wait()
     return exit_code
 
+
 def get_active_branch_name():
 
     head_dir = Path(".") / ".git" / "HEAD"
-    with head_dir.open("r") as f: content = f.read().splitlines()
+    with head_dir.open("r") as f:
+        content = f.read().splitlines()
 
     for line in content:
         if line[0:4] == "ref:":
             return line.partition("refs/heads/")[2]
 
+
 def check_exit_code(exit_code):
     if exit_code != 0:
         print("Error: exit code {}".format(exit_code))
         sys.exit(exit_code)
+
 
 def yes_or_no(question):
     """
@@ -77,9 +82,11 @@ def yes_or_no(question):
     else:
         return yes_or_no(no_reply_msg)
 
+
 def exit_without_error():
     print("Exiting")
     sys.exit(0)
+
 
 def check_valid_version(version):
     pattern = r"^\d+\.\d+\.\d+$"
@@ -134,26 +141,28 @@ def main():
         print("Warning: You are on branch '{}'.\nIt's generally recommended you run this script on master after first merging your feature branch.".format(active_branch))
         reply_switch = yes_or_no("Change to master and pull?")
         if reply_switch is True:
-            exit_code_exit_code = execute_command("git checkout master && git pull origin master")
+            exit_code_exit_code = execute_command(
+                "git checkout master && git pull origin master")
             check_exit_code(exit_code_exit_code)
             active_branch = get_active_branch_name()
-    
+
     # get current version
     current_version = get_current_version()
     print("Current tt-docker-base version on '{}': {}".format(active_branch, current_version))
-    
+
     # get desired bump
     q_increment = "Bump major (1), minor (2), or patch (3)?"
     reply_increment = input(f"{q_increment}: ").lower().strip()
     validate_increment(reply_increment)
     new_version = generate_new_version(current_version, reply_increment)
-    
+
     # save and commit
     q_commit = "Bump version to {} and commit?".format(new_version)
     confirm_commit = yes_or_no(q_commit)
     if confirm_commit == False:
         exit_without_error()
-    print("{} file changed: {} -> {}".format(VERSION_FILE_PATH, current_version, new_version))
+    print("{} file changed: {} -> {}".format(VERSION_FILE_PATH,
+          current_version, new_version))
 
     write_version_file(new_version)
     cmd_gitadd = "git add {}".format(VERSION_FILE_PATH)
@@ -163,9 +172,9 @@ def main():
     exit_code_commit = execute_command(cmd_commit)
     check_exit_code(exit_code_commit)
 
-    
     # tag and push
-    q_tag = "Tag commit as {} and push local '{}' to remote '{}'?".format(new_version, active_branch, active_branch)
+    q_tag = "Tag commit as {} and push local '{}' to remote '{}'?".format(
+        new_version, active_branch, active_branch)
     confirm_tag = yes_or_no(q_tag)
     if confirm_tag == False:
         exit_without_error()
@@ -175,7 +184,6 @@ def main():
     cmd_push_active = 'git push origin {}'.format(active_branch)
     exit_code_push = execute_command(cmd_push_active)
     check_exit_code(exit_code_push)
-
 
 
 if __name__ == "__main__":
