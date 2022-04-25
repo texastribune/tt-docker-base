@@ -111,7 +111,7 @@ If this is a small change that's very unlikely to affect anyone else, you'll bui
 ##### Directly to Master Branch
 1. Commit your changes to your `tt-base` branch.
 1. Merge this branch into `master` and proceed to [steps to deploy texastribune](#deploy-texastribune).
-1. Immediately bump the version in the [VERSION file](VERSION), commit and tag: `make tag`. There should be as little gap as possible between this step and the previous one so as to avoid conflicts with other committers. You don't need to push anything. The `make tag` command will push it for you.
+1. Run the `make bump` command and follow the prompts in order to bump the version and tag it. The final prompt will push the tag to remote master. There should be as little gap as possible between this step and the previous one so as to avoid conflicts with other committers.
 1. Proceed to [deploy to texastribune steps](#deploy-texastribune).
 
 ##### Through tt-base Feature Branch
@@ -123,8 +123,8 @@ If this is a small change that's very unlikely to affect anyone else, you'll bui
     - You can check the status of the builds on [Docker Hub](https://hub.docker.com/repository/docker/texastribune/base). _You'll see a more accurate build log when logged-in under an account that is affiliated with the texastribune org in Docker Hub._
 1. After the related `texastribune` PR is approved, merge your `tt-base` feature branch into master, and delete the feature branch.
 1. `git checkout master` and `git pull` to get your local master branch even with remote.
-1. Immediately bump the version in the [VERSION file](VERSION), commit and tag: `make tag`. There should be as little gap as possible between this step and the previous one so as to avoid conflicts with other committers. You don't need to push anything. The `make tag` command will push it for you.
-1. Proceed to [deploy to texastribune steps](#deploy-texastribune).
+2. Run the `make bump` command and follow the prompts in order to bump the version and tag it. The final prompt will push the tag to remote master. There should be as little gap as possible between this step and the previous one so as to avoid conflicts with other committers.
+3. Proceed to [deploy to texastribune steps](#deploy-texastribune).
 
 #### Deploy texastribune
 1. Change your related `texastribune` PR to use the tag instead of the branch name (example: `texastribune/base:1.2.14-base` and `texastribune/base:1.2.14-dev`). See the `texastribune` README for the locations to change the version. You may want to wait until the Docker Hub build is complete before pushing your `texastribune` PR image version because the CI tests will fail if the image isn't available yet.
