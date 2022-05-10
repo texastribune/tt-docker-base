@@ -36,3 +36,7 @@ base-shell: base-image
 
 dev-shell: dev-image
 	docker run -it --rm --volume=$$(pwd)/node:/node texastribune/base:dev bash
+
+# bumps version in VERSION file
+bump:
+	python ./scripts/bump.py
