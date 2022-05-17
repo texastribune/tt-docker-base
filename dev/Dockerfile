@@ -36,7 +36,7 @@ RUN apt update && \
 # Install nodejs from nodesource
 RUN \
   echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections && \
-  echo "deb https://deb.nodesource.com/node_12.x stretch main" > /etc/apt/sources.list.d/nodesource.list && \
+  echo "deb https://deb.nodesource.com/node_14.x stretch main" > /etc/apt/sources.list.d/nodesource.list && \
   wget -qO- https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add - && \
   apt-get -qq update && \
   apt-get -qq install nodejs > /dev/null && \
