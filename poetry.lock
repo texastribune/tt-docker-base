@@ -545,6 +545,17 @@ django = ">=2.2"
 django-classy-tags = ">=1"
 
 [[package]]
+name = "django-solo"
+version = "2.0.0"
+description = "Django Solo helps working with singletons"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+django = ">=2.2"
+
+[[package]]
 name = "django-staticfiles"
 version = "1.2.1"
 description = "A Django app that provides helpers for serving static files."
@@ -1826,7 +1837,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "06e56dce1f5c29aa482e71f8575f2e2b7cbe77f8a97ee59bdbd6d51ea016c054"
+content-hash = "f519ea7424aa0d320ec74a2212930b66f375c9a16df339eebff1f1d5181db27a"
 
 [metadata.files]
 alabaster = [
@@ -2144,6 +2155,10 @@ django-reversion = [
 django-sekizai = [
     {file = "django-sekizai-2.0.0.tar.gz", hash = "sha256:e829f09b0d6bf01ee5cde05de1fb3faf2fbc5df66dc4dc280fbaac224ca4336f"},
     {file = "django_sekizai-2.0.0-py3-none-any.whl", hash = "sha256:5c5e16845d37ce822fc655ce79ec02715191b3d03330b550997bcb842cf24fdf"},
+]
+django-solo = [
+    {file = "django-solo-2.0.0.tar.gz", hash = "sha256:7c6dbe04ae858a4645b580ec83a31a960a067ad4525d8227cca50b7fc5983a62"},
+    {file = "django_solo-2.0.0-py3-none-any.whl", hash = "sha256:9046eca738f2ed64dbef38c2107a02af1065a8899b4f9fabf61b06b8325de1b4"},
 ]
 django-staticfiles = [
     {file = "django-staticfiles-1.2.1.tar.gz", hash = "sha256:6c4371699bb316dc3e0db1ecf07c80d3d72827a789d73b165b0a592875621fe1"},
