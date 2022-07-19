@@ -326,14 +326,14 @@ django = ">=2.2"
 
 [[package]]
 name = "django-cms"
-version = "3.9.0"
+version = "3.10.1"
 description = "Lean enterprise content management powered by Django."
 category = "main"
 optional = false
-python-versions = "*"
+python-versions = ">=3.7"
 
 [package.dependencies]
-Django = ">=2.2"
+Django = ">=2.2,<4.0"
 django-classy-tags = ">=0.7.2"
 django-formtools = ">=2.1"
 django-sekizai = ">=0.7"
@@ -1837,7 +1837,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "3bab5c5f5a76c144044fd4b9f7623e195a653cfe8a5f2eb6fd884b01b988a019"
+content-hash = "61541997e5db000947aac61bcf2d4d456bfb6d9092fc6c54ea27e35a291c3ea2"
 
 [metadata.files]
 alabaster = [
@@ -2087,7 +2087,7 @@ django-classy-tags = [
     {file = "django_classy_tags-2.0.0-py3-none-any.whl", hash = "sha256:25eb4f95afee396148683bfb4811b83b3f5729218d73ad0a3399271a6f9fcc49"},
 ]
 django-cms = [
-    {file = "django_cms-3.9.0-py2.py3-none-any.whl", hash = "sha256:6feaa6f3b7f225e08f221cf33d6135a1e268e9b781dae4bf916239c3f54e7b27"},
+    {file = "django_cms-3.10.1-py2.py3-none-any.whl", hash = "sha256:e798d2a934a490f12cf1e98edd2f72930ea29217ea3dc4507d10331de233e216"},
 ]
 django-codemirror-widget = [
     {file = "django-codemirror-widget-0.5.0.tar.gz", hash = "sha256:a2f7facf299f3f51dff7227cc9850905b899e08485698d3f4fad110a7ad628be"},
