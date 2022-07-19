@@ -779,15 +779,14 @@ pyflakes = ">=2.3.0,<2.4.0"
 
 [[package]]
 name = "freezegun"
-version = "0.3.15"
+version = "1.2.1"
 description = "Let your Python tests travel through time"
 category = "dev"
 optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+python-versions = ">=3.6"
 
 [package.dependencies]
-python-dateutil = ">=1.0,<2.0 || >2.0"
-six = "*"
+python-dateutil = ">=2.7"
 
 [[package]]
 name = "fudge"
@@ -1837,7 +1836,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "3bab5c5f5a76c144044fd4b9f7623e195a653cfe8a5f2eb6fd884b01b988a019"
+content-hash = "49dafb70b3b618736da78fdf70905896b017eb556660a35bc2d410b4501627be"
 
 [metadata.files]
 alabaster = [
@@ -2231,8 +2230,8 @@ flake8 = [
     {file = "flake8-3.9.2.tar.gz", hash = "sha256:07528381786f2a6237b061f6e96610a4167b226cb926e2aa2b6b1d78057c576b"},
 ]
 freezegun = [
-    {file = "freezegun-0.3.15-py2.py3-none-any.whl", hash = "sha256:82c757a05b7c7ca3e176bfebd7d6779fd9139c7cb4ef969c38a28d74deef89b2"},
-    {file = "freezegun-0.3.15.tar.gz", hash = "sha256:e2062f2c7f95cc276a834c22f1a17179467176b624cc6f936e8bc3be5535ad1b"},
+    {file = "freezegun-1.2.1-py3-none-any.whl", hash = "sha256:15103a67dfa868ad809a8f508146e396be2995172d25f927e48ce51c0bf5cb09"},
+    {file = "freezegun-1.2.1.tar.gz", hash = "sha256:b4c64efb275e6bc68dc6e771b17ffe0ff0f90b81a2a5189043550b6519926ba4"},
 ]
 fudge = [
     {file = "fudge-1.1.1-py2.7.egg", hash = "sha256:5a9335d2c0bf29ebd646d4bd102b335107ce3566d278270453001f3e648b63e4"},
