@@ -20,7 +20,7 @@ RUN apt-get update -qq && \
 ENV PATH=/root/.poetry/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 COPY pyproject.toml poetry.lock /
 ENV PIP_NO_BINARY=psycopg2
-RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python - \
+RUN curl -sSL https://install.python-poetry.org | python - \
   && poetry config virtualenvs.create false --local \
   && poetry install --no-dev
 ENV NPM_CONFIG_LOGLEVEL warn
