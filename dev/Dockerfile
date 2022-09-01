@@ -17,6 +17,7 @@ RUN apt-get update -qq && \
   libffi-dev \
   libmemcached-dev > /dev/null
 
+ENV POETRY_VERSION=1.1.14
 ENV PATH=/root/.poetry/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 COPY pyproject.toml poetry.lock /
 ENV PIP_NO_BINARY=psycopg2
