@@ -68,6 +68,7 @@ google-auth = "^2.0.1"
 gspread = "^4.0.1"
 slack-sdk = "^3.11.2"
 django-solo = "^2.0.0"
+PyJWT = "^2.5.0"
 
 [tool.poetry.dev-dependencies]
 django-debug-toolbar = "*"
