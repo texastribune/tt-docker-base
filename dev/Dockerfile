@@ -20,7 +20,7 @@ RUN apt-get update -qq && \
 ENV PATH=/root/.local/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 COPY pyproject.toml poetry.lock /
 ENV PIP_NO_BINARY=psycopg2
-RUN curl -SL https://install.python-poetry.org \
+RUN curl -sSL https://install.python-poetry.org \
     | POETRY_VERSION=1.1.14 python3 - && \
     poetry config virtualenvs.create false --local && \
     poetry install --no-dev
