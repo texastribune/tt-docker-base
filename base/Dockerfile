@@ -1,4 +1,4 @@
-FROM python:3.7-stretch
+FROM python:3.7-buster
 
 WORKDIR /
 
@@ -17,11 +17,10 @@ RUN apt-get update -qq && \
   libffi-dev \
   libmemcached-dev > /dev/null
 
-ENV PATH=/root/.poetry/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+ENV PATH=/root/.local/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 COPY pyproject.toml poetry.lock /
 ENV PIP_NO_BINARY=psycopg2
-ENV GET_POETRY_IGNORE_DEPRECATION=1
-RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py \
-    | POETRY_VERSION=1.1.14 python - && \
+RUN curl -SL https://install.python-poetry.org \
+    | POETRY_VERSION=1.1.14 python3 - && \
     poetry config virtualenvs.create false --local && \
     poetry install --no-dev
