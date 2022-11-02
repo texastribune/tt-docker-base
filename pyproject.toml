@@ -10,7 +10,7 @@ authors = ["Your Name <you@example.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.7"
-django = "3.2.15"
+django = "3.2.16"
 six = "1.10.0"
 pytz = "2016.10"
 BeautifulSoup4 = "4.6.3"
