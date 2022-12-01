@@ -1,7 +1,7 @@
 tt-docker-base
 ===========
 
-This project contains the base Docker image of dependencies for the Texas Tribune website and CMS. It serves as the starting point for a [multistage docker build](https://docs.docker.com/develop/develop-images/multistage-build/).
+> As of 11/30/22, this repo no longer serves as the base image for the Texastribune website and CMS.  For now, it is still in use for the salaries app.
 
 ## Testing Dependabot PRs
 
